@@ -1,0 +1,4 @@
+management
+==========
+
+CORAL Management Module
