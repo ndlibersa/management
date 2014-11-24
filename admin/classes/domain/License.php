@@ -110,18 +110,20 @@ class License extends DatabaseObject {
 	}
 
 	//returns array of Document objects (parent documents) - used for document display on license record
-	public function getDocumentsWithoutParents($orderBy){
+	public function getDocumentsWithoutParents($orderBy,$documentID=NULL){
 
 		$query = "SELECT D.*
 						FROM Document D
 						LEFT JOIN Signature S ON (S.documentID = D.documentID)
 						LEFT JOIN DocumentType DT ON (DT.documentTypeID = D.documentTypeID)
-						WHERE licenseID = '" . $this->licenseID . "'
-						AND (D.expirationDate is null OR D.expirationDate = '0000-00-00')
+						WHERE licenseID = '" . $this->licenseID . "'";
+		if ($documentID) {
+			$query .= " AND D.documentID != {$documentID}";
+		}
+		$query .= "		AND (D.expirationDate is null OR D.expirationDate = '0000-00-00')
 						AND (D.parentDocumentID is null OR D.parentDocumentID=0)
 						GROUP BY D.documentID
 						ORDER BY " . $orderBy . ";";
-
 		$result = $this->db->processQuery($query, 'assoc');
 
 		$objects = array();

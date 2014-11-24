@@ -267,6 +267,12 @@ switch ($_GET['action']) {
 
 		$document = new Document(new NamedArguments(array('primaryKey' => $documentID)));
 		$license = new License(new NamedArguments(array('primaryKey' => $licenseID)));
+		
+		if (count($license->getDocumentsWithoutParents('documentID',$documentID)) > 0) {
+			$blockArchiveCheck = 'disabled';
+		} else {
+			$blockArchiveCheck = '';
+		}
 
 		//if effective date isn't set, set it to today's date
 		if (($document->effectiveDate == "0000-00-00") || ($document->effectiveDate == "")){
@@ -287,8 +293,7 @@ switch ($_GET['action']) {
 			$archiveChecked = '';
 		}
 
-
-		?>
+ 		?>
 		<div id='div_uploadDoc'>
 		<form id="uploadDoc" action="ajax_processing.php?action=submitDocument" method="POST" enctype="multipart/form-data">
 		<input type='hidden' id='licenseID' name='licenseID' value='<?php echo $licenseID; ?>'>
@@ -407,7 +412,7 @@ if ($_GET['isArchived'] == 1) {
 <?php
 } else {
 ?>
-				<input type='checkbox' id='archiveInd' name='archiveInd' <?php echo $archiveChecked; ?> />
+				<input type='checkbox' id='archiveInd' name='archiveInd' <?php echo $archiveChecked; ?> <?php echo $blockArchiveCheck; ?> />
 <?php
 }
 ?>
