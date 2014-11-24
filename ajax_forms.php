@@ -217,12 +217,12 @@ switch ($_GET['action']) {
 									</tr>
 									<tr>
 										<td colspan='2'>
-											<label for="note[body]" class="formText">Body:</label><br /><textarea name='note[body]' id = 'noteBody' cols='44' rows='10'></textarea>
+											<label for="note[body]" class="formText">Note:</label><br /><textarea name='note[body]' id = 'noteBody' cols='44' rows='10'></textarea>
 										</td>
 									</tr>
 									<tr>
 										<td colspan='2'>
-											<label for="note[documentNoteTypeID]" class="formText">Type:</label><br />
+											<label for="note[documentNoteTypeID]" class="formText">Note Type:</label><br />
 											<span id='span_noteType'>
 <?php
 				echo '						<select id="noteDocumentNoteTypeID" name="note[documentNoteTypeID]">';
@@ -1014,11 +1014,11 @@ if ($_GET['isArchived'] == 1) {
 				<td colspan='2'><span class='headerText'>Notes</span><br /><span id='span_errors'></span><br /></td>
 			</tr>
 			<tr>
-				<td colspan='2'><label for="notebody" class="formText">Body:</label><br /><textarea name='notebody' id = 'notebody' cols='44' rows='10'><?php echo $note->body; ?></textarea></td>
+				<td colspan='2'><label for="notebody" class="formText">Note:</label><br /><textarea name='notebody' id = 'notebody' cols='44' rows='10'><?php echo $note->body; ?></textarea></td>
 			</tr>
 			<tr>
 				<td colspan='2'>
-					<label for="documentNoteTypeID" class="formText">Type:</label><br />
+					<label for="documentNoteTypeID" class="formText">Note Type:</label><br />
 					<span id='span_noteType'>
 
 <?php

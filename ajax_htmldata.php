@@ -196,9 +196,9 @@ switch ($_GET['action']) {
 		<table class='verticalFormTable'>
 		<tr>
 		<th style='width:80px;'>Date</th>
-		<th style='width:540px;'>Details</th>
+		<th style='width:540px;'>Note</th>
 		<th style='width:540px;'>Document</th>
-		<th style='width:150px;'>Type</th>
+		<th style='width:150px;'>Note Type</th>
 		<?php if ($user->canEdit()){ ?>
 			<th style='width:100px;'>&nbsp;</th>
 		<?php } ?>
