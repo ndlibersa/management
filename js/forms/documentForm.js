@@ -154,7 +154,7 @@ function doSubmitDocument(){
 		 type:       "POST",
 		 url:        "ajax_processing.php?action=submitDocument",
 		 cache:      false,
-		 data:       { effectiveDate: $("#effectiveDate").val(),revisionDate: $("#revisionDate").val(), documentTypeID: $("#documentTypeID").val(), parentDocumentID: $("#parentDocumentID").val(), shortName: $("#shortName").val(), uploadDocument: fileName, archiveInd: isArchived, licenseID: $("#licenseID").val(), documentID: $("#documentID").val() },
+		 data:       { effectiveDate: $("#effectiveDate").val(),revisionDate: $("#revisionDate").val(), documentTypeID: $("#docTypeID").val(), parentDocumentID: $("#parentDocumentID").val(), shortName: $("#shortName").val(), uploadDocument: fileName, archiveInd: isArchived, licenseID: $("#licenseID").val(), documentID: $("#documentID").val() },
 		 success:    function(html) {
 			if (html){
 				$("#span_errors").html(html);
@@ -174,7 +174,7 @@ function doSubmitDocument(){
 function validateForm (){
 
 	myReturn=0;
-	if (!validateRequired('documentTypeID','Document Type is required.')) myReturn="1";
+	if (!validateRequired('docTypeID','Document Type is required.')) myReturn="1";
 	if (!validateRequired('shortName','Short Name is required.')) myReturn="1";
 
 	if (myReturn == "1"){

@@ -314,7 +314,7 @@ switch ($_GET['action']) {
 		<td style='text-align:right;vertical-align:top;'><label for="documentType" class="formText">Document Type:</label><br /><span id='span_error_documentTypeID' class='errorText'></span></td>
 		<td>
 		<span id='span_documentType'>
-		<select name='documentTypeID' id='documentTypeID' style='width:185px;'>
+		<select name='docTypeID' id='docTypeID' style='width:185px;'>
 		<?php
 
 		$display = array();
