@@ -263,7 +263,19 @@ if ($step == "3"){
 			if (!$resourcesModule) $resourcesModule = "N";
 			if (!$useTermsToolFunctionality) $useTermsToolFunctionality = "N";
 
-
+			//
+			// By default this is a stand alone module.  Overriding these install settings.
+			// End user will need to modify configuration file manually to enable these modules
+			//
+			
+			$useTermsToolFunctionality = "N"
+			$resourcesModule = "N"
+			$usageModule = "N"
+			$organizationsModule = "N"
+			
+			//
+			//
+			
 			$iniData = array();
 			$iniData[] = "# The Management module is not meant to tie into the other"; 
 			$iniData[] = "# CORAL modules.  They only module that has been tested is the";
@@ -277,6 +289,7 @@ if ($step == "3"){
 			$iniData[] = "authDatabaseName=" . $authDatabaseName;
 			$iniData[] = "usageModule=" . $usageModule;
 			$iniData[] = "resourcesModule=" . $resourcesModule;
+			$iniData[] = "resourcesDatabaseName" . $resourcesModuleDatabaseName;			
 			$iniData[] = "useTermsToolFunctionality=" . $useTermsToolFunctionality;
 			$iniData[] = "remoteAuthVariableName=\"" . $remoteAuthVariableName . "\"";
       $iniData[] = "";
