@@ -268,10 +268,10 @@ if ($step == "3"){
 			// End user will need to modify configuration file manually to enable these modules
 			//
 			
-			$useTermsToolFunctionality = "N"
-			$resourcesModule = "N"
-			$usageModule = "N"
-			$organizationsModule = "N"
+			$useTermsToolFunctionality = "N";
+			$resourcesModule = "N";
+			$usageModule = "N";
+			$organizationsModule = "N";
 			
 			//
 			//
