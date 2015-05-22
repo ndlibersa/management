@@ -31,7 +31,7 @@ $currentPage = $parts[count($parts) - 1];
 //this will redirect back to the actual license record
 if ((isset($_GET['editLicenseForm'])) && ($_GET['editLicenseForm'] == "Y")){
 	if (((isset($_GET['licenseShortName'])) && ($_GET['licenseShortName'] == "")) && ((isset($_GET['licenseOrganizationID'])) && ($_GET['licenseOrganizationID'] == ""))){
-		$err="<span style='color:red;text-align:left;'>Both license name and organization must be filled out.  Please try again.</span>";
+		$err="<span style='color:red;text-align:left;'>"._("Both license name and organization must be filled out.  Please try again.")."</span>";
 	}else{
 		$util->fixLicenseFormEnter($_GET['editLicenseID']);
 	}
@@ -63,7 +63,7 @@ $coralURL = $util->getCORALURL();
 <script type="text/javascript" src="js/common.js"></script>
 </head>
 <body>
-<noscript><font face=arial>JavaScript must be enabled in order for you to use CORAL. However, it seems JavaScript is either disabled or not supported by your browser. To use CORAL, enable JavaScript by changing your browser options, then <a href="">try again</a>. </font></noscript>
+<noscript><font face='arial'><?php echo _("JavaScript must be enabled in order for you to use CORAL. However, it seems JavaScript is either disabled or not supported by your browser. To use CORAL, enable JavaScript by changing your browser options, then ");?><a href=""><?php echo _("try again");?></a>. </font></noscript>
 <center>
 <div class="wrapper">
 <center>
@@ -82,7 +82,7 @@ $coralURL = $util->getCORALURL();
 <div style='margin-top:1px;'>
 <span class='smallText' style='color:#526972;'>
 <?php
-	echo "Hello, ";
+	echo _("Hello, ");
 	//user may not have their first name / last name set up
 	if ($user->lastName){
 		echo $user->firstName . " " . $user->lastName;
@@ -91,7 +91,7 @@ $coralURL = $util->getCORALURL();
 	}
 ?>
 </span>
-<br /><?php if($config->settings->authModule == 'Y'){ echo "<a href='" . $coralURL . "auth/?logout'>logout</a>"; } ?>
+<br /><?php if($config->settings->authModule == 'Y'){ echo "<a href='" . $coralURL . "auth/?logout'>"._("logout")."</a>"; } ?>
 </div>
 </td>
 </tr>
@@ -101,15 +101,15 @@ $coralURL = $util->getCORALURL();
 <?php
 //build main navigation based on user privileges
 if ($user->isAdmin()){
-	$mainnav = array(array("name"=>"home","path"=>"index.php"),
-					 array("name"=>"new document","path"=>"ajax_forms.php?action=getLicenseForm&height=530&width=400&modal=true&newLicenseID=","thickbox"=>true,"cssid"=>"newLicense"),
-					 array("name"=>"admin","path"=>"admin.php"));
+	$mainnav = array(array("name"=>_("home"),"path"=>"index.php"),
+					 array("name"=>_("new document"),"path"=>"ajax_forms.php?action=getLicenseForm&height=530&width=400&modal=true&newLicenseID=","thickbox"=>true,"cssid"=>"newLicense"),
+					 array("name"=>_("admin"),"path"=>"admin.php"));
 
 } elseif ($user->canEdit()) {
-	$mainnav = array(array("name"=>"home","path"=>"index.php"),
-					 array("name"=>"new document","path"=>"ajax_forms.php?action=getLicenseForm&height=265&width=260&modal=true&newLicenseID=","thickbox"=>true,"cssid"=>"newLicense"));
+	$mainnav = array(array("name"=>_("home"),"path"=>"index.php"),
+					 array("name"=>_("new document"),"path"=>"ajax_forms.php?action=getLicenseForm&height=265&width=260&modal=true&newLicenseID=","thickbox"=>true,"cssid"=>"newLicense"));
 } else {
-	$mainnav = array(array("name"=>"home","path"=>"index.php"));
+	$mainnav = array(array("name"=>_("home"),"path"=>"index.php"));
 }
 //display main navigation
 echo '<div class="mainnav">';
@@ -123,14 +123,7 @@ foreach ($mainnav as $nav) {
 	echo "<a".(($attributes) ? $attributes:'')." href=\"{$nav['path']}\">{$nav['name']}</a>";
 }
 echo '</div>';
-/* Old nav code
-<a href='index.php'><img src="images/menu/menu-home<?php if ($currentPage == 'index.php') { echo "-on"; } ?>.gif" hover="images/menu/menu-home-over.gif" class="rollover" /></a><img src='images/menu/menu-bar.gif'><a href='ajax_forms.php?action=getLicenseForm&height=350&width=300&modal=true&newLicenseID=' class='thickbox' id='newLicense'><img src='images/menu/menu-newlicense.gif' hover="images/menu/menu-newlicense-over.gif" class="rollover"></a><img src='images/menu/menu-bar.gif'><a href='admin.php'><img src='images/menu/menu-admin<?php if ($currentPage == 'admin.php') { echo "-on"; } ?>.gif' hover="images/menu/menu-admin-over.gif" id="menu-last" class="rollover" /></a><img src='images/menu/menu-end<?php if ($currentPage == 'admin.php') { echo "-on"; } ?>.gif' hover="images/menu/menu-end-over.gif" id="menu-end" />
-<?php }else if ($user->canEdit()){ ?>
-	<a href='index.php'><img src="images/menu/menu-home<?php if ($currentPage == 'index.php') { echo "-on"; } ?>.gif" hover="images/menu/menu-home-over.gif" class="rollover" /></a><img src='images/menu/menu-bar.gif'><a href='ajax_forms.php?action=getLicenseForm&height=265&width=260&modal=true&newLicenseID=' class='thickbox' id='newLicense'><img src='images/menu/menu-newlicense.gif' hover="images/menu/menu-newlicense-over.gif" class="rollover" id="menu-last" class="rollover" /></a><img src='images/menu/menu-end<?php if ($currentPage == 'compare.php') { echo "-on"; } ?>.gif' hover="images/menu/menu-end-over.gif" id="menu-end" />
-<?php }else{ ?>
-	<a href='index.php'><img src="images/menu/menu-home<?php if ($currentPage == 'index.php') { echo "-on"; } ?>.gif" hover="images/menu/menu-home-over.gif" class="rollover" /></a><img src='images/menu/menu-bar.gif'><a href='in_progress.php'><img src="images/menu/menu-licensesinprogress<?php if ($currentPage == 'in_progress.php') { echo "-on"; } ?>.gif" hover="images/menu/menu-licensesinprogress-over.gif" id="menu-last" class="rollover" /></a><img src='images/menu/menu-end<?php if ($currentPage == 'in_progress.php') { echo "-on"; } ?>.gif' hover="images/menu/menu-end-over.gif" id="menu-end" />
-<?php } ?>
-*/
+
 ?>
 </td>
 
@@ -157,27 +150,6 @@ if ((file_exists($util->getCORALPath() . "index.php")) || ($config->settings->or
 			echo "	<li><a href=\"{$coralURL}{$module}/\" target=\"_blank\"><img src=\"images/change/coral-{$module}.gif\"></a></li>";
 		}
 	}
-/*
-				if ($config->settings->organizationsModule == 'Y') {
-				?>
-				<li><a href="<?php echo $coralURL; ?>organizations/" target='_blank'><img src='images/change/coral-organizations.gif'></a></li>
-				<?php
-				}
-				if ($config->settings->resourcesModule == 'Y') {
-				?>
-				<li><a href="<?php echo $coralURL; ?>resources/" target='_blank'><img src='images/change/coral-resources.gif'></a></li>
-				<?php
-				}
-				if ($config->settings->cancellationModule == 'Y') {
-				?>
-				<li><a href="<?php echo $coralURL; ?>cancellation/" target='_blank'><img src='images/change/coral-cancellation.gif'></a></li>
-				<?php
-				}
-				if ($config->settings->usageModule == 'Y') {
-				?>
-				<li><a href="<?php echo $coralURL; ?>usage/" target='_blank'><img src='images/change/coral-usage.gif'></a></li>
-				<?php } 
-*/
 ?>
 			</ul>
 		</li>
