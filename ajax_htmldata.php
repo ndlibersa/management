@@ -45,7 +45,7 @@ switch ($_GET['action']) {
 		<?php
 
 		if ($user->canEdit()){?>
-			<a href='ajax_forms.php?action=getLicenseForm&licenseID=<?php echo $licenseID; ?>&height=350&width=300&modal=true' class='thickbox'><?php echo _("edit");?></a>  |  <a href='javascript:deleteLicense("<?php echo $licenseID; ?>");'><?php echo _("remove");?></a>
+			<a href='ajax_forms.php?action=getLicenseForm&licenseID=<?php echo $licenseID; ?>&height=350&width=350&modal=true' class='thickbox'><?php echo _("edit");?></a>  |  <a href='javascript:deleteLicense("<?php echo $licenseID; ?>");'><?php echo _("remove");?></a>
 		<?php }
 
 		echo "<div style='margin-bottom:8px;'>";

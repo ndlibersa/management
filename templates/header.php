@@ -118,7 +118,7 @@ $coralURL = $util->getCORALURL();
 //build main navigation based on user privileges
 if ($user->isAdmin()){
 	$mainnav = array(array("name"=>_("home"),"path"=>"index.php"),
-					 array("name"=>_("new document"),"path"=>"ajax_forms.php?action=getLicenseForm&height=530&width=400&modal=true&newLicenseID=","thickbox"=>true,"cssid"=>"newLicense"),
+					 array("name"=>_("new document"),"path"=>"ajax_forms.php?action=getLicenseForm&height=530&width=350&modal=true&newLicenseID=","thickbox"=>true,"cssid"=>"newLicense"),
 					 array("name"=>_("admin"),"path"=>"admin.php"));
 
 } elseif ($user->canEdit()) {

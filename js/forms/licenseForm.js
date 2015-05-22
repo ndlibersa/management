@@ -323,7 +323,7 @@ function validateForm (){
 	if (!validateRequired('licenseConsortiumID',_('A Category is required.'))) myReturn="1";	
 //	if (!validateRequired('organizationName','Provider is required.')) myReturn="1";
 
-		if ($("#headerText").text().indexOf("Edit") == -1) {
+		if ($("#headerText").text().indexOf(_("Edit")) == -1) {
 			if ($("#div_file_message").text().indexOf(_("successfully uploaded")) > 0) {
 				$("#span_error_licenseuploadDocument").html('');
 			} else {

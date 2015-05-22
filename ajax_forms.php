@@ -53,7 +53,7 @@ switch ($_GET['action']) {
 			<form id='licenseForm'>
 				<input type='hidden' id='editLicenseID' name='editLicenseID' value='<?php echo $licenseID; ?>'>
 				<input type='hidden' id='editLicenseForm' name='editLicenseForm' value='Y'>
-				<table class="thickboxTable" style="width:400px;">
+				<table class="thickboxTable" style="width:350px;">
 					<tr>
 						<td colspan='2'>
 							<span id='headerText' class='headerText'><?php if ($licenseID) echo _("Edit "); else echo _("New ") ?><?php echo _("Document");?></span><br />
@@ -183,7 +183,7 @@ switch ($_GET['action']) {
 		if ($licenseID) {
 			// No Editing of file from Main page
 			//echo "<div id='div_uploadFile'>" . $document->documentURL . "<br /><a href='javascript:replaceFile();'>replace with new file</a>";
-			//echo "<input type='hidden' id='upload_button' name='upload_button' value='" . $document->documentURL . "'></div>";
+			echo "<input type='hidden' id='upload_button' name='upload_button' value='" . $document->documentURL . "'></div>";
 		} else {
 ?>
 					<tr>

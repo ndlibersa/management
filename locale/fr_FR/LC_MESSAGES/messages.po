@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
-"POT-Creation-Date: 2015-05-22 15:04+0100\n"
-"PO-Revision-Date: 2015-05-22 15:04+0100\n"
+"POT-Creation-Date: 2015-05-22 15:43+0100\n"
+"PO-Revision-Date: 2015-05-22 15:43+0100\n"
 "Last-Translator: Cesar <hernandez.antonio.cesar19@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -1183,6 +1183,10 @@ msgstr "Le nom du document est nécessaire."
 #: /var/www/Coral/management/js/forms/licenseForm.js:323
 msgid "A Category is required."
 msgstr "Une catégorie est nécessaire."
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:326
+msgid "Edit"
+msgstr "Modifier"
 
 #: /var/www/Coral/management/js/forms/licenseForm.js:327
 msgid "successfully uploaded"
