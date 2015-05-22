@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
-"POT-Creation-Date: 2015-05-22 12:19+0100\n"
-"PO-Revision-Date: 2015-05-22 12:19+0100\n"
+"POT-Creation-Date: 2015-05-22 15:04+0100\n"
+"PO-Revision-Date: 2015-05-22 15:04+0100\n"
 "Last-Translator: Cesar <hernandez.antonio.cesar19@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -199,6 +199,10 @@ msgstr "Type de document:"
 msgid "add document type"
 msgstr "Ajouter un type de document"
 
+#: /var/www/Coral/management/ajax_forms.php:389
+msgid "replace with new file"
+msgstr "remplacer avec un nouveau fichier"
+
 #: /var/www/Coral/management/ajax_forms.php:451
 msgid "Archive Document Date"
 msgstr "Date de l'archivage du document"
@@ -260,10 +264,19 @@ msgstr "Mise à jour de l'engagement"
 
 #: /var/www/Coral/management/ajax_forms.php:633
 #: /var/www/Coral/management/ajax_forms.php:895
+#: /var/www/Coral/management/js/admin.js:314
+#: /var/www/Coral/management/js/forms/documentForm.js:189
+#: /var/www/Coral/management/js/forms/expressionForm.js:78
+#: /var/www/Coral/management/js/forms/licenseForm.js:196
+#: /var/www/Coral/management/js/forms/licenseForm.js:270
+#: /var/www/Coral/management/js/forms/licenseForm.js:306
+#: /var/www/Coral/management/js/forms/noteForm.js:37
+#: /var/www/Coral/management/js/forms/signatureForm.js:104
 msgid "add"
 msgstr "Ajouter"
 
 #: /var/www/Coral/management/ajax_forms.php:643
+#: /var/www/Coral/management/js/plugins/jquery.datePicker.js:1133
 msgid "Close"
 msgstr "Fermer"
 
@@ -336,6 +349,7 @@ msgstr "Pièces jointes:"
 #: /var/www/Coral/management/ajax_htmldata.php:1383
 #: /var/www/Coral/management/ajax_htmldata.php:1424
 #: /var/www/Coral/management/ajax_htmldata.php:1467
+#: /var/www/Coral/management/js/forms/attachmentForm.js:84
 msgid "remove"
 msgstr "Enlever"
 
@@ -991,7 +1005,7 @@ msgstr ""
 "Tant le nom de licence que l'organisation doivent être remplis. S'il vous "
 "plaît ressayez."
 
-#: /var/www/Coral/management/templates/header.php:66
+#: /var/www/Coral/management/templates/header.php:82
 msgid ""
 "JavaScript must be enabled in order for you to use CORAL. However, it seems "
 "JavaScript is either disabled or not supported by your browser. To use "
@@ -1002,41 +1016,421 @@ msgstr ""
 "utiliser CORAL, activez JavaScript en modifiant la configuration de votre "
 "navigateur, après "
 
-#: /var/www/Coral/management/templates/header.php:66
+#: /var/www/Coral/management/templates/header.php:82
 msgid "try again"
 msgstr "réessayez"
 
-#: /var/www/Coral/management/templates/header.php:85
+#: /var/www/Coral/management/templates/header.php:101
 msgid "Hello, "
 msgstr "Bonjour, "
 
-#: /var/www/Coral/management/templates/header.php:94
+#: /var/www/Coral/management/templates/header.php:110
 msgid "logout"
 msgstr "Se déconnecter"
 
-#: /var/www/Coral/management/templates/header.php:104
-#: /var/www/Coral/management/templates/header.php:109
-#: /var/www/Coral/management/templates/header.php:112
+#: /var/www/Coral/management/templates/header.php:120
+#: /var/www/Coral/management/templates/header.php:125
+#: /var/www/Coral/management/templates/header.php:128
 msgid "home"
 msgstr "Accueil"
 
-#: /var/www/Coral/management/templates/header.php:105
-#: /var/www/Coral/management/templates/header.php:110
+#: /var/www/Coral/management/templates/header.php:121
+#: /var/www/Coral/management/templates/header.php:126
 msgid "new document"
 msgstr "Nouveau document"
 
-#: /var/www/Coral/management/templates/header.php:106
+#: /var/www/Coral/management/templates/header.php:122
 msgid "admin"
 msgstr "Admin"
 
-#: /var/www/Coral/management/templates/header.php:142
+#: /var/www/Coral/management/templates/header.php:158
 msgid "Change Module"
 msgstr "Changer le module"
 
-#: /var/www/Coral/management/templates/header.php:172
+#: /var/www/Coral/management/templates/header.php:188
 msgid "Invalid translation route!"
 msgstr "Le chemin aux traductions n'est pas valide!"
 
 #: /var/www/Coral/management/terms_report.php:22
 msgid "Terms Report"
 msgstr "Report terms"
+
+#: /var/www/Coral/management/js/admin.js:106
+#: /var/www/Coral/management/js/admin.js:214
+#: /var/www/Coral/management/js/admin.js:239
+#: /var/www/Coral/management/js/admin.js:265
+#: /var/www/Coral/management/js/admin.js:292
+#: /var/www/Coral/management/js/index.js:43
+msgid "Processing..."
+msgstr "En traitement..."
+
+#: /var/www/Coral/management/js/admin.js:135
+msgid "That "
+msgstr "Ce "
+
+#: /var/www/Coral/management/js/admin.js:135
+msgid " is already in use."
+msgstr " est en utilisation."
+
+#: /var/www/Coral/management/js/admin.js:212
+#: /var/www/Coral/management/js/admin.js:290
+msgid "Do you really want to delete this data?"
+msgstr "Voulez-vous vraiment supprimer cette donnée?"
+
+#: /var/www/Coral/management/js/admin.js:237
+msgid "Do you really want to delete this user?"
+msgstr "Voulez-vous vraiment supprimer cet utilisateur?"
+
+#: /var/www/Coral/management/js/admin.js:263
+msgid ""
+"Do you really want to delete this expression type?  Any associated "
+"Qualifiers will be deleted as well."
+msgstr ""
+"Voulez-vous vraiment supprimer ce type d'expression? Tous les qualificatifs "
+"associés seront supprimés aussi."
+
+#: /var/www/Coral/management/js/forms/attachmentForm.js:41
+#: /var/www/Coral/management/js/forms/attachmentForm.js:54
+#: /var/www/Coral/management/js/forms/documentForm.js:102
+#: /var/www/Coral/management/js/forms/licenseForm.js:358
+msgid "File name is already being used..."
+msgstr "Le nom du fichier est en use..."
+
+#: /var/www/Coral/management/js/forms/attachmentForm.js:46
+msgid "The attachments directory is not writable."
+msgstr "Le dossier des pièces jointes n'a pas des droits d'écriture."
+
+#: /var/www/Coral/management/js/forms/attachmentForm.js:84
+#: /var/www/Coral/management/js/forms/documentForm.js:134
+#: /var/www/Coral/management/js/forms/licenseForm.js:390
+#: /var/www/Coral/management/js/license.js:482
+msgid " successfully uploaded."
+msgstr " téléchargé avec succès."
+
+#: /var/www/Coral/management/js/forms/attachmentForm.js:101
+#: /var/www/Coral/management/js/forms/attachmentForm.js:109
+msgid "Do you really want to delete this attachment?"
+msgstr "Voulez-vous vraiment supprimer cette pièce jointe?"
+
+#: /var/www/Coral/management/js/forms/documentForm.js:38
+#: /var/www/Coral/management/js/forms/licenseForm.js:39
+msgid "This name is already being used!"
+msgstr "Ce nom est déjà utilisé!"
+
+#: /var/www/Coral/management/js/forms/documentForm.js:106
+#: /var/www/Coral/management/js/forms/licenseForm.js:362
+msgid ""
+"File name may not contain special characters - ampersand, single quote, "
+"double quote or less than/greater than characters"
+msgstr ""
+"Le nom du fichier ne peut pas contenir des caractères spéciaux - "
+"esperluètte, apostrophe, guillemet ou caractères de moins que / plus que."
+
+#: /var/www/Coral/management/js/forms/documentForm.js:110
+#: /var/www/Coral/management/js/forms/licenseForm.js:366
+msgid "The documents directory is not writable."
+msgstr "Le dossier des documents n'a pas des droits d'écriture."
+
+#: /var/www/Coral/management/js/forms/documentForm.js:177
+msgid "Document Type is required."
+msgstr "Le type de document est nécessaire"
+
+#: /var/www/Coral/management/js/forms/documentForm.js:178
+msgid "Short Name is required."
+msgstr "Nom court est nécessaire."
+
+#: /var/www/Coral/management/js/forms/documentForm.js:216
+#: /var/www/Coral/management/js/forms/licenseForm.js:260
+msgid "DocumentType has been added"
+msgstr "Le type de document a été ajouté"
+
+#: /var/www/Coral/management/js/forms/documentForm.js:219
+#: /var/www/Coral/management/js/forms/licenseForm.js:263
+msgid "That type is already in use."
+msgstr "Ce type est en utilisation."
+
+#: /var/www/Coral/management/js/forms/expressionForm.js:89
+msgid "ExpressionType has been added"
+msgstr "Le Type d'Expression a été ajouté"
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:62
+#: /var/www/Coral/management/js/forms/licenseForm.js:124
+msgid "Warning!  This organization will be added new."
+msgstr "Attention! Cette organisation sera ajouté à nouveau."
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:222
+msgid "Category has been added"
+msgstr "La Catégorie a été ajouté"
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:225
+msgid "That Category is already in use."
+msgstr "Cette catégorie est en utilisation."
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:295
+#: /var/www/Coral/management/js/forms/noteForm.js:62
+msgid "Note Type has been added"
+msgstr "Le type de note a été ajouté"
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:298
+#: /var/www/Coral/management/js/forms/noteForm.js:65
+msgid "That Note Type is already in use."
+msgstr "Ce type de note est en utilisation."
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:322
+msgid "Document Name is required."
+msgstr "Le nom du document est nécessaire."
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:323
+msgid "A Category is required."
+msgstr "Une catégorie est nécessaire."
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:327
+msgid "successfully uploaded"
+msgstr "téléchargé avec succès"
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:330
+msgid "File is required"
+msgstr "Le fichier est nécessaire"
+
+#: /var/www/Coral/management/js/forms/sfxForm.js:59
+msgid "A document must be selected to continue."
+msgstr "Un document doit être selectionné pour continuer."
+
+#: /var/www/Coral/management/js/forms/sfxForm.js:60
+msgid "Terms Tool Resource must be entered to continue."
+msgstr "Le Resource d'outil Terms doit être entré pour continuer."
+
+#: /var/www/Coral/management/js/forms/signatureForm.js:42
+msgid "No match!"
+msgstr "Pas des coincidences!"
+
+#: /var/www/Coral/management/js/forms/signatureForm.js:42
+msgid "Selected: "
+msgstr "Sélectionné: "
+
+#: /var/www/Coral/management/js/forms/signatureForm.js:85
+msgid "Do you really want to delete this signature?"
+msgstr "Voulez-vous vraiment supprimer cette signature?"
+
+#: /var/www/Coral/management/js/forms/signatureForm.js:115
+msgid "SignatureType has been added"
+msgstr "Le type de signature a été ajouté"
+
+#: /var/www/Coral/management/js/license.js:101
+#: /var/www/Coral/management/js/license.js:329
+msgid "Do you really want to delete this document?"
+msgstr "Voulez-vous vraiment supprimer cette document?"
+
+#: /var/www/Coral/management/js/license.js:311
+msgid "Do you really want to archive this document?"
+msgstr "Voulez-vous vraiment archiver cette document?"
+
+#: /var/www/Coral/management/js/license.js:336
+msgid ""
+"There was a problem with deleting the document.  You may not delete a "
+"document if there are associated expressions.  Remove all expressions and "
+"try again."
+msgstr ""
+"Il y avait un problème pour supprimer le document. Vous ne pouvez pas "
+"supprimer un document s'il y a des expressions associées. Enlevez tous les "
+"expressions et reéssayez."
+
+#: /var/www/Coral/management/js/license.js:350
+msgid "Do you really want to delete this expression?"
+msgstr "Voulez-vous vraiment supprimer cette expression?"
+
+#: /var/www/Coral/management/js/license.js:365
+msgid ""
+"Do you really want to delete this attachment?  This will also delete all "
+"attached files."
+msgstr ""
+"Voulez-vous vraiment supprimer cette pièce jointe? Ça effacera aussi tous "
+"les fichiers enregistrés."
+
+#: /var/www/Coral/management/js/license.js:381
+msgid "Do you really want to delete this note?"
+msgstr "Voulez-vous vraiment supprimer cette note?"
+
+#: /var/www/Coral/management/js/license.js:398
+msgid "Do you really want to delete this terms tool resource link?"
+msgstr "Voulez-vous vraiment supprimer ce lien à l'outil terms resource?"
+
+#: /var/www/Coral/management/js/license.js:450
+#: /var/www/Coral/management/js/license.js:480
+msgid "File name is already being used."
+msgstr "Le nom du fichier est en use."
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Sunday"
+msgstr "Dimanche"
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Monday"
+msgstr "Lundi"
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Tuesday"
+msgstr "Mardi"
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Thursday"
+msgstr "Jeudi"
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Friday"
+msgstr "Vendredi"
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Saturday"
+msgstr "Samedi"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Sun"
+msgstr "Dim"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Mon"
+msgstr "Lun"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Tue"
+msgstr "Mar"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Wed"
+msgstr "Mer"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Thu"
+msgstr "Jeu"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Fri"
+msgstr "Ven"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Sat"
+msgstr "Sam"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "January"
+msgstr "Janvier"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "February"
+msgstr "Février"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "March"
+msgstr "Mars"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "April"
+msgstr "Avril"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "May"
+msgstr "Mai"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "June"
+msgstr "Juin"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "July"
+msgstr "Juillet"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "August"
+msgstr "Août"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "September"
+msgstr "Septembre"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "October"
+msgstr "Octobre"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "November"
+msgstr "Novembre"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "December"
+msgstr "Décembre"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Jan"
+msgstr "Jan"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Feb"
+msgstr "Fév"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Mar"
+msgstr "Mar"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Apr"
+msgstr "Avr"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Jun"
+msgstr "Jui"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Jul"
+msgstr "Juil"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Aug"
+msgstr "Aoû"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Sep"
+msgstr "Sep"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Oct"
+msgstr "Oct"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Nov"
+msgstr "Nov"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Dec"
+msgstr "Déc"
+
+#: /var/www/Coral/management/js/plugins/jquery.datePicker.js:1129
+msgid "Previous year"
+msgstr "Année précédente"
+
+#: /var/www/Coral/management/js/plugins/jquery.datePicker.js:1130
+msgid "Previous month"
+msgstr "Mois précédent"
+
+#: /var/www/Coral/management/js/plugins/jquery.datePicker.js:1131
+msgid "Next year"
+msgstr "Année suivante"
+
+#: /var/www/Coral/management/js/plugins/jquery.datePicker.js:1132
+msgid "Next month"
+msgstr "Mois suivant"
+
+#: /var/www/Coral/management/js/plugins/jquery.datePicker.js:1134
+msgid "Choose date"
+msgstr "Choissir la date"
+
+#~ msgid "Do you really want to delete this license?"
+#~ msgstr "Voulez-vous vraiment supprimer cette licence?"
+
+#~ msgid "License Name is required."
+#~ msgstr "Nom de la licence est nécessaire."

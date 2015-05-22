@@ -34,7 +34,7 @@ $("#submitNote").click(function () {
 });
 
 function newNoteType(){
-  $('#span_newNoteType').html("<input type='text' name='newNoteType' id='newNoteType' class='licenseAddInput' />  <a href='javascript:addNoteType();'>add</a>");
+  $('#span_newNoteType').html("<input type='text' name='newNoteType' id='newNoteType' class='licenseAddInput' />  <a href='javascript:addNoteType();'>"+_("add")+"</a>");
 
 	 //attach enter key event to new input and call add data when hit
 	 $('#span_newNoteType').keyup(function(e) {
@@ -59,10 +59,10 @@ function addNoteType(){
 						 url:        "ajax_processing.php",
 						 cache:      false,
 						 data:       "action=addNoteType&shortName=" + $("#newNoteType").val(),
-						 success:    function(html) { $('#span_noteType').html(html); $('#span_newNoteType').html("<font color='red'>Note Type has been added</font>"); }
+						 success:    function(html) { $('#span_noteType').html(html); $('#span_newNoteType').html("<font color='red'>"+_("Note Type has been added")+"</font>"); }
 						});
 					} else {
-						alert("That Note Type is already in use.");
+						alert(_("That Note Type is already in use."));
 					}
 	 			}
  	});
