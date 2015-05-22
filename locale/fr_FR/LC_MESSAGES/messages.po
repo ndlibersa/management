@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
-"POT-Creation-Date: 2015-05-22 15:43+0100\n"
-"PO-Revision-Date: 2015-05-22 15:43+0100\n"
+"POT-Creation-Date: 2015-05-22 16:03+0100\n"
+"PO-Revision-Date: 2015-05-22 16:03+0100\n"
 "Last-Translator: Cesar <hernandez.antonio.cesar19@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -393,7 +393,7 @@ msgstr "Identifiant de connexion"
 #: /var/www/Coral/management/ajax_forms.php:1148
 #: /var/www/Coral/management/ajax_htmldata.php:1357
 msgid "First Name"
-msgstr "Prènom"
+msgstr "Prénom"
 
 #: /var/www/Coral/management/ajax_forms.php:1149
 #: /var/www/Coral/management/ajax_htmldata.php:1358
@@ -578,6 +578,10 @@ msgstr "Regarder la pièce jointe "
 #: /var/www/Coral/management/ajax_htmldata.php:334
 msgid "add new attachment"
 msgstr "Ajouter une nouvelle pièce jointe"
+
+#: /var/www/Coral/management/ajax_htmldata.php:418
+msgid "Sorry, no documents fit your query"
+msgstr "Désolé, il n'y a pas des documents par votre requête"
 
 #: /var/www/Coral/management/ajax_htmldata.php:425
 msgid "Displaying "
@@ -1223,11 +1227,11 @@ msgstr "Le type de signature a été ajouté"
 #: /var/www/Coral/management/js/license.js:101
 #: /var/www/Coral/management/js/license.js:329
 msgid "Do you really want to delete this document?"
-msgstr "Voulez-vous vraiment supprimer cette document?"
+msgstr "Voulez-vous vraiment supprimer ce document?"
 
 #: /var/www/Coral/management/js/license.js:311
 msgid "Do you really want to archive this document?"
-msgstr "Voulez-vous vraiment archiver cette document?"
+msgstr "Voulez-vous vraiment archiver ce document?"
 
 #: /var/www/Coral/management/js/license.js:336
 msgid ""

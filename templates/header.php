@@ -161,7 +161,7 @@ if ((file_exists($util->getCORALPath() . "index.php")) || ($config->settings->or
 				<li><a href="<?php echo $coralURL; ?>" target='_blank'><img src='images/change/coral-main.gif'></a></li>
 				<?php
 				}
-	foreach (array("resources","licensing","organizations") as $module) {
+	foreach (array("resources","licensing","organizations","usage") as $module) {
  		if (file_exists("{$util->getCORALPath()}{$module}/index.php")) {
 			echo "	<li><a href=\"{$coralURL}{$module}/\" target=\"_blank\"><img src=\"images/change/coral-{$module}.gif\"></a></li>";
 		}

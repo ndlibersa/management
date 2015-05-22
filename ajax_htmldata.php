@@ -415,7 +415,7 @@ switch ($_GET['action']) {
 		$licenseArray = $licenseObj->search($whereAdd, $orderBy, $limit);
     $pagination = '';
 		if ($totalRecords == 0){
-			echo "<br /><br /><i>Sorry, no documents fit your query</i>";
+			echo "<br /><br /><i>"._("Sorry, no documents fit your query")."</i>";
 			$i=0;
 		}else{
 		  //maximum number of pages to display on screen at one time
