@@ -470,7 +470,7 @@ switch ($_GET['action']) {
 				echo "<br />";
 			}
 			if ($consortiumID) {
-				echo "<div><b>Category</b>: {$licenseObj->getConsortiumName($consortiumID)}</div><br />";
+				echo "<div><b>"._("Category")."</b>: {$licenseObj->getConsortiumName($consortiumID)}</div><br />";
 			}
 			?>
 			<table class='dataTable' style='width:727px'>
@@ -1068,7 +1068,7 @@ switch ($_GET['action']) {
 
 
 							}else{
-								echo "(none found)<br />";
+								echo _("(none found)")."<br />";
 								if ($user->canEdit()){
 									echo "<a href='ajax_forms.php?action=getSignatureForm&height=170&width=460&modal=true&documentID=" . $childDocument->documentID . "' class='thickbox' id='signatureForm'>"._("add signatures")."</a>";
 								}
@@ -1301,7 +1301,7 @@ switch ($_GET['action']) {
 			}
 
 		}else{
-			echo "(none found)";
+			echo _("(none found)");
 		}
 
 		if ($user->canEdit()){

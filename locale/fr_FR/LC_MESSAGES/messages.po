@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
-"POT-Creation-Date: 2015-05-26 14:36+0100\n"
-"PO-Revision-Date: 2015-05-26 14:37+0100\n"
+"POT-Creation-Date: 2015-05-26 17:26+0100\n"
+"PO-Revision-Date: 2015-05-26 17:26+0100\n"
 "Last-Translator: Cesar <hernandez.antonio.cesar19@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -534,7 +534,9 @@ msgstr "Ressource"
 #: /var/www/Coral/management/ajax_htmldata.php:170
 #: /var/www/Coral/management/ajax_htmldata.php:247
 #: /var/www/Coral/management/ajax_htmldata.php:330
+#: /var/www/Coral/management/ajax_htmldata.php:1071
 #: /var/www/Coral/management/ajax_htmldata.php:1128
+#: /var/www/Coral/management/ajax_htmldata.php:1304
 #: /var/www/Coral/management/ajax_htmldata.php:1338
 #: /var/www/Coral/management/ajax_htmldata.php:1392
 #: /var/www/Coral/management/ajax_htmldata.php:1433
@@ -602,6 +604,11 @@ msgstr " de "
 #: /var/www/Coral/management/ajax_htmldata.php:425
 msgid " Records"
 msgstr " registres"
+
+#: /var/www/Coral/management/ajax_htmldata.php:473
+#: /var/www/Coral/management/index.php:105
+msgid "Category"
+msgstr "Catégorie"
 
 #: /var/www/Coral/management/ajax_htmldata.php:478
 #: /var/www/Coral/management/ajax_htmldata.php:558
@@ -967,10 +974,6 @@ msgstr "Nom (contains)"
 #: /var/www/Coral/management/index.php:61
 msgid "go!"
 msgstr "Valider!"
-
-#: /var/www/Coral/management/index.php:105
-msgid "Category"
-msgstr "Catégorie"
 
 #: /var/www/Coral/management/index.php:108
 msgid "All"
