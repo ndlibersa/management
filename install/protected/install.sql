@@ -1,5 +1,5 @@
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Attachment` (
+CREATE TABLE IF NOT EXISTS `Attachment` (
   `attachmentID` int(10) NOT NULL auto_increment,
   `licenseID` int(10) default NULL,
   `sentDate` date default NULL,
@@ -8,20 +8,20 @@ CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Attachment` (
   KEY `licenseID` (`licenseID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`AttachmentFile` (
+CREATE TABLE IF NOT EXISTS `AttachmentFile` (
   `attachmentFileID` int(10) unsigned NOT NULL auto_increment,
   `attachmentID` int(10) unsigned NOT NULL,
   `attachmentURL` varchar(200) NOT NULL,
   PRIMARY KEY  (`attachmentFileID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Consortium` (
+CREATE TABLE IF NOT EXISTS `Consortium` (
   `consortiumID` int(10) unsigned NOT NULL auto_increment,
   `shortName` tinytext NOT NULL,
   PRIMARY KEY  (`consortiumID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Document` (
+CREATE TABLE IF NOT EXISTS `Document` (
   `documentID` int(10) unsigned NOT NULL auto_increment,
   `shortName` tinytext NOT NULL,
   `documentTypeID` int(10) unsigned NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Document` (
   KEY `parentDocumentID` (`parentDocumentID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`DocumentNote` (
+CREATE TABLE IF NOT EXISTS `DocumentNote` (
   `documentNoteID` int(11) NOT NULL auto_increment,
   `licenseID` int(11) NOT NULL,
   `documentID` int(11) default '0',
@@ -50,19 +50,19 @@ CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`DocumentNote` (
   KEY `documentID` (`documentID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`DocumentNoteType` (
+CREATE TABLE IF NOT EXISTS `DocumentNoteType` (
   `documentNoteTypeID` int(11) NOT NULL auto_increment,
   `shortName` varchar(60) NOT NULL,
   PRIMARY KEY  (`documentNoteTypeID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`DocumentType` (
+CREATE TABLE IF NOT EXISTS `DocumentType` (
   `documentTypeID` int(10) unsigned NOT NULL auto_increment,
   `shortName` tinytext NOT NULL,
   PRIMARY KEY  (`documentTypeID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Expression` (
+CREATE TABLE IF NOT EXISTS `Expression` (
   `expressionID` int(10) unsigned NOT NULL auto_increment,
   `documentID` int(10) unsigned NOT NULL,
   `expressionTypeID` int(10) unsigned NOT NULL,
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Expression` (
   KEY `expressionTypeID` (`expressionTypeID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`ExpressionNote` (
+CREATE TABLE IF NOT EXISTS `ExpressionNote` (
   `expressionNoteID` int(10) NOT NULL auto_increment,
   `expressionID` int(10) default NULL,
   `note` varchar(2000) default NULL,
@@ -85,20 +85,20 @@ CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`ExpressionNote` (
   KEY `expressionID` (`expressionID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`ExpressionQualifierProfile` (
+CREATE TABLE IF NOT EXISTS `ExpressionQualifierProfile` (
   `expressionID` int(10) unsigned NOT NULL,
   `qualifierID` int(10) unsigned NOT NULL,
   PRIMARY KEY  (`expressionID`,`qualifierID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`ExpressionType` (
+CREATE TABLE IF NOT EXISTS `ExpressionType` (
   `expressionTypeID` int(10) unsigned NOT NULL auto_increment,
   `shortName` tinytext NOT NULL,
   `noteType` varchar(45) default NULL,
   PRIMARY KEY  (`expressionTypeID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`License` (
+CREATE TABLE IF NOT EXISTS `License` (
   `licenseID` int(10) unsigned NOT NULL auto_increment,
   `consortiumID` int(10) unsigned default NULL,
   `organizationID` int(10) unsigned default NULL,
@@ -116,19 +116,19 @@ CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`License` (
   KEY `statusID` (`statusID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Organization` (
+CREATE TABLE IF NOT EXISTS `Organization` (
   `organizationID` int(10) unsigned NOT NULL auto_increment,
   `shortName` tinytext NOT NULL,
   PRIMARY KEY  (`organizationID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Privilege` (
+CREATE TABLE IF NOT EXISTS `Privilege` (
   `privilegeID` int(10) unsigned NOT NULL auto_increment,
   `shortName` varchar(50) default NULL,
   PRIMARY KEY  (`privilegeID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Qualifier` (
+CREATE TABLE IF NOT EXISTS `Qualifier` (
   `qualifierID` int(10) unsigned NOT NULL auto_increment,
   `expressionTypeID` int(10) unsigned NOT NULL,
   `shortName` varchar(45) NOT NULL,
@@ -136,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Qualifier` (
   KEY `expressionTypeID` (`expressionTypeID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`SFXProvider` (
+CREATE TABLE IF NOT EXISTS `SFXProvider` (
   `sfxProviderID` int(10) unsigned NOT NULL auto_increment,
   `documentID` int(10) unsigned NOT NULL,
   `shortName` varchar(245) NOT NULL,
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`SFXProvider` (
   KEY `documentID` (`documentID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Signature` (
+CREATE TABLE IF NOT EXISTS `Signature` (
   `signatureID` int(10) unsigned NOT NULL auto_increment,
   `documentID` int(10) unsigned NOT NULL,
   `signatureTypeID` int(10) unsigned NOT NULL,
@@ -155,25 +155,25 @@ CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Signature` (
   KEY `signatureTypeID` (`signatureTypeID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`SignatureType` (
+CREATE TABLE IF NOT EXISTS `SignatureType` (
   `signatureTypeID` int(10) unsigned NOT NULL auto_increment,
   `shortName` tinytext NOT NULL,
   PRIMARY KEY  (`signatureTypeID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Status` (
+CREATE TABLE IF NOT EXISTS `Status` (
   `statusID` int(10) unsigned NOT NULL auto_increment,
   `shortName` varchar(45) NOT NULL,
   PRIMARY KEY  (`statusID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`Type` (
+CREATE TABLE IF NOT EXISTS `Type` (
   `typeID` int(11) NOT NULL auto_increment,
   `shortName` varchar(200) default NULL,
   PRIMARY KEY  (`typeID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`User` (
+CREATE TABLE IF NOT EXISTS `User` (
   `loginID` varchar(50) NOT NULL,
   `lastName` varchar(45) default NULL,
   `firstName` varchar(45) default NULL,
@@ -182,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`User` (
   PRIMARY KEY  (`loginID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `_DATABASE_NAME_`.`license_consortium` (
+CREATE TABLE IF NOT EXISTS `license_consortium` (
   `id` int(11) NOT NULL auto_increment,
   `licenseID` int(11) default NULL,
   `consortiumID` int(11) default NULL,
