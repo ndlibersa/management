@@ -422,14 +422,14 @@ switch ($_GET['action']) {
 			$maxDisplay = 25;
 			
 			$thisPageNum = count($licenseArray) + $pageStart - 1;
-			echo "<span style='font-weight:bold;'>Displaying " . $pageStart . " to " . $thisPageNum . " of " . $totalRecords . " Records</span><br />";
+			echo "<span style='font-weight:bold;' class='display-title'>Displaying " . $pageStart . " to " . $thisPageNum . " of " . $totalRecords . " Records</span><br />";
 
 			//print out page selectors
 			if ($totalRecords > $numberOfRecords){
 				if ($pageStart == "1"){
-					$pagination .= "<span class='smallText'><<</span>&nbsp;";
+					$pagination .= "<span class='smallText'><i class='fa fa-backward'></i></span>&nbsp;";
 				}else{
-					$pagination .= "<a href='javascript:setPageStart(1);'><<</a>&nbsp;";
+					$pagination .= "<a href='javascript:setPageStart(1);'><i class='fa fa-backward'></i></a>&nbsp;";
 				}
         $page = floor($pageStart/$numberOfRecords) + 1;
         //now determine the starting page - we will display 3 prior to the currently selected page
@@ -461,9 +461,9 @@ switch ($_GET['action']) {
 				}
 
 				if ($pageStart == $nextPageStarts){
-					$pagination .= "<span class='smallText'>>></span>&nbsp;";
+					$pagination .= "<span class='smallText'><i class='fa fa-forward'></i></span>&nbsp;";
 				}else{
-					$pagination .= "<a href='javascript:setPageStart(" . $nextPageStarts  .");'>>></a>&nbsp;";
+					$pagination .= "<a href='javascript:setPageStart(" . $nextPageStarts  .");'><i class='fa fa-forward'></i></a>&nbsp;";
 				}
 				echo $pagination;
 			} else {
@@ -473,7 +473,7 @@ switch ($_GET['action']) {
 				echo "<div><b>Category</b>: {$licenseObj->getConsortiumName($consortiumID)}</div><br />";
 			}
 			?>
-			<table class='dataTable' style='width:727px'>
+			<table class='dataTable' style='width:840px'>
 			<tr>
 			<th style="width:60%"><table class='noBorderTable'><tr><td>Name</td><td class='arrow'><a href='javascript:setOrder("L.shortName","asc");'><img src='images/arrowup.gif' border=0></a>&nbsp;<a href='javascript:setOrder("L.shortName","desc");'><img src='images/arrowdown.gif' border=0></a></td></tr></table></th>
 <!--			<th><table class='noBorderTable'><tr><td>Publisher / Provider</td><td class='arrow'><a href='javascript:setOrder("providerName","asc");'><img src='images/arrowup.gif' border=0></a>&nbsp;<a href='javascript:setOrder("providerName","desc");'><img src='images/arrowdown.gif' border=0></a></td></tr></table></th> -->
