@@ -55,7 +55,7 @@ if ($license->shortName){
 <input type='hidden' name='licenseID' id='licenseID' value='<?php echo $license->licenseID; ?>'>
 
 <div style="width: 899px;" id ='div_displayDocuments'>
-	<table cellpadding="0" cellspacing="0" style="width: 100%; table-layout: fixed;">
+	<table cellpadding="0" cellspacing="0" style="table-layout: fixed;">
 		<tr>
 			<td class="sidemenu">
 				<div class="sidemenuselected" style='position: relative; width: 91px'><a href='javascript:void(0)' class='showDocuments'>Documents</a></div>
