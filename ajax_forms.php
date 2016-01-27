@@ -248,7 +248,7 @@ switch ($_GET['action']) {
 				</table>
 				<table style="width:300px;">
 					<tr style="vertical-align:middle;">
-						<td style="padding-top:8px;"><input type='button' value='submit' name='submitLicense' id ='submitLicense'></td>
+						<td style="padding-top:8px;width:60px;"><input type='button' value='submit' name='submitLicense' id ='submitLicense'></td>
 						<td style="padding-top:8px;padding-right:8px;text-align:right;"><input type='button' value='cancel' onclick="tb_remove()"></td>
 					</tr>
 				</table>
@@ -980,7 +980,7 @@ if ($_GET['isArchived'] == 1) {
 		</tr>
 
 		<tr style="vertical-align:middle;">
-		<td style="padding-top:8px;"><input type='button' value='submit' name='submitAttachment' id='submitAttachment'></td>
+		<td style="padding-top:8px;width:60px;"><input type='button' value='submit' name='submitAttachment' id='submitAttachment'></td>
 		<td style="padding-top:8px;padding-right:8px;text-align:right;"><input type='button' value='cancel' onclick="tb_remove();window.parent.updateAttachments();"></td>
 		</tr>
 		</table>
@@ -1062,7 +1062,7 @@ if ($_GET['isArchived'] == 1) {
 				</td>
 			</tr>
 			<tr style="vertical-align:middle;">
-				<td style="padding-top:8px;"><input type='button' value='submit' name='submitNote' id='submitNote' /></td>
+				<td style="padding-top:8px;width:60px;"><input type='button' value='submit' name='submitNote' id='submitNote' /></td>
 				<td style="padding-top:8px;padding-right:8px;text-align:right;"><input type='button' value='cancel' onclick="tb_remove();window.parent.updateNotes();"></td>
 			</tr>
 		</table>

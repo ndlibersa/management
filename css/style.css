@@ -40,14 +40,12 @@ body {
 
 .footer {
 	height: 3em;
-	font-size:80%;
-	color: #4d4d4d;
-	text-align:center;
-	/*-- width: 100%; --*/
-	/*-*/width: 1024px;
-	position: absolute;
+	font-size: 80%;
+	text-align: center;
+	/*-*/width: 100%;
+	font-style: italic;
+	text-align: center;
 }
-
 
 a {
 	color: #4d4d4d;
@@ -1388,9 +1386,8 @@ div#TB_window {
 	border: none;
 	padding: 5px 10px;
 	text-transform: capitalize;
-	margin-left: 15px;
-	position: relative;
-	left: -160px;
+	margin-left: 5px;
+	float: left;
 }
 
 #div_licenseForm input[value=cancel]:hover {
@@ -1510,10 +1507,6 @@ a.showDocuments:before {
 
 /*--- New Note Modal ---*/
 
-#noteForm .thickboxTable tr:nth-child(n+2) td {
-	padding-left: 10px;
-}
-
 #noteForm #span_newNoteType {
 	display: block;
 	text-transform: capitalize;
@@ -1542,9 +1535,6 @@ a.showDocuments:before {
 	border: none;
 	padding: 5px 10px;
 	text-transform: capitalize;
-	margin-left: 15px;
-	position: relative;
-	left: -15px;
 }
 
 #noteForm input#submitNote:hover {
@@ -1560,9 +1550,8 @@ a.showDocuments:before {
 	border: none;
 	padding: 5px 10px;
 	text-transform: capitalize;
-	margin-left: 15px;
-	position: relative;
-	left: -245px;
+	margin-left: 5px;
+	float: left;
 }
 
 #noteForm input[value=cancel]:hover {
@@ -1676,8 +1665,7 @@ a.showDocuments:before {
 	padding: 5px 10px;
 	text-transform: capitalize;
 	float: left;
-	position: relative;
-	left: -118px;
+	margin-left: 5px;
 }
 
 #attachmentForm input[value=cancel]:hover {
@@ -1697,10 +1685,6 @@ a.showDocuments:before {
 
 #attachmentForm input#submitAttachment:hover {
 	cursor: pointer;
-}
-
-#attachmentForm .thickboxTable tr:nth-child(n+2) td {
-	padding-left: 10px;
 }
 
 /*--- Control Documents Table ---*/
@@ -1777,3 +1761,37 @@ a.showDocuments:before {
 	cursor: pointer;
 }
 
+/*--- Capitalize Links ---*/
+
+div#div_licenseHead a {
+	text-transform: capitalize;
+}
+
+div#div_displayDocuments a {
+	text-transform: capitalize;
+}
+
+div#div_displayAttachments a {
+	text-transform: capitalize;
+}
+
+#div_User a {
+	text-transform: capitalize;
+}
+
+#div_DocumentType a {
+	text-transform: capitalize;
+}
+
+#div_DocumentNoteType a {
+	text-transform: capitalize;
+}
+
+#div_Consortium a {
+	text-transform: capitalize;
+}
+
+#sidebar-link-bottom {
+	padding: 10px;
+	float: left;
+}
