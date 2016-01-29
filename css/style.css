@@ -1795,3 +1795,9 @@ div#div_displayAttachments a {
 	padding: 10px;
 	float: left;
 }
+
+/*--- Left Align Table Header Text ---*/
+
+table.dataTable th {
+	text-align: left;
+}
