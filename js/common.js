@@ -18,16 +18,16 @@
 
 //image preloader
 (function($) {
-  var cache = [];
-  // Arguments are image paths relative to the current page.
-  $.preLoadImages = function() {
-    var args_len = arguments.length;
-    for (var i = args_len; i--;) {
-      var cacheImage = document.createElement('img');
-      cacheImage.src = arguments[i];
-      cache.push(cacheImage);
-    }
-  }
+	var cache = [];
+	// Arguments are image paths relative to the current page.
+	$.preLoadImages = function() {
+		var args_len = arguments.length;
+		for (var i = args_len; i--;) {
+			var cacheImage = document.createElement('img');
+			cacheImage.src = arguments[i];
+			cache.push(cacheImage);
+		}
+	}
 })(jQuery)
 
 
@@ -77,7 +77,7 @@ $(function(){
 			}, function () {
 			$('.coraldropdown:eq(0)', this).slideUp(100);
 		});
-	 });	 
+	 });
 });
 
 function loadDatePicker() {
@@ -125,11 +125,11 @@ function validateRequired(field,alerttxt){
 
 
 function validateDate(field,alerttxt) {
-     $("#span_error_" + field).html('');
-     sDate =$("#" + field).val(); 
-   
-     if (sDate){
-   
+			$("#span_error_" + field).html('');
+			sDate =$("#" + field).val();
+		
+			if (sDate){
+		
 	   var re = /^\d{1,2}\/\d{1,2}\/\d{4}$/
 	   if (re.test(sDate)) {
 	      var dArr = sDate.split("/");
@@ -137,7 +137,7 @@ function validateDate(field,alerttxt) {
 
 	      if (!(d.getMonth() + 1 == dArr[0] && d.getDate() == dArr[1] && d.getFullYear() == dArr[2])) {
 		$("#span_error_" + field).html(alerttxt);
-	       $("#" + field).focus();   
+	       $("#" + field).focus();
 		return false;
 	      }else{
 		return true;
@@ -145,70 +145,70 @@ function validateDate(field,alerttxt) {
 
 	   } else {
 	      $("#span_error_" + field).html(alerttxt);
-	      $("#" + field).focus();   
+	      $("#" + field).focus();
 	      return false;
 	   }
-     }
-     
-     return true;
+			}
+			
+			return true;
 }
 
 
 
-function thickboxResize() {  
-  
-    var boundHeight = 530; // minimum height  
-    var boundWidth = 400; // minimum width  
-  
-    var viewportWidth = (self.innerWidth || (document.documentElement.clientWidth || (document.body.clientWidth || 0)))  
-    var viewportHeight =(self.innerHeight || (document.documentElement.clientHeight || (document.body.clientHeight || 0)))  
- 
-    //only do this for extremely high resolutions
-    if (viewportWidth > 1300){
-  
-	    $('a.thickbox').each(function(){  
-		var text = $(this).attr("href");  
+function thickboxResize() {
+	
+		var boundHeight = 530; // minimum height
+		var boundWidth = 400; // minimum width
+	
+		var viewportWidth = (self.innerWidth || (document.documentElement.clientWidth || (document.body.clientWidth || 0)))
+		var viewportHeight =(self.innerHeight || (document.documentElement.clientHeight || (document.body.clientHeight || 0)))
+	
+		//only do this for extremely high resolutions
+		if (viewportWidth > 1300){
+	
+	    $('a.thickbox').each(function(){
+		var text = $(this).attr("href");
 
-		if ( viewportHeight < boundHeight  || viewportHeight < boundWidth)  
-		{  
-		    // adjust the height  
-		    text = text.replace(/height=[0-9]*/,'height=' + Math.round(viewportHeight * .8));  
-		    // adjust the width  
-		    text = text.replace(/width=[0-9]*/,'width=' + Math.round(viewportWidth * .8));  
-		}  
-		else   
-		{  
-		    // constrain the height by defined bounds  
-		    text = text.replace(/height=[0-9]*/,'height=' + boundHeight);  
-		    // constrain the width by defined bounds  
-		    text = text.replace(/width=[0-9]*/,'width=' + boundWidth);  
-		}  
+		if ( viewportHeight < boundHeight  || viewportHeight < boundWidth)
+		{
+		    // adjust the height
+		    text = text.replace(/height=[0-9]*/,'height=' + Math.round(viewportHeight * .8));
+		    // adjust the width
+		    text = text.replace(/width=[0-9]*/,'width=' + Math.round(viewportWidth * .8));
+		}
+		else
+		{
+		    // constrain the height by defined bounds
+		    text = text.replace(/height=[0-9]*/,'height=' + boundHeight);
+		    // constrain the width by defined bounds
+		    text = text.replace(/width=[0-9]*/,'width=' + boundWidth);
+		}
 
-		$(this).attr("href", text);  
+		$(this).attr("href", text);
 	    });
 	    
-     }
-}  
-  
+			}
+}
+	
 
-$(window).bind('load', thickboxResize );  
-$(window).bind('resize', thickboxResize );  
+$(window).bind('load', thickboxResize );
+$(window).bind('resize', thickboxResize );
 
 
 
 function postwith (to,p) {
-  var myForm = document.createElement("form");
-  myForm.method="post" ;
-  myForm.action = to ;
-  for (var k in p) {
-    var myInput = document.createElement("input") ;
-    myInput.setAttribute("name", k) ;
-    myInput.setAttribute("value", p[k]);
-    myForm.appendChild(myInput) ;
-  }
-  document.body.appendChild(myForm) ;
-  myForm.submit() ;
-  document.body.removeChild(myForm) ;
+	var myForm = document.createElement("form");
+	myForm.method="post" ;
+	myForm.action = to ;
+	for (var k in p) {
+		var myInput = document.createElement("input") ;
+		myInput.setAttribute("name", k) ;
+		myInput.setAttribute("value", p[k]);
+		myForm.appendChild(myInput) ;
+	}
+	document.body.appendChild(myForm) ;
+	myForm.submit() ;
+	document.body.removeChild(myForm) ;
 }
 
 
@@ -219,23 +219,23 @@ function postwith (to,p) {
 
 if (!Array.prototype.indexOf)
 {
-  Array.prototype.indexOf = function(elt /*, from*/)
-  {
-    var len = this.length;
+	Array.prototype.indexOf = function(elt /*, from*/)
+	{
+		var len = this.length;
 
-    var from = Number(arguments[1]) || 0;
-    from = (from < 0)
-         ? Math.ceil(from)
-         : Math.floor(from);
-    if (from < 0)
-      from += len;
+		var from = Number(arguments[1]) || 0;
+		from = (from < 0)
+					? Math.ceil(from)
+					: Math.floor(from);
+		if (from < 0)
+			from += len;
 
-    for (; from < len; from++)
-    {
-      if (from in this &&
-          this[from] === elt)
-        return from;
-    }
-    return -1;
-  };
+		for (; from < len; from++)
+		{
+			if (from in this &&
+					this[from] === elt)
+				return from;
+		}
+		return -1;
+	};
 }

@@ -31,9 +31,9 @@ include_once 'user.php';
 switch ($_GET['action']) {
 
 	//form to edit license record
-    case 'getLicenseForm':
+		case 'getLicenseForm':
 		if (isset($_GET['licenseID'])) {
-			$licenseID = $_GET['licenseID']; 
+			$licenseID = $_GET['licenseID'];
 		} else {
 			$licenseID = '';
 		}
@@ -74,8 +74,8 @@ switch ($_GET['action']) {
 							<textarea name='licenseDescription' id = 'licenseDescription' cols='38' rows='2'><?php echo $license->description; ?></textarea>
 						</td>
 					</tr>
-					<input type='hidden' id='licenseOrganizationID' name='licenseOrganizationID' value='<?php echo '0'; ?>'>		
-					<input type='hidden' id='organizationName' name='organizationName' value='<?php echo 'Default Internal'; ?>'>		
+					<input type='hidden' id='licenseOrganizationID' name='licenseOrganizationID' value='<?php echo '0'; ?>'>
+					<input type='hidden' id='organizationName' name='organizationName' value='<?php echo 'Default Internal'; ?>'>
 <!--
 		<tr>
 		<td colspan='2'><label for="licenseOrganizationID" class="formText">Publisher / Provider:</label>  <span id='span_error_organizationName' class='errorText'></span><br />
@@ -86,10 +86,10 @@ switch ($_GET['action']) {
 		</td>
 		</tr>
 -->
-<?php 
+<?php
 		//if not editing
 		if (!$licenseID){
-?>		
+?>
 					<tr>
 						<td colspan='2'>
 							<label for="documentType" class="formText">Type:</label><br />
@@ -121,14 +121,14 @@ switch ($_GET['action']) {
 							<div><input class="date-pick" type='input' id='revisionDate' name='revisionDate' value="<?php echo date("m/d/Y");?>" /></div>
 						</td>
 					</tr>
-<?php 
+<?php
 		//if editing
 		} else {
 ?>
 					<input type='hidden' id='docTypeID' name='docTypeID' value='<?php echo $license->typeID; ?>'>
-<?php		
+<?php
 		}
-?>		
+?>
 		
 					<tr>
 						<td colspan='2'>
@@ -172,12 +172,12 @@ switch ($_GET['action']) {
 ?>
 							<br />
 							<span id='span_newConsortium'><a href="javascript:newConsortium();">add category</a></span>
-<?php 	
-		} 
+<?php
+		}
 ?>
 
 						</td>
-					</tr>	
+					</tr>
 <?php
 		//if editing
 		if ($licenseID) {
@@ -191,7 +191,7 @@ switch ($_GET['action']) {
 							<label for="uploadDocument" class="formText">File:</label>
 <?php
 			echo "			<div style=\"display:inline;\" id='div_uploadFile'><input type='file' name='upload_button' id='upload_button'></div>";
-	}		
+	}
 ?>
 							<span id='div_file_message'></span>
 							<span id='span_error_licenseuploadDocument' class='errorText'></span>
@@ -248,7 +248,7 @@ switch ($_GET['action']) {
 				</table>
 				<table style="width:300px;">
 					<tr style="vertical-align:middle;">
-						<td style="padding-top:8px;"><input type='button' value='submit' name='submitLicense' id ='submitLicense'></td>
+						<td style="padding-top:8px;width:60px;"><input type='button' value='submit' name='submitLicense' id ='submitLicense'></td>
 						<td style="padding-top:8px;padding-right:8px;text-align:right;"><input type='button' value='cancel' onclick="tb_remove()"></td>
 					</tr>
 				</table>
@@ -259,7 +259,7 @@ switch ($_GET['action']) {
 <?php
 	break;
 	//form to edit/upload documents
-    case 'getUploadDocument':
+		case 'getUploadDocument':
 
 		//document ID passed in for updates only
 		if (isset($_GET['documentID'])) $documentID = $_GET['documentID']; else $documentID = '';
@@ -293,7 +293,7 @@ switch ($_GET['action']) {
 			$archiveChecked = '';
 		}
 
- 		?>
+			?>
 		<div id='div_uploadDoc'>
 		<form id="uploadDoc" action="ajax_processing.php?action=submitDocument" method="POST" enctype="multipart/form-data">
 		<input type='hidden' id='licenseID' name='licenseID' value='<?php echo $licenseID; ?>'>
@@ -371,7 +371,7 @@ switch ($_GET['action']) {
 		</td>
 		</tr>
 
--->		
+-->
 		
 		<tr>
 		<td style='text-align:right;vertical-align:top;'><label for="shortName" class="formText">Name:</label><br /><span id='span_error_shortName' class='errorText'></span></td>
@@ -431,7 +431,7 @@ if ($_GET['isArchived'] == 1) {
 
 		<?php
 
-        break;
+				break;
 
 
 
@@ -440,7 +440,7 @@ if ($_GET['isArchived'] == 1) {
 	//form to prompt for date for archiving documents
 	//Jan 2010, form no longer used, archive checkbox on document form instead
 	//leaving in in case we revert
-    case 'getArchiveDocumentForm':
+		case 'getArchiveDocumentForm':
 
 		if (isset($_GET['documentID'])) $documentID = $_GET['documentID']; else $documentID = '';
 
@@ -465,13 +465,13 @@ if ($_GET['isArchived'] == 1) {
 
 		<?php
 
-       break;
+				break;
 
 
 
 
 	//form to add/edit sfx or other terms tool provider links
-    case 'getSFXForm':
+		case 'getSFXForm':
 
 		//sfx provider id passed in for updates
 		$licenseID = $_GET['licenseID'];
@@ -531,13 +531,13 @@ if ($_GET['isArchived'] == 1) {
 
 		<?php
 
-       break;
+				break;
 
 
 
 
 	//form to add/edit signatures
-    case 'getSignatureForm':
+		case 'getSignatureForm':
 
 		//signature passed in for updates
 		$documentID = $_GET['documentID'];
@@ -649,11 +649,11 @@ if ($_GET['isArchived'] == 1) {
 
 		<?php
 
-       break;
+				break;
 
 
 	//form to add/edit expressions
-    case 'getExpressionForm':
+		case 'getExpressionForm':
 
 		//expression ID sent in for updates
 		if (isset($_GET['expressionID'])) $expressionID = $_GET['expressionID']; else $expressionID = '';
@@ -799,11 +799,11 @@ if ($_GET['isArchived'] == 1) {
 
 		<?php
 
-        break;
+				break;
 
 
 	//form to add / edit expression notes (internal and display notes)
-    case 'getExpressionNotesForm':
+		case 'getExpressionNotesForm':
 
 		$expressionID = $_GET['expressionID'];
 		if (isset($_GET['expressionNoteID'])) $expressionNoteID = $_GET['expressionNoteID']; else $expressionNoteID = '';
@@ -912,12 +912,12 @@ if ($_GET['isArchived'] == 1) {
 
 		<?php
 
-       break;
+				break;
 
 
 
 	//form to add/edit attachment form
-    case 'getAttachmentForm':
+		case 'getAttachmentForm':
 
 		//attachment ID sent in for updates
 		if (isset($_GET['attachmentID'])) $attachmentID = $_GET['attachmentID']; else $attachmentID = '';
@@ -980,7 +980,7 @@ if ($_GET['isArchived'] == 1) {
 		</tr>
 
 		<tr style="vertical-align:middle;">
-		<td style="padding-top:8px;"><input type='button' value='submit' name='submitAttachment' id='submitAttachment'></td>
+		<td style="padding-top:8px;width:60px;"><input type='button' value='submit' name='submitAttachment' id='submitAttachment'></td>
 		<td style="padding-top:8px;padding-right:8px;text-align:right;"><input type='button' value='cancel' onclick="tb_remove();window.parent.updateAttachments();"></td>
 		</tr>
 		</table>
@@ -994,13 +994,13 @@ if ($_GET['isArchived'] == 1) {
 
 		<?php
 
-        break;
+				break;
 
 	//form to add/edit notes
-    case 'getNoteForm':
+		case 'getNoteForm':
 		//note ID sent in for updates
 		if (isset($_GET['documentNoteID'])) {
-			 $documentNoteID = $_GET['documentNoteID']; 
+			 $documentNoteID = $_GET['documentNoteID'];
 		} else {
 			 $documentNoteID = '';
 		}
@@ -1062,7 +1062,7 @@ if ($_GET['isArchived'] == 1) {
 				</td>
 			</tr>
 			<tr style="vertical-align:middle;">
-				<td style="padding-top:8px;"><input type='button' value='submit' name='submitNote' id='submitNote' /></td>
+				<td style="padding-top:8px;width:60px;"><input type='button' value='submit' name='submitNote' id='submitNote' /></td>
 				<td style="padding-top:8px;padding-right:8px;text-align:right;"><input type='button' value='cancel' onclick="tb_remove();window.parent.updateNotes();"></td>
 			</tr>
 		</table>
@@ -1076,7 +1076,7 @@ if ($_GET['isArchived'] == 1) {
 
 		<?php
 
-        break;
+				break;
 
 
 	//generic form for administering lookup tables on the admin page (these tables simply have an ID and shortName attributes)
@@ -1091,19 +1091,21 @@ if ($_GET['isArchived'] == 1) {
 		<div id='div_updateForm'>
 		<table class="thickboxTable" style="width:200px;">
 		<tr>
-		<td colspan='2'><br /><span class='headerText'>Update</span><br /></td>
+		<td colspan='3'><br /><span class='headerText'>Update</span><br /></td>
 		</tr>
 		<tr>
-		<td>
+
+		</tr>
+		<tr>
+		
+				<td>
 		<?php
-		echo "<input type='text' id='updateVal' name='updateVal' value='" . $instance->shortName . "' style='width:190px;'/></td><td><a href='javascript:updateData(\"" . $className . "\", \"" . $updateID . "\");'>update</a>";
+		echo "<input type='text' id='updateVal' name='updateVal' value='" . $instance->shortName . "' style='width:190px;'/></td><td><a href='javascript:updateData(\"" . $className . "\", \"" . $updateID . "\");' id='updateButton'>update</a>";
 		?>
 
 
 		</td>
-		</tr>
-		<tr>
-		<td colspan='2'><p><a href='#' onclick='window.parent.tb_remove(); return false'>close</a></td>
+		<td colspan='2'><p><a href='#' onclick='window.parent.tb_remove(); return false' id='closeButton'>close</a></td>
 		</tr>
 		</table>
 		</div>
@@ -1116,9 +1118,9 @@ if ($_GET['isArchived'] == 1) {
 				   if(e.keyCode == 13) {
 					   updateData("<?php echo $className; ?>", "<?php echo $updateID; ?>");
 				   }
-        	});
+					});
 
-        </script>
+				</script>
 
 
 		<?php
@@ -1141,13 +1143,13 @@ if ($_GET['isArchived'] == 1) {
 		$util = new Utility();
 
 		?>
-		<div id='div_updateForm'>
+		<div id='div_updateForm'><br />
 		<table class="thickboxTable" style="width:285px;padding:2px;">
-		<tr><td colspan='3'><span class='headerText'><?php echo $update; ?> User</span><br /><br /></td></tr>
-		<tr><td colspan='2' style='width:135px;'><label for='loginID'><b>Login ID</b></label</td><td><input type='text' id='loginID' name='loginID' value='<?php echo $loginID; ?>' style='width:140px;' /></td></tr>
-		<tr><td colspan='2'><label for='firstName'><b>First Name</b></label</td><td><input type='text' id='firstName' name='firstName' value="<?php if (isset($updateUser)) echo $updateUser->firstName; ?>" style='width:140px;' /></td></tr>
-		<tr><td colspan='2'><label for='lastName'><b>Last Name</b></label</td><td><input type='text' id='lastName' name='lastName' value="<?php if (isset($updateUser)) echo $updateUser->lastName; ?>" style='width:140px;' /></td></tr>
-		<tr><td><label for='privilegeID'><b>Privilege</b></label</td>
+			<tr><td colspan='3'><span class='headerText'><?php echo $update; ?> User</span><br /><br /></td></tr>
+			<tr><td colspan='2' style='width:135px;'><label for='loginID'><b>Login ID</b></label></td><td><input type='text' id='loginID' name='loginID' value='<?php echo $loginID; ?>' style='width:140px;' /></td></tr>
+			<tr><td colspan='2'><label for='firstName'><b>First Name</b></label></td><td><input type='text' id='firstName' name='firstName' value="<?php if (isset($updateUser)) echo $updateUser->firstName; ?>" style='width:140px;' /></td></tr>
+			<tr><td colspan='2'><label for='lastName'><b>Last Name</b></label></td><td><input type='text' id='lastName' name='lastName' value="<?php if (isset($updateUser)) echo $updateUser->lastName; ?>" style='width:140px;' /></td></tr>
+			<tr><td><label for='privilegeID'><b>Privilege</b></label></td>
 		<td>
 				<fieldset id="fieldsetPrivilege">
 				<a title = "Add/Edit users can add, edit, or remove licenses and associated fields<br /><br />Admin users have access to the Admin page and the SFX tab.<br /><br />View only users can view all license information, including the license pdf" href=""><img src='images/help.gif'></a>
@@ -1182,7 +1184,7 @@ if ($_GET['isArchived'] == 1) {
 		//if not configured to use SFX, hide the Terms Tool Report
 		if ($util->useTermsTool()) {
 		?>
-		<tr><td><label for='emailAddressForTermsTool'><b>Terms Tool Email</b></label</td>
+			<tr><td><label for='emailAddressForTermsTool'><b>Terms Tool Email</b></label></td>
 		<td>
 				<fieldset id="fieldsetEmail">
 				<a title = "Enter email address if you wish this user to receive email notifications when the terms tool box is checked on the Expressions tab.<br /><br />Leave this field blank if the user shouldn't receive emails." href=""><img src='images/help.gif'></a>
@@ -1227,8 +1229,8 @@ if ($_GET['isArchived'] == 1) {
 		<input type='hidden' name='expressionTypeID' id='expressionTypeID' value='<?php echo $expressionTypeID; ?>' />
 		<table class="thickboxTable" style="width:260px;padding:2px;">
 		<tr><td colspan='2'><span class='headerText'><?php echo $update; ?> Expression Type</span><br /><br /></td></tr>
-		<tr><td><label for='shortName'><b>Expression Type</b></label</td><td><input type='text' id='shortName' name='shortName' value='<?php if (isset($expressionType)) echo $expressionType->shortName; ?>' style='width:130px;'/></td></tr>
-		<tr><td><label for='noteType'><b>Note Type</b></label</td>
+			<tr><td><label for='shortName'><b>Expression Type</b></label></td><td><input type='text' id='shortName' name='shortName' value='<?php if (isset($expressionType)) echo $expressionType->shortName; ?>' style='width:130px;'/></td></tr>
+			<tr><td><label for='noteType'><b>Note Type</b></label></td>
 		<td>
 		<select name='noteType' id='noteType' style='width:135px'>
 		<option value='Internal' <?php if ((isset($expressionType)) && ($expressionType->noteType == 'Internal')) echo "selected"; ?>>Internal</option>
@@ -1273,7 +1275,7 @@ if ($_GET['isArchived'] == 1) {
 		<table class="thickboxTable" style="width:290px;padding:2px;">
 		<tr><td colspan='2'><span class='headerText'><?php echo $update; ?> Qualifier</span><br /><br /></td></tr>
 
-		<tr><td><label for='expressionTypeID'><b>For Expression Type</b></label</td>
+			<tr><td><label for='expressionTypeID'><b>For Expression Type</b></label></td>
 		<td>
 		<select name='expressionTypeID' id='expressionTypeID' style='width:155px'>
 		<?php
@@ -1294,7 +1296,7 @@ if ($_GET['isArchived'] == 1) {
 		</td>
 		</tr>
 
-		<tr><td><label for='shortName'><b>Qualifier</b></label</td><td><input type='text' id='shortName' name='shortName' value='<?php if (isset($qualifier)) echo $qualifier->shortName; ?>' style='width:150px;'/></td></tr>
+			<tr><td><label for='shortName'><b>Qualifier</b></label></td><td><input type='text' id='shortName' name='shortName' value='<?php if (isset($qualifier)) echo $qualifier->shortName; ?>' style='width:150px;'/></td></tr>
 
 		<tr>
 		<td style="padding-top:18px;"><input type='button' value='<?php echo $update; ?>' onclick='javascript:window.parent.submitQualifier();' id='submitQualifier'></td>
@@ -1311,9 +1313,9 @@ if ($_GET['isArchived'] == 1) {
 				   if(e.keyCode == 13) {
 					   submitQualifier();
 				   }
-        	});
+					});
 
-        </script>
+				</script>
 
 		<?php
 
@@ -1321,8 +1323,8 @@ if ($_GET['isArchived'] == 1) {
 
 
 	default:
-       echo "Action " . $action . " not set up!";
-       break;
+				echo "Action " . $action . " not set up!";
+				break;
 
 
 }

@@ -55,7 +55,7 @@ if ($license->shortName){
 <input type='hidden' name='licenseID' id='licenseID' value='<?php echo $license->licenseID; ?>'>
 
 <div style="width: 899px;" id ='div_displayDocuments'>
-	<table cellpadding="0" cellspacing="0" style="width: 100%; table-layout: fixed;">
+	<table cellpadding="0" cellspacing="0">
 		<tr>
 			<td class="sidemenu">
 				<div class="sidemenuselected" style='position: relative; width: 91px'><a href='javascript:void(0)' class='showDocuments'>Documents</a></div>
@@ -81,7 +81,7 @@ if ($license->shortName){
 
 
 <div id ='div_displayExpressions' style='display:none;width:899px;'>
-	<table cellpadding="0" cellspacing="0" style="width: 100%; table-layout: fixed;">
+	<table cellpadding="0" cellspacing="0" style="width: 100%;">
 		<tr>
 			<td class="sidemenu">
 				<div class="sidemenuunselected"><a href='javascript:void(0)' class='showDocuments'>Documents</a></div>
@@ -101,7 +101,7 @@ if ($license->shortName){
 
 
 <div id ='div_displaySFXProviders' style='display:none;width:899px;'>
-	<table cellpadding="0" cellspacing="0" style="width: 100%; table-layout: fixed;">
+	<table cellpadding="0" cellspacing="0" style="width: 100%;">
 		<tr>
 			<td class="sidemenu">
 				<div class="sidemenuunselected"><a href='javascript:void(0)' class='showDocuments'>Documents</a></div>
@@ -120,7 +120,7 @@ if ($license->shortName){
 
 
 <div id ='div_displayAttachments' style='display:none;width:899px;'>
-	<table cellpadding="0" cellspacing="0" style="width: 100%; table-layout: fixed;">
+	<table cellpadding="0" cellspacing="0" style="width: 100%;">
 		<tr>
 			<td class="sidemenu">
 				<div class="sidemenuunselected"><a href='javascript:void(0)' class='showDocuments'>Documents</a></div>

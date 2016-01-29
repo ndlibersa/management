@@ -65,7 +65,7 @@ $_SESSION['ref_script']=$currentPage;
 
 	<input type='hidden' name='organizationID' id='organizationID' value='' />
 
-<!--	
+<!--
 	<tr>
 	<td class='searchRow'><label for='organizationID'><b>Publisher/Provider</b></label>
 	<br />
@@ -99,7 +99,7 @@ $_SESSION['ref_script']=$currentPage;
 	</td>
 	</tr>
 
--->	
+-->
 
 	<tr>
 	<td class='searchRow'><label for='consortium'><b>Category</b></label>
@@ -125,7 +125,7 @@ $_SESSION['ref_script']=$currentPage;
 	</tr>
 
 	
-	<input type='hidden' name='statusID' id='statusID' value='' />	
+	<input type='hidden' name='statusID' id='statusID' value='' />
 <!--
 
 	<tr>
@@ -180,7 +180,7 @@ $_SESSION['ref_script']=$currentPage;
 	</tr>
 
 
-	<input type='hidden' name='expressionTypeID' id='expressionTypeID' value='' />	
+	<input type='hidden' name='expressionTypeID' id='expressionTypeID' value='' />
 
 <!--
 
@@ -243,7 +243,7 @@ $_SESSION['ref_script']=$currentPage;
 	</td>
 	</tr>
 	</table>
-	&nbsp;<a href='javascript:void(0)' class='newSearch'>new search</a>
+	&nbsp;<a href='javascript:void(0)' class='newSearch' id='sidebar-link-bottom'>new search</a>
 	<input type='hidden' id='reset' value='<?php echo $reset; ?>'>
 
 </td>
@@ -262,24 +262,24 @@ $_SESSION['ref_script']=$currentPage;
 
 <script type='text/javascript'>
 <?php
-  //used to default to previously selected values when back button is pressed
-  //if the startWith is defined set it so that it will default to the first letter picked
-  if (($_SESSION['license_startWith']) && ($reset != 'Y')){
+	//used to default to previously selected values when back button is pressed
+	//if the startWith is defined set it so that it will default to the first letter picked
+	if (($_SESSION['license_startWith']) && ($reset != 'Y')){
 	  echo "startWith = '" . $_SESSION['license_startWith'] . "';";
 	  echo "$(\"#span_letter_" . $_SESSION['license_startWith'] . "\").removeClass('searchLetter').addClass('searchLetterSelected');";
-  }
+	}
 
-  if (($_SESSION['license_pageStart']) && ($reset != 'Y')){
+	if (($_SESSION['license_pageStart']) && ($reset != 'Y')){
 	  echo "pageStart = '" . $_SESSION['license_pageStart'] . "';";
-  }
+	}
 
-  if (($_SESSION['license_numberOfRecords']) && ($reset != 'Y')){
+	if (($_SESSION['license_numberOfRecords']) && ($reset != 'Y')){
 	  echo "numberOfRecords = '" . $_SESSION['license_numberOfRecords'] . "';";
-  }
+	}
 
-  if (($_SESSION['license_orderBy']) && ($reset != 'Y')){
+	if (($_SESSION['license_orderBy']) && ($reset != 'Y')){
 	  echo "orderBy = \"" . $_SESSION['license_orderBy'] . "\";";
-  }
+	}
 
 
 </script>
