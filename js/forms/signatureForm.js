@@ -39,7 +39,7 @@ $(function(){
 
 
   function log(event, data, formatted) {
-	$("<li>").html( !data ? "No match!" : "Selected: " + formatted).html("#result");
+	$("<li>").html( !data ? _("No match!") : _("Selected: ") + formatted).html("#result");
 
   }
 
@@ -82,7 +82,7 @@ function updateSignatureForm(signatureID){
 
 
 function removeSignature(signatureID){
-  if (confirm("Do you really want to delete this signature?") == true) {
+  if (confirm(_("Do you really want to delete this signature?")) == true) {
 	  $.ajax({
 		 type:       "GET",
 		 url:        "ajax_processing.php",
@@ -101,7 +101,7 @@ function removeSignature(signatureID){
 
 
 function newSignatureType(){
-  $('#span_newSignatureType').html("<input type='text' name='newSignatureType' id='newSignatureType' style='width:80px;' />  <a href='javascript:addSignatureType();'>add</a>");
+  $('#span_newSignatureType').html("<input type='text' name='newSignatureType' id='newSignatureType' style='width:80px;' />  <a href='javascript:addSignatureType();'>"+_("add")+"</a>");
 }
 
 
@@ -112,7 +112,7 @@ function addSignatureType(){
 	 url:        "ajax_processing.php?action=addSignatureType",
 	 cache:      false,
 	 data:       { shortName: $("#newSignatureType").val() },
-	 success:    function(html) { $('#span_signatureType').html(html); $('#span_newSignatureType').html("<font color='red'>SignatureType has been added</font>"); }
+	 success:    function(html) { $('#span_signatureType').html(html); $('#span_newSignatureType').html("<font color='red'>"+_("SignatureType has been added")+"</font>"); }
  });
 }
 

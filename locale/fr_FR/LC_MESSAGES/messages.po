@@ -1,0 +1,1451 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: messages\n"
+"POT-Creation-Date: 2015-05-26 17:26+0100\n"
+"PO-Revision-Date: 2015-05-26 17:26+0100\n"
+"Last-Translator: Cesar <hernandez.antonio.cesar19@gmail.com>\n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: /var/www/Coral/management\n"
+
+#: /var/www/Coral/management/LangCodes.php:17
+msgid "French"
+msgstr "Français"
+
+#: /var/www/Coral/management/LangCodes.php:18
+msgid "English"
+msgstr "Anglais"
+
+#: /var/www/Coral/management/admin.php:22
+msgid "Administration"
+msgstr "Administration"
+
+#: /var/www/Coral/management/admin.php:35
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: /var/www/Coral/management/admin.php:36
+msgid "add new user"
+msgstr "Ajouter un nouveau utilisateur"
+
+#: /var/www/Coral/management/admin.php:39
+#: /var/www/Coral/management/admin.php:53
+#: /var/www/Coral/management/admin.php:67
+#: /var/www/Coral/management/admin.php:155
+#: /var/www/Coral/management/in_progress.php:38
+#: /var/www/Coral/management/license.php:69
+#: /var/www/Coral/management/license.php:95
+#: /var/www/Coral/management/license.php:114
+#: /var/www/Coral/management/license.php:134
+msgid "Loading..."
+msgstr "Chargement..."
+
+#: /var/www/Coral/management/admin.php:49
+msgid "Document Types"
+msgstr "Type de document"
+
+#: /var/www/Coral/management/admin.php:50
+msgid "add new document type"
+msgstr "Ajouter un type de document"
+
+#: /var/www/Coral/management/admin.php:63
+msgid "Note Types"
+msgstr "Type de notes:"
+
+#: /var/www/Coral/management/admin.php:64
+msgid "add new note type"
+msgstr "Ajouter nouveau type de note"
+
+#: /var/www/Coral/management/admin.php:151
+msgid "Categories"
+msgstr "Catégories"
+
+#: /var/www/Coral/management/admin.php:152
+msgid "add new category"
+msgstr "Ajouter nouvelle catégorie"
+
+#: /var/www/Coral/management/admin.php:182
+msgid "You don't have permission to access this page"
+msgstr "Vous n'avez pas la permission d'accéder dans cette page"
+
+#: /var/www/Coral/management/admin/classes/common/DBService.php:40
+msgid "There was a problem with the database: "
+msgstr "Il y avait un problème avec la base de données: "
+
+#: /var/www/Coral/management/admin/classes/common/Object.php:63
+#: /var/www/Coral/management/admin/classes/common/Object.php:72
+msgid "Cannot set value for undefined key ("
+msgstr "Ne pouvait pas asigner un valeur indefini ("
+
+#: /var/www/Coral/management/ajax_forms.php:59
+msgid "Edit "
+msgstr "Modifier le "
+
+#: /var/www/Coral/management/ajax_forms.php:59
+msgid "New "
+msgstr "Nouveau "
+
+#: /var/www/Coral/management/ajax_forms.php:59
+#: /var/www/Coral/management/ajax_htmldata.php:200
+msgid "Document"
+msgstr "Document"
+
+#: /var/www/Coral/management/ajax_forms.php:65
+#: /var/www/Coral/management/ajax_forms.php:377
+msgid "Name:"
+msgstr "Nom:"
+
+#: /var/www/Coral/management/ajax_forms.php:72
+msgid "Description:"
+msgstr "Description:"
+
+#: /var/www/Coral/management/ajax_forms.php:95
+msgid "Type:"
+msgstr "Type:"
+
+#: /var/www/Coral/management/ajax_forms.php:114
+msgid "add type"
+msgstr "Ajouter un type"
+
+#: /var/www/Coral/management/ajax_forms.php:120
+#: /var/www/Coral/management/ajax_forms.php:306
+msgid "Last Document Revision:"
+msgstr "Dernière révision du document: "
+
+#: /var/www/Coral/management/ajax_forms.php:135
+#: /var/www/Coral/management/ajax_htmldata.php:60
+#: /var/www/Coral/management/ajax_htmldata.php:73
+msgid "Categories:"
+msgstr "Catégories:"
+
+#: /var/www/Coral/management/ajax_forms.php:162
+#: /var/www/Coral/management/ajax_htmldata.php:591
+#: /var/www/Coral/management/index.php:95
+msgid ""
+"There was an error processing this request - please verify configuration.ini "
+"is set up for organizations correctly and the database and tables have been "
+"created."
+msgstr ""
+"Il y avait un problème avec la requête, s'il vous plaît verifiez si la "
+"configuration pour les organisations est correcte dans configuration.ini et "
+"les tableaux de la base de données ont été créées."
+
+#: /var/www/Coral/management/ajax_forms.php:174
+msgid "add category"
+msgstr "Ajouter nouvelle catégorie"
+
+#: /var/www/Coral/management/ajax_forms.php:191
+#: /var/www/Coral/management/ajax_forms.php:383
+msgid "File:"
+msgstr "Fichier:"
+
+#: /var/www/Coral/management/ajax_forms.php:201
+#: /var/www/Coral/management/ajax_forms.php:405
+msgid "Archived:"
+msgstr "Archivé:"
+
+#: /var/www/Coral/management/ajax_forms.php:210
+msgid "Add Optional Note"
+msgstr "Ajouter une note optionnelle"
+
+#: /var/www/Coral/management/ajax_forms.php:220
+#: /var/www/Coral/management/ajax_forms.php:1022
+msgid "Note:"
+msgstr "Note:"
+
+#: /var/www/Coral/management/ajax_forms.php:225
+#: /var/www/Coral/management/ajax_forms.php:1026
+msgid "Note Type:"
+msgstr "Type de note:"
+
+#: /var/www/Coral/management/ajax_forms.php:237
+#: /var/www/Coral/management/ajax_forms.php:1042
+msgid "add note type"
+msgstr "Ajouter nouveau type de note"
+
+#: /var/www/Coral/management/ajax_forms.php:251
+#: /var/www/Coral/management/ajax_forms.php:425
+#: /var/www/Coral/management/ajax_forms.php:522
+#: /var/www/Coral/management/ajax_forms.php:792
+#: /var/www/Coral/management/ajax_forms.php:983
+#: /var/www/Coral/management/ajax_forms.php:1065
+msgid "submit"
+msgstr "Confirmer"
+
+#: /var/www/Coral/management/ajax_forms.php:252
+#: /var/www/Coral/management/ajax_forms.php:425
+#: /var/www/Coral/management/ajax_forms.php:523
+#: /var/www/Coral/management/ajax_forms.php:793
+#: /var/www/Coral/management/ajax_forms.php:984
+#: /var/www/Coral/management/ajax_forms.php:1066
+#: /var/www/Coral/management/ajax_forms.php:1199
+#: /var/www/Coral/management/ajax_forms.php:1245
+#: /var/www/Coral/management/ajax_forms.php:1301
+msgid "cancel"
+msgstr "Annuler"
+
+#: /var/www/Coral/management/ajax_forms.php:303
+msgid "Document Upload"
+msgstr "Télécharger un document"
+
+#: /var/www/Coral/management/ajax_forms.php:314
+msgid "Document Type:"
+msgstr "Type de document:"
+
+#: /var/www/Coral/management/ajax_forms.php:335
+msgid "add document type"
+msgstr "Ajouter un type de document"
+
+#: /var/www/Coral/management/ajax_forms.php:389
+msgid "replace with new file"
+msgstr "remplacer avec un nouveau fichier"
+
+#: /var/www/Coral/management/ajax_forms.php:451
+msgid "Archive Document Date"
+msgstr "Date de l'archivage du document"
+
+#: /var/www/Coral/management/ajax_forms.php:456
+msgid "Archive Date:"
+msgstr "Date d'archivage:"
+
+#: /var/www/Coral/management/ajax_forms.php:459
+#: /var/www/Coral/management/ajax_processing.php:561
+#: /var/www/Coral/management/ajax_processing.php:573
+#: /var/www/Coral/management/ajax_processing.php:586
+msgid "Continue"
+msgstr "Continuer"
+
+#: /var/www/Coral/management/ajax_forms.php:489
+msgid "Terms Tool Resource Link"
+msgstr "Lien aux ressources de l'outil Terms"
+
+#: /var/www/Coral/management/ajax_forms.php:494
+#: /var/www/Coral/management/ajax_htmldata.php:1187
+msgid "For Document:"
+msgstr "Pour le document:"
+
+#: /var/www/Coral/management/ajax_forms.php:517
+msgid "Terms Tool Resource:"
+msgstr "Ressource de l'outil Terms"
+
+#: /var/www/Coral/management/ajax_forms.php:554
+#: /var/www/Coral/management/ajax_htmldata.php:1004
+#: /var/www/Coral/management/ajax_htmldata.php:1009
+msgid "Signatures"
+msgstr "Signatures"
+
+#: /var/www/Coral/management/ajax_forms.php:560
+msgid "Signer Name"
+msgstr "Nom de signataire"
+
+#: /var/www/Coral/management/ajax_forms.php:561
+#: /var/www/Coral/management/ajax_htmldata.php:198
+#: /var/www/Coral/management/ajax_htmldata.php:267
+msgid "Date"
+msgstr "Date"
+
+#: /var/www/Coral/management/ajax_forms.php:562
+#: /var/www/Coral/management/ajax_htmldata.php:480
+#: /var/www/Coral/management/ajax_htmldata.php:866
+#: /var/www/Coral/management/ajax_htmldata.php:871
+#: /var/www/Coral/management/ajax_htmldata.php:1002
+#: /var/www/Coral/management/ajax_htmldata.php:1007
+#: /var/www/Coral/management/ajax_htmldata.php:1191
+msgid "Type"
+msgstr "Type"
+
+#: /var/www/Coral/management/ajax_forms.php:597
+#: /var/www/Coral/management/ajax_forms.php:857
+msgid "commit update"
+msgstr "Mise à jour de l'engagement"
+
+#: /var/www/Coral/management/ajax_forms.php:633
+#: /var/www/Coral/management/ajax_forms.php:895
+#: /var/www/Coral/management/js/admin.js:314
+#: /var/www/Coral/management/js/forms/documentForm.js:189
+#: /var/www/Coral/management/js/forms/expressionForm.js:78
+#: /var/www/Coral/management/js/forms/licenseForm.js:196
+#: /var/www/Coral/management/js/forms/licenseForm.js:270
+#: /var/www/Coral/management/js/forms/licenseForm.js:306
+#: /var/www/Coral/management/js/forms/noteForm.js:37
+#: /var/www/Coral/management/js/forms/signatureForm.js:104
+msgid "add"
+msgstr "Ajouter"
+
+#: /var/www/Coral/management/ajax_forms.php:643
+#: /var/www/Coral/management/js/plugins/jquery.datePicker.js:1133
+msgid "Close"
+msgstr "Fermer"
+
+#: /var/www/Coral/management/ajax_forms.php:699
+#: /var/www/Coral/management/license.php:88
+#: /var/www/Coral/management/license.php:108
+msgid "Expressions"
+msgstr "Expressions"
+
+#: /var/www/Coral/management/ajax_forms.php:704
+#: /var/www/Coral/management/ajax_forms.php:1049
+msgid "Document:"
+msgstr "Document:"
+
+#: /var/www/Coral/management/ajax_forms.php:726
+msgid "Expression Type:"
+msgstr "Type d'expression:"
+
+#: /var/www/Coral/management/ajax_forms.php:745
+msgid "add expression type"
+msgstr "Ajouter type d'expression"
+
+#: /var/www/Coral/management/ajax_forms.php:752
+msgid "Qualifier:"
+msgstr "Qualificateur:"
+
+#: /var/www/Coral/management/ajax_forms.php:788
+#: /var/www/Coral/management/ajax_htmldata.php:638
+msgid "Document Text:"
+msgstr "Texte du document:"
+
+#: /var/www/Coral/management/ajax_forms.php:826
+#: /var/www/Coral/management/ajax_forms.php:836
+#: /var/www/Coral/management/ajax_forms.php:1019
+#: /var/www/Coral/management/ajax_htmldata.php:186
+msgid "Notes"
+msgstr "Notes"
+
+#: /var/www/Coral/management/ajax_forms.php:827
+msgid "For Document Text:"
+msgstr "Pour le text du document:"
+
+#: /var/www/Coral/management/ajax_forms.php:941
+#: /var/www/Coral/management/license.php:64
+#: /var/www/Coral/management/license.php:90
+#: /var/www/Coral/management/license.php:110
+#: /var/www/Coral/management/license.php:129
+msgid "Attachments"
+msgstr "Pièces jointes"
+
+#: /var/www/Coral/management/ajax_forms.php:945
+msgid "Date:"
+msgstr "Date:"
+
+#: /var/www/Coral/management/ajax_forms.php:952
+msgid "Details:"
+msgstr "Détails:"
+
+#: /var/www/Coral/management/ajax_forms.php:958
+msgid "Attachments:"
+msgstr "Pièces jointes:"
+
+#: /var/www/Coral/management/ajax_forms.php:967
+#: /var/www/Coral/management/ajax_htmldata.php:48
+#: /var/www/Coral/management/ajax_htmldata.php:157
+#: /var/www/Coral/management/ajax_htmldata.php:236
+#: /var/www/Coral/management/ajax_htmldata.php:319
+#: /var/www/Coral/management/ajax_htmldata.php:1258
+#: /var/www/Coral/management/ajax_htmldata.php:1329
+#: /var/www/Coral/management/ajax_htmldata.php:1383
+#: /var/www/Coral/management/ajax_htmldata.php:1424
+#: /var/www/Coral/management/ajax_htmldata.php:1467
+#: /var/www/Coral/management/js/forms/attachmentForm.js:84
+msgid "remove"
+msgstr "Enlever"
+
+#: /var/www/Coral/management/ajax_forms.php:1052
+msgid "All Documents"
+msgstr "Tous les documents"
+
+#: /var/www/Coral/management/ajax_forms.php:1094
+#: /var/www/Coral/management/ajax_forms.php:1135
+#: /var/www/Coral/management/ajax_forms.php:1218
+#: /var/www/Coral/management/ajax_forms.php:1263
+msgid "Update"
+msgstr "Mise à jour"
+
+#: /var/www/Coral/management/ajax_forms.php:1099
+#: /var/www/Coral/management/ajax_htmldata.php:1382
+#: /var/www/Coral/management/ajax_htmldata.php:1423
+#: /var/www/Coral/management/ajax_htmldata.php:1466
+msgid "update"
+msgstr "Mise à jour"
+
+#: /var/www/Coral/management/ajax_forms.php:1106
+msgid "close"
+msgstr "Fermer"
+
+#: /var/www/Coral/management/ajax_forms.php:1138
+#: /var/www/Coral/management/ajax_forms.php:1221
+#: /var/www/Coral/management/ajax_forms.php:1266
+msgid "Add New"
+msgstr "Ajouter un nouveau"
+
+#: /var/www/Coral/management/ajax_forms.php:1146
+msgid "User"
+msgstr "Utilisateur"
+
+#: /var/www/Coral/management/ajax_forms.php:1147
+#: /var/www/Coral/management/ajax_htmldata.php:1356
+msgid "Login ID"
+msgstr "Identifiant de connexion"
+
+#: /var/www/Coral/management/ajax_forms.php:1148
+#: /var/www/Coral/management/ajax_htmldata.php:1357
+msgid "First Name"
+msgstr "Prénom"
+
+#: /var/www/Coral/management/ajax_forms.php:1149
+#: /var/www/Coral/management/ajax_htmldata.php:1358
+msgid "Last Name"
+msgstr "Nom"
+
+#: /var/www/Coral/management/ajax_forms.php:1150
+#: /var/www/Coral/management/ajax_htmldata.php:1359
+msgid "Privilege"
+msgstr "Privilège"
+
+#: /var/www/Coral/management/ajax_forms.php:1153
+#: /var/www/Coral/management/ajax_forms.php:1156
+msgid "Add/Edit users can add, edit, or remove licenses and associated fields"
+msgstr ""
+"Les utilisateurs 'Add/Edit' peuvent ajouter, modifier ou supprimer les "
+"licences et les champs associés"
+
+#: /var/www/Coral/management/ajax_forms.php:1153
+#: /var/www/Coral/management/ajax_forms.php:1156
+msgid "Admin users have access to the Admin page and the SFX tab."
+msgstr ""
+"Les utilisateurs 'Admin' peuvent accéder à la page Admin et l'onglet SFX"
+
+#: /var/www/Coral/management/ajax_forms.php:1153
+#: /var/www/Coral/management/ajax_forms.php:1156
+msgid ""
+"View only users can view all license information, including the license pdf"
+msgstr ""
+"Les utilisateurs 'View only' peuvent regarder l'information des licences, "
+"aussi le pdf de la licence"
+
+#: /var/www/Coral/management/ajax_forms.php:1185
+msgid "Terms Tool Email"
+msgstr "Email de l'outil Terms"
+
+#: /var/www/Coral/management/ajax_forms.php:1188
+msgid ""
+"Enter email address if you wish this user to receive email notifications "
+"when the terms tool box is checked on the Expressions tab."
+msgstr ""
+"Tapez l'adresse email si vous souhaitez que cet utilisateur reçoive des "
+"notifications par email lorsque la boîte de l'outil terms est activée dans "
+"l'onglet Expressions."
+
+#: /var/www/Coral/management/ajax_forms.php:1188
+msgid "Leave this field blank if the user shouldn't receive emails."
+msgstr ""
+"Laissez ce champ vide si l'utilisateur ne doit pas recevoir des emails."
+
+#: /var/www/Coral/management/ajax_forms.php:1229
+#: /var/www/Coral/management/ajax_forms.php:1230
+#: /var/www/Coral/management/ajax_htmldata.php:1413
+msgid "Expression Type"
+msgstr "Type d'expression"
+
+#: /var/www/Coral/management/ajax_forms.php:1231
+#: /var/www/Coral/management/ajax_htmldata.php:201
+#: /var/www/Coral/management/ajax_htmldata.php:1414
+msgid "Note Type"
+msgstr "Type de note"
+
+#: /var/www/Coral/management/ajax_forms.php:1234
+msgid "Internal"
+msgstr "Intern"
+
+#: /var/www/Coral/management/ajax_forms.php:1235
+msgid "Display"
+msgstr "Afficher"
+
+#: /var/www/Coral/management/ajax_forms.php:1240
+msgid "Note type of display allows for terms tool use"
+msgstr "Type de note qui permet d'afficher l'utilisation de l'outil terms"
+
+#: /var/www/Coral/management/ajax_forms.php:1274
+#: /var/www/Coral/management/ajax_forms.php:1297
+#: /var/www/Coral/management/ajax_htmldata.php:1194
+#: /var/www/Coral/management/ajax_htmldata.php:1454
+#: /var/www/Coral/management/index.php:213
+msgid "Qualifier"
+msgstr "Qualificateur"
+
+#: /var/www/Coral/management/ajax_forms.php:1276
+#: /var/www/Coral/management/ajax_htmldata.php:1453
+msgid "For Expression Type"
+msgstr "Pour le type de l'expression"
+
+#: /var/www/Coral/management/ajax_forms.php:1324
+#: /var/www/Coral/management/ajax_htmldata.php:1570
+#: /var/www/Coral/management/ajax_processing.php:1330
+msgid "Action "
+msgstr "Action "
+
+#: /var/www/Coral/management/ajax_forms.php:1324
+#: /var/www/Coral/management/ajax_htmldata.php:1570
+#: /var/www/Coral/management/ajax_processing.php:1330
+msgid " not set up!"
+msgstr " ne pas etabli!"
+
+#: /var/www/Coral/management/ajax_htmldata.php:48
+#: /var/www/Coral/management/ajax_htmldata.php:156
+#: /var/www/Coral/management/ajax_htmldata.php:236
+#: /var/www/Coral/management/ajax_htmldata.php:319
+#: /var/www/Coral/management/ajax_htmldata.php:1258
+#: /var/www/Coral/management/ajax_htmldata.php:1328
+msgid "edit"
+msgstr "Modifier"
+
+#: /var/www/Coral/management/ajax_htmldata.php:59
+#: /var/www/Coral/management/ajax_htmldata.php:72
+msgid "Description:  "
+msgstr "Description:  "
+
+#: /var/www/Coral/management/ajax_htmldata.php:85
+msgid "Creation Date:  "
+msgstr "Date de création:  "
+
+#: /var/www/Coral/management/ajax_htmldata.php:86
+msgid "Last Update:  "
+msgstr "Dernière mise à jour:  "
+
+#: /var/www/Coral/management/ajax_htmldata.php:93
+msgid "License Status:"
+msgstr "Statut de la licence:"
+
+#: /var/www/Coral/management/ajax_htmldata.php:146
+msgid "For Document"
+msgstr "Pour le document"
+
+#: /var/www/Coral/management/ajax_htmldata.php:147
+msgid "Resource"
+msgstr "Ressource"
+
+#: /var/www/Coral/management/ajax_htmldata.php:170
+#: /var/www/Coral/management/ajax_htmldata.php:247
+#: /var/www/Coral/management/ajax_htmldata.php:330
+#: /var/www/Coral/management/ajax_htmldata.php:1071
+#: /var/www/Coral/management/ajax_htmldata.php:1128
+#: /var/www/Coral/management/ajax_htmldata.php:1304
+#: /var/www/Coral/management/ajax_htmldata.php:1338
+#: /var/www/Coral/management/ajax_htmldata.php:1392
+#: /var/www/Coral/management/ajax_htmldata.php:1433
+msgid "(none found)"
+msgstr "(non trouvé)"
+
+#: /var/www/Coral/management/ajax_htmldata.php:175
+msgid "add new terms tool resource link"
+msgstr "Ajouter un nouveau lien aux ressources d'outil Terms"
+
+#: /var/www/Coral/management/ajax_htmldata.php:189
+msgid "add new note"
+msgstr "Ajouter nouvelle note"
+
+#: /var/www/Coral/management/ajax_htmldata.php:199
+msgid "Note"
+msgstr "Note"
+
+#: /var/www/Coral/management/ajax_htmldata.php:223
+#: /var/www/Coral/management/ajax_htmldata.php:291
+#: /var/www/Coral/management/ajax_htmldata.php:770
+msgid "more..."
+msgstr "plus..."
+
+#: /var/www/Coral/management/ajax_htmldata.php:228
+#: /var/www/Coral/management/ajax_htmldata.php:296
+#: /var/www/Coral/management/ajax_htmldata.php:775
+msgid "less..."
+msgstr "moins..."
+
+#: /var/www/Coral/management/ajax_htmldata.php:268
+msgid "Details"
+msgstr "Détails"
+
+#: /var/www/Coral/management/ajax_htmldata.php:308
+#: /var/www/Coral/management/ajax_htmldata.php:966
+#: /var/www/Coral/management/ajax_htmldata.php:1084
+msgid "(none uploaded)"
+msgstr "(non téléchargé)"
+
+#: /var/www/Coral/management/ajax_htmldata.php:313
+msgid "view attachment "
+msgstr "Regarder la pièce jointe "
+
+#: /var/www/Coral/management/ajax_htmldata.php:334
+msgid "add new attachment"
+msgstr "Ajouter une nouvelle pièce jointe"
+
+#: /var/www/Coral/management/ajax_htmldata.php:418
+msgid "Sorry, no documents fit your query"
+msgstr "Désolé, il n'y a pas des documents par votre requête"
+
+#: /var/www/Coral/management/ajax_htmldata.php:425
+msgid "Displaying "
+msgstr "En montrant "
+
+#: /var/www/Coral/management/ajax_htmldata.php:425
+msgid " to "
+msgstr " - "
+
+#: /var/www/Coral/management/ajax_htmldata.php:425
+msgid " of "
+msgstr " de "
+
+#: /var/www/Coral/management/ajax_htmldata.php:425
+msgid " Records"
+msgstr " registres"
+
+#: /var/www/Coral/management/ajax_htmldata.php:473
+#: /var/www/Coral/management/index.php:105
+msgid "Category"
+msgstr "Catégorie"
+
+#: /var/www/Coral/management/ajax_htmldata.php:478
+#: /var/www/Coral/management/ajax_htmldata.php:558
+#: /var/www/Coral/management/ajax_htmldata.php:865
+#: /var/www/Coral/management/ajax_htmldata.php:870
+#: /var/www/Coral/management/ajax_htmldata.php:1001
+#: /var/www/Coral/management/ajax_htmldata.php:1006
+msgid "Name"
+msgstr "Nom"
+
+#: /var/www/Coral/management/ajax_htmldata.php:481
+#: /var/www/Coral/management/ajax_htmldata.php:867
+#: /var/www/Coral/management/ajax_htmldata.php:872
+msgid "Last Document Revision"
+msgstr "Dernière révision du document"
+
+#: /var/www/Coral/management/ajax_htmldata.php:527
+msgid "records per page"
+msgstr "resultats par page"
+
+#: /var/www/Coral/management/ajax_htmldata.php:559
+msgid "Publisher / Provider"
+msgstr "Editeur / Fournisseur"
+
+#: /var/www/Coral/management/ajax_htmldata.php:560
+msgid "Consortium"
+msgstr "Consortium"
+
+#: /var/www/Coral/management/ajax_htmldata.php:561
+msgid "Status"
+msgstr "Statut"
+
+#: /var/www/Coral/management/ajax_htmldata.php:630
+msgid "view / edit license"
+msgstr "Regarder / Modifier la licence"
+
+#: /var/www/Coral/management/ajax_htmldata.php:630
+msgid "view / edit "
+msgstr "Regarder / Modifier "
+
+#: /var/www/Coral/management/ajax_htmldata.php:630
+#: /var/www/Coral/management/ajax_htmldata.php:1284
+msgid " notes"
+msgstr " notes"
+
+#: /var/www/Coral/management/ajax_htmldata.php:630
+#: /var/www/Coral/management/ajax_htmldata.php:632
+#: /var/www/Coral/management/ajax_htmldata.php:964
+#: /var/www/Coral/management/ajax_htmldata.php:1082
+msgid "view document"
+msgstr "Regarder le document"
+
+#: /var/www/Coral/management/ajax_htmldata.php:632
+#: /var/www/Coral/management/ajax_htmldata.php:734
+msgid "view license"
+msgstr "Regarder la licence"
+
+#: /var/www/Coral/management/ajax_htmldata.php:642
+#: /var/www/Coral/management/ajax_htmldata.php:747
+#: /var/www/Coral/management/ajax_htmldata.php:1263
+#: /var/www/Coral/management/ajax_htmldata.php:1265
+msgid " Notes:"
+msgstr " Notes:"
+
+#: /var/www/Coral/management/ajax_htmldata.php:668
+msgid "Qualifiers:"
+msgstr "Qualificateurs:"
+
+#: /var/www/Coral/management/ajax_htmldata.php:725
+msgid "License"
+msgstr "Licence"
+
+#: /var/www/Coral/management/ajax_htmldata.php:726
+msgid " Notes"
+msgstr " Notes"
+
+#: /var/www/Coral/management/ajax_htmldata.php:727
+#: /var/www/Coral/management/ajax_htmldata.php:1192
+msgid "Document Text"
+msgstr "Texte du document"
+
+#: /var/www/Coral/management/ajax_htmldata.php:739
+msgid "(document text not entered)"
+msgstr "(il n'y a pas text dans le document)"
+
+#: /var/www/Coral/management/ajax_htmldata.php:787
+msgid "(none for "
+msgstr "(non pour "
+
+#: /var/www/Coral/management/ajax_htmldata.php:837
+msgid "Archived Documents"
+msgstr "Documents archivés"
+
+#: /var/www/Coral/management/ajax_htmldata.php:837
+msgid "hide archives"
+msgstr "cacher les archives"
+
+#: /var/www/Coral/management/ajax_htmldata.php:914
+#: /var/www/Coral/management/ajax_htmldata.php:1034
+msgid "archived on: "
+msgstr "Archivé: "
+
+#: /var/www/Coral/management/ajax_htmldata.php:971
+#: /var/www/Coral/management/ajax_htmldata.php:1088
+msgid "view expressions"
+msgstr "Regarder les expressions"
+
+#: /var/www/Coral/management/ajax_htmldata.php:977
+#: /var/www/Coral/management/ajax_htmldata.php:1094
+msgid "edit document"
+msgstr "Modifier le document"
+
+#: /var/www/Coral/management/ajax_htmldata.php:977
+#: /var/www/Coral/management/ajax_htmldata.php:1094
+msgid "remove document"
+msgstr "Supprimer le document"
+
+#: /var/www/Coral/management/ajax_htmldata.php:987
+#: /var/www/Coral/management/ajax_htmldata.php:989
+msgid "This document has "
+msgstr "Ce document a "
+
+#: /var/www/Coral/management/ajax_htmldata.php:987
+#: /var/www/Coral/management/ajax_htmldata.php:989
+msgid " children document(s) not displayed."
+msgstr " les documents des enfants ne sont pas affichés."
+
+#: /var/www/Coral/management/ajax_htmldata.php:987
+#: /var/www/Coral/management/ajax_htmldata.php:989
+msgid "show all documents for this parent"
+msgstr "Montrer tous les documents du parent"
+
+#: /var/www/Coral/management/ajax_htmldata.php:993
+#: /var/www/Coral/management/ajax_htmldata.php:995
+#: /var/www/Coral/management/ajax_htmldata.php:1103
+#: /var/www/Coral/management/ajax_htmldata.php:1105
+msgid "The following "
+msgstr "La suivante "
+
+#: /var/www/Coral/management/ajax_htmldata.php:993
+#: /var/www/Coral/management/ajax_htmldata.php:995
+#: /var/www/Coral/management/ajax_htmldata.php:1103
+#: /var/www/Coral/management/ajax_htmldata.php:1105
+msgid " document(s) belong to "
+msgstr " document(s) appartient(nent) à "
+
+#: /var/www/Coral/management/ajax_htmldata.php:993
+#: /var/www/Coral/management/ajax_htmldata.php:995
+msgid "hide children documents for this parent"
+msgstr "cacher les documents des enfants de ce parent"
+
+#: /var/www/Coral/management/ajax_htmldata.php:1003
+#: /var/www/Coral/management/ajax_htmldata.php:1008
+msgid "Effective Date"
+msgstr "Date effective"
+
+#: /var/www/Coral/management/ajax_htmldata.php:1032
+msgid "archive document"
+msgstr "Archiver le document"
+
+#: /var/www/Coral/management/ajax_htmldata.php:1055
+msgid "(no date)"
+msgstr "(Pas de date établi)"
+
+#: /var/www/Coral/management/ajax_htmldata.php:1066
+msgid "add/view details"
+msgstr "Ajouter/Regarder les détails"
+
+#: /var/www/Coral/management/ajax_htmldata.php:1073
+msgid "add signatures"
+msgstr "Ajouter signatures"
+
+#: /var/www/Coral/management/ajax_htmldata.php:1132
+msgid " archive(s) available."
+msgstr " archive(s) disponible(s)."
+
+#: /var/www/Coral/management/ajax_htmldata.php:1132
+msgid "show archives"
+msgstr "montrer les archives"
+
+#: /var/www/Coral/management/ajax_htmldata.php:1141
+msgid "upload new document"
+msgstr "Télécharger un nouveau document"
+
+#: /var/www/Coral/management/ajax_htmldata.php:1143
+msgid "Only one active document is allowed."
+msgstr "Seulement un document actif est autorisé."
+
+#: /var/www/Coral/management/ajax_htmldata.php:1143
+msgid "upload archived document"
+msgstr "Télécharger un document archivé"
+
+#: /var/www/Coral/management/ajax_htmldata.php:1233
+msgid "used in terms tool"
+msgstr "utilisé dans l'outil terms"
+
+#: /var/www/Coral/management/ajax_htmldata.php:1278
+#: /var/www/Coral/management/index.php:109
+msgid "(none)"
+msgstr "(aucun)"
+
+#: /var/www/Coral/management/ajax_htmldata.php:1284
+msgid "add/view "
+msgstr "Ajouter/Regarder "
+
+#: /var/www/Coral/management/ajax_htmldata.php:1308
+msgid "add new expression"
+msgstr "Ajouter une nouvelle expression"
+
+#: /var/www/Coral/management/ajax_htmldata.php:1363
+msgid "Terms Tool Update Email"
+msgstr "Mise à jour d'email d'outil Terms"
+
+#: /var/www/Coral/management/ajax_htmldata.php:1503
+#: /var/www/Coral/management/compare.php:73
+msgid "Limit by Qualifier:"
+msgstr "Limite par le qualificateur:"
+
+#: /var/www/Coral/management/ajax_processing.php:101
+msgid "License successfully deleted."
+msgstr "La licence a été supprimé avec succès."
+
+#: /var/www/Coral/management/ajax_processing.php:180
+#: /var/www/Coral/management/ajax_processing.php:1078
+msgid "There was a problem saving your file to "
+msgstr "Il y avait un problème pour enregistrer votre fichier sur "
+
+#: /var/www/Coral/management/ajax_processing.php:241
+msgid "Document Saved Successfully."
+msgstr "Le document a été enregistré avec succès."
+
+#: /var/www/Coral/management/ajax_processing.php:255
+msgid "Signature Deleted Successfully."
+msgstr "Signature effacé avec succès."
+
+#: /var/www/Coral/management/ajax_processing.php:317
+msgid "Expression Removed Successfully."
+msgstr "Expression supprimé avec succès."
+
+#: /var/www/Coral/management/ajax_processing.php:340
+msgid ""
+"An expression in the licensing module has been approved for terms tool use."
+msgstr ""
+"Une expression dans le module licensing a été approuvé par l'utilisation "
+"dans l'outil terms."
+
+#: /var/www/Coral/management/ajax_processing.php:341
+msgid "License:  "
+msgstr "Licence:  "
+
+#: /var/www/Coral/management/ajax_processing.php:342
+msgid "View License Record:  "
+msgstr "Regarder la licence enregistrée:  "
+
+#: /var/www/Coral/management/ajax_processing.php:346
+msgid "Licensing - expression set to production use"
+msgstr "Licensing - expression reglé pour l'utilisation en production"
+
+#: /var/www/Coral/management/ajax_processing.php:351
+msgid "Approved for terms tool display."
+msgstr "Aprouvé pour l'affichage dans l'outil terms."
+
+#: /var/www/Coral/management/ajax_processing.php:353
+msgid "Removed from terms tool display."
+msgstr "Supprimé pour l'affichage dans l'outil terms."
+
+#: /var/www/Coral/management/ajax_processing.php:420
+msgid "Note Removed Successfully."
+msgstr "La note a été supprimé avec succès."
+
+#: /var/www/Coral/management/ajax_processing.php:457
+msgid "Terms Tool Resource Link successfully deleted"
+msgstr "Le lien de la ressource d'outil terms a été supprimé avec succès"
+
+#: /var/www/Coral/management/ajax_processing.php:472
+msgid "Document Updated Successfully."
+msgstr "Le document a été modifié avec succès."
+
+#: /var/www/Coral/management/ajax_processing.php:482
+msgid "Document Added Successfully."
+msgstr "Le document ajouté avec succès."
+
+#: /var/www/Coral/management/ajax_processing.php:570
+#: /var/www/Coral/management/ajax_processing.php:583
+msgid "SQL Insert Failed."
+msgstr "L'insertion SQL a echouée."
+
+#: /var/www/Coral/management/ajax_processing.php:570
+#: /var/www/Coral/management/ajax_processing.php:583
+msgid "Please make sure everything is filled out correctly."
+msgstr "S'il vous plaît, assurez-vous que tout est correctement rempli."
+
+#: /var/www/Coral/management/ajax_processing.php:911
+msgid "Unable to delete  - this "
+msgstr "N'est pas possible supprimer  - ce "
+
+#: /var/www/Coral/management/ajax_processing.php:911
+msgid ""
+" is in use.  Please make sure no documents are set up with this information."
+msgstr ""
+" est en utilisation. S'il vous plaît, assurez-vous  qu'aucun document est "
+"configurée avec cet information."
+
+#: /var/www/Coral/management/ajax_processing.php:917
+msgid ""
+"Unable to delete.  Please make sure no documents are set up with this "
+"information."
+msgstr ""
+"N'est pas possible supprimer. S'il vous plaît, assurez-vous qu'aucun "
+"document est configurée avec cet information."
+
+#: /var/www/Coral/management/ajax_processing.php:1145
+msgid "Attachment successfully deleted"
+msgstr "La pièce jointe a été supprimé avec succès."
+
+#: /var/www/Coral/management/ajax_processing.php:1159
+msgid "Attachment file successfully deleted"
+msgstr "Le fichier de la pièce jointe a été supprimé avec succès."
+
+#: /var/www/Coral/management/ajax_processing.php:1172
+msgid "Note successfully deleted"
+msgstr "La note a été supprimé avec succès."
+
+#: /var/www/Coral/management/ajax_processing.php:1220
+msgid "Status has been updated"
+msgstr "Le statut a été mit à jour"
+
+#: /var/www/Coral/management/compare.php:22
+msgid "Expression Comparison"
+msgstr "Comparaison de l'expression"
+
+#: /var/www/Coral/management/compare.php:39
+#: /var/www/Coral/management/terms_report.php:35
+msgid "Limit by Expression Type:"
+msgstr "Limite par le type d'expression:"
+
+#: /var/www/Coral/management/in_progress.php:23
+#: /var/www/Coral/management/index.php:23
+msgid "Home"
+msgstr "Accueil"
+
+#: /var/www/Coral/management/in_progress.php:33
+msgid "Licenses In Progress"
+msgstr "Licences en avance"
+
+#: /var/www/Coral/management/in_progress.php:33
+msgid "Browse All"
+msgstr "Chercher tous"
+
+#: /var/www/Coral/management/index.php:48
+msgid "Search"
+msgstr "Recherche"
+
+#: /var/www/Coral/management/index.php:49
+#: /var/www/Coral/management/index.php:246
+msgid "new search"
+msgstr "Nouvelle recherche"
+
+#: /var/www/Coral/management/index.php:58
+msgid "Name (contains)"
+msgstr "Nom (contains)"
+
+#: /var/www/Coral/management/index.php:61
+msgid "go!"
+msgstr "Valider!"
+
+#: /var/www/Coral/management/index.php:108
+msgid "All"
+msgstr "Tous"
+
+#: /var/www/Coral/management/index.php:158
+msgid "Document Type"
+msgstr "Type de document"
+
+#: /var/www/Coral/management/index.php:223
+msgid "Starts with"
+msgstr "Commence avec"
+
+#: /var/www/Coral/management/license.php:61
+#: /var/www/Coral/management/license.php:87
+#: /var/www/Coral/management/license.php:107
+#: /var/www/Coral/management/license.php:126
+msgid "Documents"
+msgstr "Documents"
+
+#: /var/www/Coral/management/license.php:63
+#: /var/www/Coral/management/license.php:89
+#: /var/www/Coral/management/license.php:109
+#: /var/www/Coral/management/license.php:128
+msgid "Terms Tool"
+msgstr "Outil Terms"
+
+#: /var/www/Coral/management/not_available.php:21
+msgid "Not Available"
+msgstr "No disponible"
+
+#: /var/www/Coral/management/not_available.php:66
+msgid "You have not been set up to have access to the Management Module."
+msgstr "Vous n'avez pas configuré l'accès au Module Management."
+
+#: /var/www/Coral/management/templates/header.php:34
+msgid ""
+"Both license name and organization must be filled out.  Please try again."
+msgstr ""
+"Tant le nom de licence que l'organisation doivent être remplis. S'il vous "
+"plaît ressayez."
+
+#: /var/www/Coral/management/templates/header.php:82
+msgid ""
+"JavaScript must be enabled in order for you to use CORAL. However, it seems "
+"JavaScript is either disabled or not supported by your browser. To use "
+"CORAL, enable JavaScript by changing your browser options, then "
+msgstr ""
+"JavaScript doit être activé pour utiliser CORAL. Cependant, on semble qui "
+"JavaScript est desactivé ou n'est pas supporté par votre navigateur. Pour "
+"utiliser CORAL, activez JavaScript en modifiant la configuration de votre "
+"navigateur, après "
+
+#: /var/www/Coral/management/templates/header.php:82
+msgid "try again"
+msgstr "réessayez"
+
+#: /var/www/Coral/management/templates/header.php:101
+msgid "Hello, "
+msgstr "Bonjour, "
+
+#: /var/www/Coral/management/templates/header.php:110
+msgid "logout"
+msgstr "Se déconnecter"
+
+#: /var/www/Coral/management/templates/header.php:120
+#: /var/www/Coral/management/templates/header.php:125
+#: /var/www/Coral/management/templates/header.php:128
+msgid "home"
+msgstr "Accueil"
+
+#: /var/www/Coral/management/templates/header.php:121
+#: /var/www/Coral/management/templates/header.php:126
+msgid "new document"
+msgstr "Nouveau document"
+
+#: /var/www/Coral/management/templates/header.php:122
+msgid "admin"
+msgstr "Admin"
+
+#: /var/www/Coral/management/templates/header.php:158
+msgid "Change Module"
+msgstr "Changer le module"
+
+#: /var/www/Coral/management/templates/header.php:188
+msgid "Invalid translation route!"
+msgstr "Le chemin aux traductions n'est pas valide!"
+
+#: /var/www/Coral/management/terms_report.php:22
+msgid "Terms Report"
+msgstr "Report terms"
+
+#: /var/www/Coral/management/js/admin.js:106
+#: /var/www/Coral/management/js/admin.js:214
+#: /var/www/Coral/management/js/admin.js:239
+#: /var/www/Coral/management/js/admin.js:265
+#: /var/www/Coral/management/js/admin.js:292
+#: /var/www/Coral/management/js/index.js:43
+msgid "Processing..."
+msgstr "En traitement..."
+
+#: /var/www/Coral/management/js/admin.js:135
+msgid "That "
+msgstr "Ce "
+
+#: /var/www/Coral/management/js/admin.js:135
+msgid " is already in use."
+msgstr " est en utilisation."
+
+#: /var/www/Coral/management/js/admin.js:212
+#: /var/www/Coral/management/js/admin.js:290
+msgid "Do you really want to delete this data?"
+msgstr "Voulez-vous vraiment supprimer cette donnée?"
+
+#: /var/www/Coral/management/js/admin.js:237
+msgid "Do you really want to delete this user?"
+msgstr "Voulez-vous vraiment supprimer cet utilisateur?"
+
+#: /var/www/Coral/management/js/admin.js:263
+msgid ""
+"Do you really want to delete this expression type?  Any associated "
+"Qualifiers will be deleted as well."
+msgstr ""
+"Voulez-vous vraiment supprimer ce type d'expression? Tous les qualificatifs "
+"associés seront supprimés aussi."
+
+#: /var/www/Coral/management/js/forms/attachmentForm.js:41
+#: /var/www/Coral/management/js/forms/attachmentForm.js:54
+#: /var/www/Coral/management/js/forms/documentForm.js:102
+#: /var/www/Coral/management/js/forms/licenseForm.js:358
+msgid "File name is already being used..."
+msgstr "Le nom du fichier est en use..."
+
+#: /var/www/Coral/management/js/forms/attachmentForm.js:46
+msgid "The attachments directory is not writable."
+msgstr "Le dossier des pièces jointes n'a pas des droits d'écriture."
+
+#: /var/www/Coral/management/js/forms/attachmentForm.js:84
+#: /var/www/Coral/management/js/forms/documentForm.js:134
+#: /var/www/Coral/management/js/forms/licenseForm.js:390
+#: /var/www/Coral/management/js/license.js:482
+msgid " successfully uploaded."
+msgstr " téléchargé avec succès."
+
+#: /var/www/Coral/management/js/forms/attachmentForm.js:101
+#: /var/www/Coral/management/js/forms/attachmentForm.js:109
+msgid "Do you really want to delete this attachment?"
+msgstr "Voulez-vous vraiment supprimer cette pièce jointe?"
+
+#: /var/www/Coral/management/js/forms/documentForm.js:38
+#: /var/www/Coral/management/js/forms/licenseForm.js:39
+msgid "This name is already being used!"
+msgstr "Ce nom est déjà utilisé!"
+
+#: /var/www/Coral/management/js/forms/documentForm.js:106
+#: /var/www/Coral/management/js/forms/licenseForm.js:362
+msgid ""
+"File name may not contain special characters - ampersand, single quote, "
+"double quote or less than/greater than characters"
+msgstr ""
+"Le nom du fichier ne peut pas contenir des caractères spéciaux - "
+"esperluètte, apostrophe, guillemet ou caractères de moins que / plus que."
+
+#: /var/www/Coral/management/js/forms/documentForm.js:110
+#: /var/www/Coral/management/js/forms/licenseForm.js:366
+msgid "The documents directory is not writable."
+msgstr "Le dossier des documents n'a pas des droits d'écriture."
+
+#: /var/www/Coral/management/js/forms/documentForm.js:177
+msgid "Document Type is required."
+msgstr "Le type de document est nécessaire"
+
+#: /var/www/Coral/management/js/forms/documentForm.js:178
+msgid "Short Name is required."
+msgstr "Nom court est nécessaire."
+
+#: /var/www/Coral/management/js/forms/documentForm.js:216
+#: /var/www/Coral/management/js/forms/licenseForm.js:260
+msgid "DocumentType has been added"
+msgstr "Le type de document a été ajouté"
+
+#: /var/www/Coral/management/js/forms/documentForm.js:219
+#: /var/www/Coral/management/js/forms/licenseForm.js:263
+msgid "That type is already in use."
+msgstr "Ce type est en utilisation."
+
+#: /var/www/Coral/management/js/forms/expressionForm.js:89
+msgid "ExpressionType has been added"
+msgstr "Le Type d'Expression a été ajouté"
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:62
+#: /var/www/Coral/management/js/forms/licenseForm.js:124
+msgid "Warning!  This organization will be added new."
+msgstr "Attention! Cette organisation sera ajouté à nouveau."
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:222
+msgid "Category has been added"
+msgstr "La Catégorie a été ajouté"
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:225
+msgid "That Category is already in use."
+msgstr "Cette catégorie est en utilisation."
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:295
+#: /var/www/Coral/management/js/forms/noteForm.js:62
+msgid "Note Type has been added"
+msgstr "Le type de note a été ajouté"
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:298
+#: /var/www/Coral/management/js/forms/noteForm.js:65
+msgid "That Note Type is already in use."
+msgstr "Ce type de note est en utilisation."
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:322
+msgid "Document Name is required."
+msgstr "Le nom du document est nécessaire."
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:323
+msgid "A Category is required."
+msgstr "Une catégorie est nécessaire."
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:326
+msgid "Edit"
+msgstr "Modifier"
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:327
+msgid "successfully uploaded"
+msgstr "téléchargé avec succès"
+
+#: /var/www/Coral/management/js/forms/licenseForm.js:330
+msgid "File is required"
+msgstr "Le fichier est nécessaire"
+
+#: /var/www/Coral/management/js/forms/sfxForm.js:59
+msgid "A document must be selected to continue."
+msgstr "Un document doit être selectionné pour continuer."
+
+#: /var/www/Coral/management/js/forms/sfxForm.js:60
+msgid "Terms Tool Resource must be entered to continue."
+msgstr "Le Resource d'outil Terms doit être entré pour continuer."
+
+#: /var/www/Coral/management/js/forms/signatureForm.js:42
+msgid "No match!"
+msgstr "Pas des coincidences!"
+
+#: /var/www/Coral/management/js/forms/signatureForm.js:42
+msgid "Selected: "
+msgstr "Sélectionné: "
+
+#: /var/www/Coral/management/js/forms/signatureForm.js:85
+msgid "Do you really want to delete this signature?"
+msgstr "Voulez-vous vraiment supprimer cette signature?"
+
+#: /var/www/Coral/management/js/forms/signatureForm.js:115
+msgid "SignatureType has been added"
+msgstr "Le type de signature a été ajouté"
+
+#: /var/www/Coral/management/js/license.js:101
+#: /var/www/Coral/management/js/license.js:329
+msgid "Do you really want to delete this document?"
+msgstr "Voulez-vous vraiment supprimer ce document?"
+
+#: /var/www/Coral/management/js/license.js:311
+msgid "Do you really want to archive this document?"
+msgstr "Voulez-vous vraiment archiver ce document?"
+
+#: /var/www/Coral/management/js/license.js:336
+msgid ""
+"There was a problem with deleting the document.  You may not delete a "
+"document if there are associated expressions.  Remove all expressions and "
+"try again."
+msgstr ""
+"Il y avait un problème pour supprimer le document. Vous ne pouvez pas "
+"supprimer un document s'il y a des expressions associées. Enlevez tous les "
+"expressions et reéssayez."
+
+#: /var/www/Coral/management/js/license.js:350
+msgid "Do you really want to delete this expression?"
+msgstr "Voulez-vous vraiment supprimer cette expression?"
+
+#: /var/www/Coral/management/js/license.js:365
+msgid ""
+"Do you really want to delete this attachment?  This will also delete all "
+"attached files."
+msgstr ""
+"Voulez-vous vraiment supprimer cette pièce jointe? Ça effacera aussi tous "
+"les fichiers enregistrés."
+
+#: /var/www/Coral/management/js/license.js:381
+msgid "Do you really want to delete this note?"
+msgstr "Voulez-vous vraiment supprimer cette note?"
+
+#: /var/www/Coral/management/js/license.js:398
+msgid "Do you really want to delete this terms tool resource link?"
+msgstr "Voulez-vous vraiment supprimer ce lien à l'outil terms resource?"
+
+#: /var/www/Coral/management/js/license.js:450
+#: /var/www/Coral/management/js/license.js:480
+msgid "File name is already being used."
+msgstr "Le nom du fichier est en use."
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Sunday"
+msgstr "Dimanche"
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Monday"
+msgstr "Lundi"
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Tuesday"
+msgstr "Mardi"
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Thursday"
+msgstr "Jeudi"
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Friday"
+msgstr "Vendredi"
+
+#: /var/www/Coral/management/js/plugins/date.js:30
+msgid "Saturday"
+msgstr "Samedi"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Sun"
+msgstr "Dim"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Mon"
+msgstr "Lun"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Tue"
+msgstr "Mar"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Wed"
+msgstr "Mer"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Thu"
+msgstr "Jeu"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Fri"
+msgstr "Ven"
+
+#: /var/www/Coral/management/js/plugins/date.js:42
+msgid "Sat"
+msgstr "Sam"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "January"
+msgstr "Janvier"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "February"
+msgstr "Février"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "March"
+msgstr "Mars"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "April"
+msgstr "Avril"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "May"
+msgstr "Mai"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "June"
+msgstr "Juin"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "July"
+msgstr "Juillet"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "August"
+msgstr "Août"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "September"
+msgstr "Septembre"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "October"
+msgstr "Octobre"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "November"
+msgstr "Novembre"
+
+#: /var/www/Coral/management/js/plugins/date.js:54
+msgid "December"
+msgstr "Décembre"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Jan"
+msgstr "Jan"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Feb"
+msgstr "Fév"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Mar"
+msgstr "Mar"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Apr"
+msgstr "Avr"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Jun"
+msgstr "Jui"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Jul"
+msgstr "Juil"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Aug"
+msgstr "Aoû"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Sep"
+msgstr "Sep"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Oct"
+msgstr "Oct"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Nov"
+msgstr "Nov"
+
+#: /var/www/Coral/management/js/plugins/date.js:66
+msgid "Dec"
+msgstr "Déc"
+
+#: /var/www/Coral/management/js/plugins/jquery.datePicker.js:1129
+msgid "Previous year"
+msgstr "Année précédente"
+
+#: /var/www/Coral/management/js/plugins/jquery.datePicker.js:1130
+msgid "Previous month"
+msgstr "Mois précédent"
+
+#: /var/www/Coral/management/js/plugins/jquery.datePicker.js:1131
+msgid "Next year"
+msgstr "Année suivante"
+
+#: /var/www/Coral/management/js/plugins/jquery.datePicker.js:1132
+msgid "Next month"
+msgstr "Mois suivant"
+
+#: /var/www/Coral/management/js/plugins/jquery.datePicker.js:1134
+msgid "Choose date"
+msgstr "Choissir la date"
+
+#~ msgid "Do you really want to delete this license?"
+#~ msgstr "Voulez-vous vraiment supprimer cette licence?"
+
+#~ msgid "License Name is required."
+#~ msgstr "Nom de la licence est nécessaire."

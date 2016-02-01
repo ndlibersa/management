@@ -98,7 +98,7 @@ $(document).ready(function(){
 
 
  function deleteLicense(licenseID){
-    if (confirm("Do you really want to delete this license?") == true) {
+    if (confirm(_("Do you really want to delete this document?")) == true) {
        $.ajax({
           type:       "GET",
           url:        "ajax_processing.php",
@@ -308,7 +308,7 @@ function updateAttachmentsNumber(){
 
 
  function archiveDocument(documentID){
-    if (confirm("Do you really want to archive this document?") == true) {
+    if (confirm(_("Do you really want to archive this document?")) == true) {
 	  $.ajax({
 		 type:       "GET",
 		 url:        "ajax_processing.php",
@@ -326,14 +326,14 @@ function updateAttachmentsNumber(){
 
 
  function deleteDocument(documentID){
-    if (confirm("Do you really want to delete this document?") == true) {
+    if (confirm(_("Do you really want to delete this document?")) == true) {
        $.ajax({
           type:       "GET",
           url:        "ajax_processing.php",
           cache:      false,
           data:       "action=deleteDocument&documentID=" + documentID,
           success:    function(html) { 
-          	if (html) alert('There was a problem with deleting the document.  You may not delete a document if there are associated expressions.  Remove all expressions and try again.'); 
+          	if (html) alert(_("There was a problem with deleting the document.  You may not delete a document if there are associated expressions.  Remove all expressions and try again.")); 
           	updateDocuments(); 
           	updateArchivedDocuments(); 
           }
@@ -347,7 +347,7 @@ function updateAttachmentsNumber(){
 
 
  function deleteExpression(expressionID){
-    if (confirm("Do you really want to delete this expression?") == true) {
+    if (confirm(_("Do you really want to delete this expression?")) == true) {
        $.ajax({
           type:       "GET",
           url:        "ajax_processing.php",
@@ -362,7 +362,7 @@ function updateAttachmentsNumber(){
 
 
  function deleteAttachment(attachmentID){
-    if (confirm("Do you really want to delete this attachment?  This will also delete all attached files.") == true) {
+    if (confirm(_("Do you really want to delete this attachment?  This will also delete all attached files.")) == true) {
        $.ajax({
           type:       "GET",
           url:        "ajax_processing.php",
@@ -378,7 +378,7 @@ function updateAttachmentsNumber(){
  }
 
  function deleteNote(documentNoteID){
-    if (confirm("Do you really want to delete this note?") == true) {
+    if (confirm(_("Do you really want to delete this note?")) == true) {
        $.ajax({
           type:       "GET",
           url:        "ajax_processing.php",
@@ -395,7 +395,7 @@ function updateAttachmentsNumber(){
 
 
  function deleteSFXProvider(sfxProviderID){
-    if (confirm("Do you really want to delete this terms tool resource link?") == true) {
+    if (confirm(_("Do you really want to delete this terms tool resource link?")) == true) {
        $.ajax({
           type:       "GET",
           url:        "ajax_processing.php",
@@ -447,7 +447,7 @@ function hideFullNoteText(noteID){
  		 success:    function(response) {
  			if (response == "1"){
  				exists = "1";
- 				$("#div_file_message").html("  <font color='red'>File name is already being used.</font>");
+ 				$("#div_file_message").html("  <font color='red'>"+_("File name is already being used.")+"</font>");
  				return false;
  			}else{
  				$("#div_file_message").html("");
@@ -477,9 +477,9 @@ function hideFullNoteText(noteID){
  					fileName=data;
 
  					if (exists == "1"){
- 						$("#div_file_message").html("  <font color='red'>File name is already being used.</font>");
+ 						$("#div_file_message").html("  <font color='red'>"+_("File name is already being used.")+"</font>");
  					}else{
- 						$("#div_uploadFile").html("<img src='images/paperclip.gif'>" + fileName + " successfully uploaded.");
+ 						$("#div_uploadFile").html("<img src='images/paperclip.gif'>" + fileName + _(" successfully uploaded."));
 
  					}
 

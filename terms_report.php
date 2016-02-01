@@ -19,7 +19,7 @@
 
 include_once 'directory.php';
 
-$pageTitle='Terms Report';
+$pageTitle=_('Terms Report');
 include 'templates/header.php';
 
 //set referring page
@@ -32,7 +32,7 @@ $_SESSION['ref_script']=$currentPage;
 <tr><td>
 <br />
 
-<b>Limit by Expression Type:</b>
+<b><?php echo _("Limit by Expression Type:");?></b>
 
 <select name='expressionTypeID' id='expressionTypeID' onchange='javascript:updateTermsReport();'>
 
