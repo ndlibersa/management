@@ -92,7 +92,7 @@ $coralURL = $util->getCORALURL();
 	}
 ?>
 </span>
-<br /><?php if($config->settings->authModule == 'Y'){ echo "<a href='" . $coralURL . "auth/?logout' id='logout'>logout</a>"; } ?>
+<br /><?php if($config->settings->authModule == 'Y'){ echo "<a href='" . $coralURL . "auth/?logout' id='logout'>logout</a> | </span><a href='https://js-erm-helps.bc.sirsidynix.net' id='help' target='_blank'>Help</a>"; } ?>
 </div>
 </td>
 </tr>
