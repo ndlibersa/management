@@ -64,7 +64,6 @@ if ($license->shortName){
 				<div class='sidemenuunselected'><a href='javascript:void(0)' class='showAttachments'>Attachments</a><br />&nbsp;<span class='span_AttachmentNumber'></span></div>
 			</td>
 			<td class='mainContent'>
-
 				<div id='div_documents'>
 				<img src = "images/circle.gif">Loading...
 				</div>
@@ -90,7 +89,6 @@ if ($license->shortName){
 				<div class='sidemenuunselected'><a href='javascript:void(0)' class='showAttachments'>Attachments</a><br />&nbsp;<span class='span_AttachmentNumber'></span></div>
 			</td>
 			<td class='mainContent'>
-
 				<div id='div_expressions'>
 				<img src = "images/circle.gif">Loading...
 				</div>
@@ -129,7 +127,6 @@ if ($license->shortName){
 				<div class='sidemenuselected' style='position: relative; width: 91px'><a href='javascript:void(0)' class='showAttachments'>Attachments</a><br />&nbsp;<span class='span_AttachmentNumber'></span></div>
 			</td>
 			<td class='mainContent'>
-
 				<div id='div_attachments'>
 				<img src = "images/circle.gif">Loading...
 				</div>

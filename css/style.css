@@ -1361,7 +1361,7 @@ div#TB_window {
 
 /*--- Modal Window Buttons ---*/
 
-#div_licenseForm input#submitLicense {
+/*#div_licenseForm input#submitLicense {
 	color: #FFFFFF;
 	font-family: "Arial", sans-serif;
 	font-size: 11px;
@@ -1392,7 +1392,7 @@ div#TB_window {
 
 #div_licenseForm input[value=cancel]:hover {
 	cursor: pointer;
-}
+}*/
 
 #div_licenseForm #span_newNoteType:before {
 	font-family: FontAwesome;
@@ -1437,7 +1437,7 @@ div#TB_window {
 	padding-left: 10px;
 }
 
-#div_updateForm input[value=Add\ New] {
+/*#div_updateForm input[value=Add\ New] {
 	color: #FFFFFF;
 	font-family: "Arial", sans-serif;
 	font-size: 11px;
@@ -1470,7 +1470,7 @@ div#TB_window {
 
 #div_updateForm input[value=cancel]:hover {
 	cursor: pointer;
-}
+}*/
 
 .display-title {
 	display: block;
@@ -1526,7 +1526,7 @@ a.showDocuments:before {
 	margin-bottom: -18px;
 }
 
-#noteForm input#submitNote {
+/*#noteForm input#submitNote {
 	color: #FFFFFF;
 	font-family: "Arial", sans-serif;
 	font-size: 11px;
@@ -1556,7 +1556,7 @@ a.showDocuments:before {
 
 #noteForm input[value=cancel]:hover {
 	cursor: pointer;
-}
+}*/
 
 /*--- Document Upload Modal ---*/
 
@@ -1589,7 +1589,7 @@ a.showDocuments:before {
 	top: 2px;
 }
 
-#uploadDoc input[value=cancel] {
+/*#uploadDoc input[value=cancel] {
 	color: #FFFFFF;
 	font-family: "Arial", sans-serif;
 	font-size: 11px;
@@ -1623,7 +1623,7 @@ a.showDocuments:before {
 
 #uploadDoc input#submitDocument:hover {
 	cursor: pointer;
-}
+}*/
 
 #uploadDoc #div_uploadFile a {
 	text-transform: capitalize;
@@ -1655,7 +1655,7 @@ a.showDocuments:before {
 	padding-bottom: 5px;
 }
 
-#attachmentForm input[value=cancel] {
+/*#attachmentForm input[value=cancel] {
 	color: #FFFFFF;
 	font-family: "Arial", sans-serif;
 	font-size: 11px;
@@ -1685,7 +1685,7 @@ a.showDocuments:before {
 
 #attachmentForm input#submitAttachment:hover {
 	cursor: pointer;
-}
+}*/
 
 /*--- Control Documents Table ---*/
 
@@ -1708,7 +1708,7 @@ a.showDocuments:before {
 
 /*--- Update User Modal Window ---*/
 
-#div_updateForm input[value=Update] {
+/*#div_updateForm input[value=Update] {
 	color: #FFFFFF;
 	font-family: "Arial", sans-serif;
 	font-size: 11px;
@@ -1722,11 +1722,11 @@ a.showDocuments:before {
 
 #div_updateForm input[value=Update]:hover {
 	cursor: pointer;
-}
+}*/
 
 /*--- Update User Modal Window (Edit Link) ---*/
 
-#div_updateForm a#updateButton {
+/*#div_updateForm a#updateButton {
 	color: #FFFFFF;
 	font-family: "Arial", sans-serif;
 	font-size: 11px;
@@ -1759,7 +1759,7 @@ a.showDocuments:before {
 
 #div_updateForm a#closeButton:hover {
 	cursor: pointer;
-}
+}*/
 
 /*--- Capitalize Links ---*/
 
@@ -1835,4 +1835,47 @@ select#lang {
     border: none;
     margin-left: 10px;
     background-color: #fff;
+}
+
+/*--- Consistentcy for Form Buttons ---*/
+
+.submit-button,
+.cancel-button,
+.save-button
+ {
+    color: #FFFFFF;
+    font-family: "Arial", sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    background: #1b76a9;
+    border: none;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    margin-left: 8px;
+    min-width: 60px;
+    margin-top: 10px;
+}
+
+.submit-button:hover,
+.cancel-button:hover,
+.save-button {
+    cursor: pointer;
+}
+
+.submit-button {
+    margin-left: 0;
+}
+
+a.submit-button,
+a.cancel-button,
+a.save-button
+ {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+/*--- Adjust Attachments Table ---*/
+
+#div_displayAttachments td.mainContent {
+	width: 100%;
 }
