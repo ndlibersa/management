@@ -475,10 +475,10 @@ switch ($_GET['action']) {
 			?>
 			<table class='dataTable' style='width:840px'>
 			<tr>
-			<th style="width:60%"><table class='noBorderTable'><tr><td>Name</td><td class='arrow'><a href='javascript:setOrder("L.shortName","asc");'><img src='images/arrowup.gif' border=0></a>&nbsp;<a href='javascript:setOrder("L.shortName","desc");'><img src='images/arrowdown.gif' border=0></a></td></tr></table></th>
-<!--			<th><table class='noBorderTable'><tr><td>Publisher / Provider</td><td class='arrow'><a href='javascript:setOrder("providerName","asc");'><img src='images/arrowup.gif' border=0></a>&nbsp;<a href='javascript:setOrder("providerName","desc");'><img src='images/arrowdown.gif' border=0></a></td></tr></table></th> -->
-			<th style="width:15%"><table class='noBorderTable'><tr><td>Type</td><td class='arrow'><a href='javascript:setOrder("DT.shortName","asc");'><img src='images/arrowup.gif' border=0></a>&nbsp;<a href='javascript:setOrder("DT.shortName","desc");'><img src='images/arrowdown.gif' border=0></a></td></tr></table></th>
-			<th style="width:25%"><table class='noBorderTable'><tr><td>Last Document Revision</td><td class='arrow'><a href='javascript:setOrder("D.revisionDate","asc");'><img src='images/arrowup.gif' border=0></a>&nbsp;<a href='javascript:setOrder("D.revisionDate","desc");'><img src='images/arrowdown.gif' border=0></a></td></tr></table></th>
+			<th style="width:60%"><table class='noBorderTable'><tr><td>Name</td><td class='arrow'><a href='javascript:setOrder("L.shortName","asc");'><img src='images/arrowup.png' border=0></a>&nbsp;<a href='javascript:setOrder("L.shortName","desc");'><img src='images/arrowdown.png' border=0></a></td></tr></table></th>
+<!--			<th><table class='noBorderTable'><tr><td>Publisher / Provider</td><td class='arrow'><a href='javascript:setOrder("providerName","asc");'><img src='images/arrowup.png' border=0></a>&nbsp;<a href='javascript:setOrder("providerName","desc");'><img src='images/arrowdown.png' border=0></a></td></tr></table></th> -->
+			<th style="width:15%"><table class='noBorderTable'><tr><td>Type</td><td class='arrow'><a href='javascript:setOrder("DT.shortName","asc");'><img src='images/arrowup.png' border=0></a>&nbsp;<a href='javascript:setOrder("DT.shortName","desc");'><img src='images/arrowdown.png' border=0></a></td></tr></table></th>
+			<th style="width:25%"><table class='noBorderTable'><tr><td>Last Document Revision</td><td class='arrow'><a href='javascript:setOrder("D.revisionDate","asc");'><img src='images/arrowup.png' border=0></a>&nbsp;<a href='javascript:setOrder("D.revisionDate","desc");'><img src='images/arrowdown.png' border=0></a></td></tr></table></th>
 			</tr>
 
 			<?php
