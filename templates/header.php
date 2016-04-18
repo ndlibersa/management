@@ -57,6 +57,22 @@ $coralURL = $util->getCORALURL();
 <script type="text/javascript" src="js/plugins/jquery.js"></script>
 <script type="text/javascript" src="js/plugins/ajaxupload.3.5.js"></script>
 <script type="text/javascript" src="js/plugins/thickbox.js"></script>
+<script type="text/javascript" src="js/plugins/Gettext.js"></script>
+<?php
+    // Add translation for the JavaScript files
+    global $http_lang;
+    $str = substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
+    $default_l = $lang_name->getLanguage($str);
+    if($default_l==null || empty($default_l)){$default_l=$str;}
+    if(isset($_COOKIE["lang"])){
+        if($_COOKIE["lang"]==$http_lang && $_COOKIE["lang"] != "en_US"){
+            echo "<link rel='gettext' type='application/x-po' href='./locale/".$http_lang."/LC_MESSAGES/messages.po' />";
+        }
+    }else if($default_l==$http_lang && $default_l != "en_US"){
+            echo "<link rel='gettext' type='application/x-po' href='./locale/".$http_lang."/LC_MESSAGES/messages.po' />";
+    }
+?>
+<script type="text/javascript" src="js/plugins/translate.js"></script>
 <script type="text/javascript" src="js/plugins/date.js"></script>
 <script type="text/javascript" src="js/plugins/jquery.datePicker.js"></script>
 <script type="text/javascript" src="js/plugins/jquery.autocomplete.js"></script>
@@ -134,11 +150,11 @@ echo '</div>';
 
 <?php if ($user->isAdmin()){ ?>
 
-<a href='index.php'><img src="images/menu/menu-home<?php if ($currentPage == 'index.php') { echo "-on"; } ?>.gif" hover="images/menu/menu-home-over.gif" class="rollover" /></a><img src='images/menu/menu-bar.gif'><a href='ajax_forms.php?action=getLicenseForm&height=350&width=300&modal=true&newLicenseID=' class='thickbox' id='newLicense'><img src='images/menu/menu-newlicense.gif' hover="images/menu/menu-newlicense-over.gif" class="rollover"></a><img src='images/menu/menu-bar.gif'><a href='admin.php'><img src='images/menu/menu-admin<?php if ($currentPage == 'admin.php') { echo "-on"; } ?>.gif' hover="images/menu/menu-admin-over.gif" id="menu-last" class="rollover" /></a><img src='images/menu/menu-end<?php if ($currentPage == 'admin.php') { echo "-on"; } ?>.gif' hover="images/menu/menu-end-over.gif" id="menu-end" />
+<a href='index.php'><img src="images/menu/<?php echo $http_lang?>/menu-home<?php if ($currentPage == 'index.php') { echo "-on"; } ?>.gif" hover="images/menu/<?php echo $http_lang?>/menu-home-over.gif" class="rollover" /></a><img src='images/menu/menu-bar.gif'><a href='ajax_forms.php?action=getLicenseForm&height=350&width=300&modal=true&newLicenseID=' class='thickbox' id='newLicense'><img src='images/menu/<?php echo $http_lang?>/menu-newlicense.gif' hover="images/menu/<?php echo $http_lang?>/menu-newlicense-over.gif" class="rollover"></a><img src='images/menu/menu-bar.gif'><a href='admin.php'><img src='images/menu/<?php echo $http_lang?>/menu-admin<?php if ($currentPage == 'admin.php') { echo "-on"; } ?>.gif' hover="images/menu/<?php echo $http_lang?>/menu-admin-over.gif" id="menu-last" class="rollover" /></a><img src='images/menu/menu-end<?php if ($currentPage == 'admin.php') { echo "-on"; } ?>.gif' hover="images/menu/menu-end-over.gif" id="menu-end" />
 <?php }else if ($user->canEdit()){ ?>
-	<a href='index.php'><img src="images/menu/menu-home<?php if ($currentPage == 'index.php') { echo "-on"; } ?>.gif" hover="images/menu/menu-home-over.gif" class="rollover" /></a><img src='images/menu/menu-bar.gif'><a href='ajax_forms.php?action=getLicenseForm&height=265&width=260&modal=true&newLicenseID=' class='thickbox' id='newLicense'><img src='images/menu/menu-newlicense.gif' hover="images/menu/menu-newlicense-over.gif" class="rollover" id="menu-last" class="rollover" /></a><img src='images/menu/menu-end<?php if ($currentPage == 'compare.php') { echo "-on"; } ?>.gif' hover="images/menu/menu-end-over.gif" id="menu-end" />
+	<a href='index.php'><img src="images/menu/<?php echo $http_lang?>/menu-home<?php if ($currentPage == 'index.php') { echo "-on"; } ?>.gif" hover="images/menu/<?php echo $http_lang?>/menu-home-over.gif" class="rollover" /></a><img src='images/menu/menu-bar.gif'><a href='ajax_forms.php?action=getLicenseForm&height=265&width=260&modal=true&newLicenseID=' class='thickbox' id='newLicense'><img src='images/menu/<?php echo $http_lang?>/menu-newlicense.gif' hover="images/menu/<?php echo $http_lang?>/menu-newlicense-over.gif" class="rollover" id="menu-last" class="rollover" /></a><img src='images/menu/menu-end<?php if ($currentPage == 'compare.php') { echo "-on"; } ?>.gif' hover="images/menu/menu-end-over.gif" id="menu-end" />
 <?php }else{ ?>
-	<a href='index.php'><img src="images/menu/menu-home<?php if ($currentPage == 'index.php') { echo "-on"; } ?>.gif" hover="images/menu/menu-home-over.gif" class="rollover" /></a><img src='images/menu/menu-bar.gif'><a href='in_progress.php'><img src="images/menu/menu-licensesinprogress<?php if ($currentPage == 'in_progress.php') { echo "-on"; } ?>.gif" hover="images/menu/menu-licensesinprogress-over.gif" id="menu-last" class="rollover" /></a><img src='images/menu/menu-end<?php if ($currentPage == 'in_progress.php') { echo "-on"; } ?>.gif' hover="images/menu/menu-end-over.gif" id="menu-end" />
+	<a href='index.php'><img src="images/menu/<?php echo $http_lang?>/menu-home<?php if ($currentPage == 'index.php') { echo "-on"; } ?>.gif" hover="images/menu/<?php echo $http_lang?>/menu-home-over.gif" class="rollover" /></a><img src='images/menu/menu-bar.gif'><a href='in_progress.php'><img src="images/menu/<?php echo $http_lang?>/menu-licensesinprogress<?php if ($currentPage == 'in_progress.php') { echo "-on"; } ?>.gif" hover="images/menu/<?php echo $http_lang?>/menu-licensesinprogress-over.gif" id="menu-last" class="rollover" /></a><img src='images/menu/menu-end<?php if ($currentPage == 'in_progress.php') { echo "-on"; } ?>.gif' hover="images/menu/menu-end-over.gif" id="menu-end" />
 <?php } ?>
 
 
@@ -156,7 +172,7 @@ if ((file_exists($util->getCORALPath() . "index.php")) || ($config->settings->or
 
 	<div style='text-align:left;'>
 		<ul class="tabs">
-		<li style="background: url('images/change/coral-change.gif') no-repeat right;">&nbsp;
+		<li style="background: url('images/change/<?php echo $http_lang?>/coral-change.gif') no-repeat right;">&nbsp;
 			<ul class="coraldropdown">
 				<?php if (file_exists($util->getCORALPath() . "index.php")) {?>
 				<li><a href="<?php echo $coralURL; ?>" target='_blank'><img src='images/change/coral-main.png'></a></li>
@@ -203,6 +219,61 @@ if ((file_exists($util->getCORALPath() . "index.php")) || ($config->settings->or
 ?>
 
 </td>
-</tr>
+<td id="setLanguage">
+		<select name="lang" id="lang" class="dropDownLang">
+           <?php
+            // Get all translations on the 'locale' folder
+            $route='locale';
+            $lang[]="en_US"; // add default language
+            if (is_dir($route)) {
+                if ($dh = opendir($route)) {
+                    while (($file = readdir($dh)) !== false) {
+                        if (is_dir("$route/$file") && $file!="." && $file!=".."){
+                            $lang[]=$file;
+                        } 
+                    } 
+                    closedir($dh); 
+                } 
+            }else {
+                echo "<br>"._("Invalid translation route!"); 
+            }
+            // Get language of navigator
+            $defLang = substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
+            
+            // Show an ordered list
+            sort($lang); 
+            for($i=0; $i<count($lang); $i++){
+                if(isset($_COOKIE["lang"])){
+                    if($_COOKIE["lang"]==$lang[$i]){
+                        echo "<option value='".$lang[$i]."' selected='selected'>".$lang_name->getNameLang($lang[$i])."</option>";
+                    }else{
+                        echo "<option value='".$lang[$i]."'>".$lang_name->getNameLang($lang[$i])."</option>";
+                    }
+                }else{
+                    if($defLang==substr($lang[$i],0,2)){
+                        echo "<option value='".$lang[$i]."' selected='selected'>".$lang_name->getNameLang($lang[$i])."</option>";
+                    }else{
+                        echo "<option value='".$lang[$i]."'>".$lang_name->getNameLang($lang[$i])."</option>";
+                    }
+                }
+            }
+            ?>
+            
+        </select>
+</td>
 </table>
+	<script>
+        $("#lang").change(function() {
+            setLanguage($("#lang").val());
+            location.reload();
+        });
+        
+        function setLanguage(lang) {
+			var wl = window.location, now = new Date(), time = now.getTime();
+            var cookievalid=2592000000; // 30 days (1000*60*60*24*30)
+            time += cookievalid;
+			now.setTime(time);
+			document.cookie ='lang='+lang+';path=/'+';domain='+wl.host+';expires='+now;
+	    }
+    </script>
 <span id='span_message' style='color:red;text-align:left;'><?php if (isset($err)) echo $err; ?></span>

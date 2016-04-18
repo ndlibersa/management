@@ -1829,6 +1829,10 @@ a#help:before {
     margin-right: 3px;
 }
 
+td#setLanguage {
+	vertical-align:middle;
+}
+
 /*--- Adjustments for Language Dropdown ---*/
 
 select#lang {
