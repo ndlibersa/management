@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: messages\n"
+"POT-Creation-Date: 2016-04-18 14:17-0600\n"
+"PO-Revision-Date: 2016-04-18 14:20-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: index.php:23
+msgid "Home"
+msgstr "Accueil"
+
+#: index.php:58
+msgid "Name (contains)"
+msgstr "Nom (contient)"
+
+#: index.php:105
+msgid "Category"
+msgstr ""
+
+#: index.php:158
+msgid "Document Type"
+msgstr ""
+
+#: index.php:213
+msgid "Qualifier"
+msgstr ""
+
+#: index.php:223
+msgid "Starts with"
+msgstr "Commençant par"
+
+#: index.php:246
+msgid "new search"
+msgstr "Nouvelle recherche"
+
+#: templates/header.php:238
+msgid "Invalid translation route!"
+msgstr "Chemin d'accès aux traductions invalide !"

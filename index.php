@@ -20,7 +20,7 @@
 
 include_once 'directory.php';
 
-$pageTitle='Home';
+$pageTitle=_('Home');
 include 'templates/header.php';
 
 //used for creating a "sticky form" for back buttons
@@ -55,7 +55,7 @@ $_SESSION['ref_script']=$currentPage;
 	<table class='borderedFormTable' style="width:150px">
 
 	<tr>
-	<td class='searchRow'><label for='searchName'><b>Name (contains)</b></label>
+	<td class='searchRow'><label for='searchName'><b><?php echo _("Name (contains)");?></b></label>
 	<br />
 	<input type='text' name='searchName' id='searchName' style='width:145px' value="<?php if (isset($_SESSION['license_shortName']) && ($reset != 'Y')) echo $_SESSION['license_shortName']; ?>" /><br />
 	<div id='div_searchName' style='<?php if ((!isset($_SESSION['license_shortName'])) || ($reset == 'Y')) echo "display:none;"; ?>margin-left:123px;'><input type='button' name='searchName' value='go!' class='searchButton' /></div>
@@ -102,7 +102,7 @@ $_SESSION['ref_script']=$currentPage;
 -->
 
 	<tr>
-	<td class='searchRow'><label for='consortium'><b>Category</b></label>
+	<td class='searchRow'><label for='consortium'><b><?php echo _("Category");?></b></label>
 	<br />
 	<select name='consortiumID' id='consortiumID' style='width:150px' onchange='javsacript:updateSearch();'>
 	<option value=''>All</option>
@@ -155,7 +155,7 @@ $_SESSION['ref_script']=$currentPage;
 -->
 
 	<tr>
-	<td class='searchRow'><label for='documentTypeID'><b>Document Type</b></label>
+	<td class='searchRow'><label for='documentTypeID'><b><?php echo _("Document Type");?></b></label>
 	<br />
 	<select name='documentTypeID' id='documentTypeID' style='width:150px' onchange='javsacript:updateSearch();'>
 	<option value='' selected></option>
@@ -210,7 +210,7 @@ $_SESSION['ref_script']=$currentPage;
 	</tr>
 -->
 	<tr id='tr_Qualifiers'>
-	<td class='searchRow'><label for='qualifierID'><b>Qualifier</b></label>
+	<td class='searchRow'><label for='qualifierID'><b><?php echo _("Qualifier");?></b></label>
 	<br />
 	<div id='div_Qualifiers'>
 	<input type='hidden' id='qualifierID' value='<?php if ((isset($_SESSION['license_qualifierID'])) && ($_SESSION['license_qualifierID']) && ($reset != 'Y')) echo $_SESSION['license_qualifierID']; ?>' />
@@ -220,7 +220,7 @@ $_SESSION['ref_script']=$currentPage;
 
 
 	<tr>
-	<td class='searchRow'><label for='searchFirstLetter'><b>Starts with</b></label>
+	<td class='searchRow'><label for='searchFirstLetter'><b><?php echo _("Starts with");?></b></label>
 	<br />
 	<?php
 	$license = new License();
@@ -243,7 +243,7 @@ $_SESSION['ref_script']=$currentPage;
 	</td>
 	</tr>
 	</table>
-	&nbsp;<a href='javascript:void(0)' class='newSearch' id='sidebar-link-bottom'>new search</a>
+	&nbsp;<a href='javascript:void(0)' class='newSearch' id='sidebar-link-bottom'><?php echo _("new search");?></a>
 	<input type='hidden' id='reset' value='<?php echo $reset; ?>'>
 
 </td>
