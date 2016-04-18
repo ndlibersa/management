@@ -56,20 +56,20 @@ switch ($_GET['action']) {
 				<table class="thickboxTable" style="width:300px;">
 					<tr>
 						<td colspan='2'>
-							<span id='headerText' class='headerText'><?php if ($licenseID) echo "Edit "; else echo "New " ?>Document</span><br />
+							<span id='headerText' class='headerText'><?php if ($licenseID) echo _("Edit "); else echo _("New ")?><?php echo _("Document");?></span><br />
 						</td>
 					</tr>
 			
 					<tr>
 						<td colspan='2'>
-							<label for="shortName" class="formText">Name:</label>
+							<label for="shortName" class="formText"><?php echo _("Name:");?></label>
 							<span id='span_error_licenseShortName' class='errorText'></span><br />
 							<input type='textbox' id = 'licenseShortName' value="<?php echo $license->shortName; ?>">
 						</td>
 					</tr>
 					<tr>
 						<td colspan='2'>
-							<label for="description" class="formText">Description:</label>
+							<label for="description" class="formText"><?php echo _("Description:");?></label>
 							<span id='span_error_licenseDescription' class='errorText'></span><br />
 							<textarea name='licenseDescription' id = 'licenseDescription' cols='38' rows='2'><?php echo $license->description; ?></textarea>
 						</td>
@@ -92,7 +92,7 @@ switch ($_GET['action']) {
 ?>
 					<tr>
 						<td colspan='2'>
-							<label for="documentType" class="formText">Type:</label><br />
+							<label for="documentType" class="formText"><?php echo _("Type:");?></label><br />
 							<span id='span_error_documentTypeID' class='errorText'></span>
 							<span id='span_documentType'>
 								<select name='docTypeID' id='docTypeID' style='width:185px;'>
@@ -111,13 +111,13 @@ switch ($_GET['action']) {
 								</select>
 							</span>
 							<br />
-							<span id='span_newDocumentType'><a href="javascript:newDocumentType();">add type</a></span>
+							<span id='span_newDocumentType'><a href="javascript:newDocumentType();"><?php echo _("add type");?></a></span>
 							<br />
 						</td>
 					</tr>
 					<tr>
 						<td colspan="2">
-							<label for="revisionDate" class="formText">Last Document Revision:</label>
+							<label for="revisionDate" class="formText"><?php echo _("Last Document Revision:");?></label>
 							<div><input class="date-pick" type='input' id='revisionDate' name='revisionDate' value="<?php echo date("m/d/Y");?>" /></div>
 						</td>
 					</tr>
@@ -132,7 +132,7 @@ switch ($_GET['action']) {
 		
 					<tr>
 						<td colspan='2'>
-							<label for="consortiumID" class="formText">Categories:</label>
+							<label for="consortiumID" class="formText"><?php echo _("Categories:");?></label>
 							<span id='span_error_licenseConsortiumID' class='errorText'></span><br />
 							<span id='span_consortium'>
 <?php
@@ -159,7 +159,7 @@ switch ($_GET['action']) {
 								</select>
 <?php
 		}catch(Exception $e){
-			echo "				<span style='color:red'>There was an error processing this request - please verify configuration.ini is set up for organizations correctly and the database and tables have been created.</span>";
+			echo "				<span style='color:red'>" . _("There was an error processing this request - please verify configuration.ini is set up for organizations correctly and the database and tables have been created.") . "</span>";
 		}
 ?>
 							</span>
@@ -188,7 +188,7 @@ switch ($_GET['action']) {
 ?>
 					<tr>
 						<td colspan="2">
-							<label for="uploadDocument" class="formText">File:</label>
+							<label for="uploadDocument" class="formText"><?php echo _("File:");?></label>
 <?php
 			echo "			<div style=\"display:inline;\" id='div_uploadFile'><input type='file' name='upload_button' id='upload_button'></div>";
 	}
@@ -198,7 +198,7 @@ switch ($_GET['action']) {
 						</td>
 					</tr>
 					<tr>
-						<td><label for="archiveInd" class="formText">Archived:</label></td>
+						<td><label for="archiveInd" class="formText"><?php echo _("Archived:");?></label></td>
 						<td><input type='checkbox' id='archiveInd' name='archiveInd' value='1' /></td>
 					</tr>
 <?php
@@ -207,7 +207,7 @@ switch ($_GET['action']) {
 ?>
 					<tr>
 						<td colspan="2">
-							<a href="#addNote" class="sectiontoggle">Add Optional Note</a>
+							<a href="#addNote" class="sectiontoggle"><?php echo _("Add Optional Note");?></a>
 							<div id="addNote" class="hidden">
 								<table style="width:300px;">
 									<tr>
@@ -217,12 +217,12 @@ switch ($_GET['action']) {
 									</tr>
 									<tr>
 										<td colspan='2'>
-											<label for="note[body]" class="formText">Note:</label><br /><textarea name='note[body]' id = 'noteBody' cols='44' rows='10'></textarea>
+											<label for="note[body]" class="formText"><?php echo _("Note:");?></label><br /><textarea name='note[body]' id = 'noteBody' cols='44' rows='10'></textarea>
 										</td>
 									</tr>
 									<tr>
 										<td colspan='2'>
-											<label for="note[documentNoteTypeID]" class="formText">Note Type:</label><br />
+											<label for="note[documentNoteTypeID]" class="formText"><?php echo _("Note Type:");?></label><br />
 											<span id='span_noteType'>
 <?php
 				echo '						<select id="noteDocumentNoteTypeID" name="note[documentNoteTypeID]">';
@@ -234,7 +234,7 @@ switch ($_GET['action']) {
 ?>
 											</span>
 											<br />
-											<span id='span_newNoteType'><a href="javascript:newNoteType();">add note type</a></span>
+											<span id='span_newNoteType'><a href="javascript:newNoteType();"><?php echo _("add note type");?></a></span>
 											<br />
 										</td>
 									</tr>
@@ -303,7 +303,7 @@ switch ($_GET['action']) {
 		<td colspan='2'><span class='headerText'>Document Upload</span><br /><span id='span_errors'></span><br /></td>
 		</tr>
 		<tr>
-			<td style='text-align:right;vertical-align:top;'><label for="revisionDate" class="formText">Last Document Revision:</label><br /><span id='span_error_revisionDate' class='errorText'></span></td>
+			<td style='text-align:right;vertical-align:top;'><label for="revisionDate" class="formText"><?php echo _("Last Document Revision:");?></label><br /><span id='span_error_revisionDate' class='errorText'></span></td>
 			<td>
 				<input type='hidden' id="effectiveDate" name='effectiveDate' value='<?php echo $effectiveDate; ?>' />
 				<input class='date-pick' id='revisionDate' name='revisionDate' style='width:80px' value='<?php echo $revisionDate; ?>' />
@@ -311,7 +311,7 @@ switch ($_GET['action']) {
 		</tr>
 
 		<tr>
-		<td style='text-align:right;vertical-align:top;'><label for="documentType" class="formText">Document Type:</label><br /><span id='span_error_documentTypeID' class='errorText'></span></td>
+		<td style='text-align:right;vertical-align:top;'><label for="documentType" class="formText"><?php echo _("Document Type:");?></label><br /><span id='span_error_documentTypeID' class='errorText'></span></td>
 		<td>
 		<span id='span_documentType'>
 		<select name='docTypeID' id='docTypeID' style='width:185px;'>
@@ -332,7 +332,7 @@ switch ($_GET['action']) {
 		</select>
 		</span>
 		<br />
-		<span id='span_newDocumentType'><a href="javascript:newDocumentType();">add document type</a></span>
+		<span id='span_newDocumentType'><a href="javascript:newDocumentType();"><?php echo _("add document type");?></a></span>
 		<br />
 		</td>
 		</tr>
@@ -374,19 +374,19 @@ switch ($_GET['action']) {
 -->
 		
 		<tr>
-		<td style='text-align:right;vertical-align:top;'><label for="shortName" class="formText">Name:</label><br /><span id='span_error_shortName' class='errorText'></span></td>
+		<td style='text-align:right;vertical-align:top;'><label for="shortName" class="formText"><?php echo _("Name:");?></label><br /><span id='span_error_shortName' class='errorText'></span></td>
 		<td>
 		<textarea name='shortName' id = 'shortName' cols='28' rows='2' style='width:185px;'><?php echo $document->shortName; ?></textarea>
 		</td>
 		</tr>
 		<tr>
-		<td style='text-align:right;vertical-align:top;'><label for="uploadDocument" class="formText">File:</label></td>
+		<td style='text-align:right;vertical-align:top;'><label for="uploadDocument" class="formText"><?php echo _("File:");?></label></td>
 		<td>
 		<?php
 
 		//if editing
 		if ($documentID){
-			echo "<div id='div_uploadFile'>" . $document->documentURL . "<br /><a href='javascript:replaceFile();'>replace with new file</a>";
+			echo "<div id='div_uploadFile'>" . $document->documentURL . "<br /><a href='javascript:replaceFile();'>" . _("replace with new file") . "</a>";
 			echo "<input type='hidden' id='upload_button' name='upload_button' value='" . $document->documentURL . "'></div>";
 
 		//if adding
@@ -402,7 +402,7 @@ switch ($_GET['action']) {
 
 		<?php if (($document->parentDocumentID == "0") || ($document->parentDocumentID == "")){ ?>
 		<tr>
-			<td style='text-align:right;vertical-align:top;'><label for="archiveInd" class="formText">Archived:</label></td>
+			<td style='text-align:right;vertical-align:top;'><label for="archiveInd" class="formText"><?php echo _("Archived:");?></label></td>
 			<td>
 <?php
 if ($_GET['isArchived'] == 1) {
@@ -421,8 +421,8 @@ if ($_GET['isArchived'] == 1) {
 		<?php } ?>
 
 		<tr style="vertical-align:middle;">
-		<td style="width:60px;"><input type='button' value='submit' name='submitDocument' id='submitDocument' class='submit-button'></td>
-		<td><input type='button' value='cancel' onclick="tb_remove()" class='cancel-button'></td>
+		<td style="width:60px;"><input type='button' value='<?php echo _("submit");?>' name='submitDocument' id='submitDocument' class='submit-button'></td>
+		<td><input type='button' value='<?php echo _("cancel");?>' onclick="tb_remove()" class='cancel-button'></td>
 		</tr>
 		</table>
 		</div>

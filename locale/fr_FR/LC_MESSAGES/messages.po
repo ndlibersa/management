@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
-"POT-Creation-Date: 2016-04-18 14:17-0600\n"
-"PO-Revision-Date: 2016-04-18 14:20-0600\n"
+"POT-Creation-Date: 2016-04-18 14:43-0600\n"
+"PO-Revision-Date: 2016-04-18 14:49-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -14,6 +14,105 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: ajax_forms.php:59
+msgid "Edit "
+msgstr "Modifier "
+
+#: ajax_forms.php:59
+msgid "New "
+msgstr ""
+
+#: ajax_forms.php:59
+msgid "Document"
+msgstr ""
+
+#: ajax_forms.php:65 ajax_forms.php:377
+msgid "Name:"
+msgstr "Nom:"
+
+#: ajax_forms.php:72
+msgid "Description:"
+msgstr "Description:"
+
+#: ajax_forms.php:95
+msgid "Type:"
+msgstr "Type:"
+
+#: ajax_forms.php:114
+msgid "add type"
+msgstr ""
+
+#: ajax_forms.php:120 ajax_forms.php:306
+msgid "Last Document Revision:"
+msgstr ""
+
+#: ajax_forms.php:135
+msgid "Categories:"
+msgstr ""
+
+#: ajax_forms.php:162
+msgid ""
+"There was an error processing this request - please verify configuration.ini "
+"is set up for organizations correctly and the database and tables have been "
+"created."
+msgstr ""
+
+#: ajax_forms.php:191 ajax_forms.php:383
+msgid "File:"
+msgstr "Fichier:"
+
+#: ajax_forms.php:201 ajax_forms.php:405
+msgid "Archived:"
+msgstr ""
+
+#: ajax_forms.php:210
+msgid "Add Optional Note"
+msgstr ""
+
+#: ajax_forms.php:220
+msgid "Note:"
+msgstr "Remarque:"
+
+#: ajax_forms.php:225
+msgid "Note Type:"
+msgstr "Type de remarque:"
+
+#: ajax_forms.php:237
+msgid "add note type"
+msgstr ""
+
+#: ajax_forms.php:314
+msgid "Document Type:"
+msgstr ""
+
+#: ajax_forms.php:335
+msgid "add document type"
+msgstr ""
+
+#: ajax_forms.php:389
+msgid "replace with new file"
+msgstr ""
+
+#: ajax_forms.php:424
+msgid "submit"
+msgstr ""
+
+#: ajax_forms.php:425
+msgid "cancel"
+msgstr ""
+
+#: ajax_htmldata.php:478 ajax_htmldata.php:865 ajax_htmldata.php:870
+msgid "Name"
+msgstr ""
+
+#: ajax_htmldata.php:480 ajax_htmldata.php:866 ajax_htmldata.php:871
+msgid "Type"
+msgstr ""
+
+#: ajax_htmldata.php:481 ajax_htmldata.php:867 ajax_htmldata.php:872
+msgid "Last Document Revision"
+msgstr ""
 
 #: index.php:23
 msgid "Home"
