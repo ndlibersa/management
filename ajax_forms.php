@@ -1187,7 +1187,7 @@ if ($_GET['isArchived'] == 1) {
 			<tr><td><label for='emailAddressForTermsTool'><b><?php echo _("Terms Tool Email");?></b></label></td>
 		<td>
 				<fieldset id="fieldsetEmail">
-				<a title = '<?php echo _("Enter email address if you wish this user to receive email notifications when the terms tool box is checked on the Expressions tab." . "<br /><br />" . _("Leave this field blank if the user shouldn't receive emails.");?>' href=""><img src='images/help.gif'></a>
+				<a title = '<?php echo _("Enter email address if you wish this user to receive email notifications when the terms tool box is checked on the Expressions tab.") . "<br /><br />" . _("Leave this field blank if the user shouldn't receive emails.");?>' href=""><img src='images/help.gif'></a>
 				</fieldset>
 
 		</td>
