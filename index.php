@@ -58,7 +58,7 @@ $_SESSION['ref_script']=$currentPage;
 	<td class='searchRow'><label for='searchName'><b><?php echo _("Name (contains)");?></b></label>
 	<br />
 	<input type='text' name='searchName' id='searchName' style='width:145px' value="<?php if (isset($_SESSION['license_shortName']) && ($reset != 'Y')) echo $_SESSION['license_shortName']; ?>" /><br />
-	<div id='div_searchName' style='<?php if ((!isset($_SESSION['license_shortName'])) || ($reset == 'Y')) echo "display:none;"; ?>margin-left:123px;'><input type='button' name='searchName' value='go!' class='searchButton' /></div>
+	<div id='div_searchName' style='<?php if ((!isset($_SESSION['license_shortName'])) || ($reset == 'Y')) echo "display:none;"; ?>margin-left:123px;'><input type='button' name='searchName' value='<?php echo _("go!");?>' class='searchButton' /></div>
 	</td>
 	</tr>
 
@@ -92,7 +92,7 @@ $_SESSION['ref_script']=$currentPage;
 			</select>
 			<?php
 		}catch (Exception $e){
-			echo "<span style='color:red'>There was an error processing this request - please verify configuration.ini is set up for organizations correctly and the database and tables have been created.</span>";
+			echo "<span style='color:red'>" . _("There was an error processing this request - please verify configuration.ini is set up for organizations correctly and the database and tables have been created.") . "</span>";
 		}
 	?>
 

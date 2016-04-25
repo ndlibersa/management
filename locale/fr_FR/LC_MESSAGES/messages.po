@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
-"POT-Creation-Date: 2016-04-18 14:43-0600\n"
-"PO-Revision-Date: 2016-04-18 14:49-0600\n"
+"POT-Creation-Date: 2016-04-25 15:33-0600\n"
+"PO-Revision-Date: 2016-04-25 15:53-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,6 +15,51 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: admin.php:22
+msgid "Administration"
+msgstr "Administration"
+
+#: admin.php:35
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: admin.php:36
+msgid "add new user"
+msgstr "Ajouter utilisateur"
+
+#: admin.php:39 admin.php:56 admin.php:70 admin.php:158 in_progress.php:38
+#: license.php:68 license.php:93 license.php:112
+msgid "Loading..."
+msgstr "Chargement en cours..."
+
+#: admin.php:52
+msgid "Document Types"
+msgstr "Types de document"
+
+#: admin.php:53
+msgid "add new document type"
+msgstr "Ajouter un type de document"
+
+#: admin.php:66
+msgid "Note Types"
+msgstr ""
+
+#: admin.php:67
+msgid "add new note type"
+msgstr ""
+
+#: admin.php:154
+msgid "Categories"
+msgstr ""
+
+#: admin.php:155
+msgid "add new category"
+msgstr ""
+
+#: admin.php:185
+msgid "You don't have permission to access this page"
+msgstr ""
+
 #: ajax_forms.php:59
 msgid "Edit "
 msgstr "Modifier "
@@ -23,7 +68,7 @@ msgstr "Modifier "
 msgid "New "
 msgstr ""
 
-#: ajax_forms.php:59
+#: ajax_forms.php:59 ajax_htmldata.php:200
 msgid "Document"
 msgstr ""
 
@@ -47,15 +92,19 @@ msgstr ""
 msgid "Last Document Revision:"
 msgstr ""
 
-#: ajax_forms.php:135
+#: ajax_forms.php:135 ajax_htmldata.php:60 ajax_htmldata.php:73
 msgid "Categories:"
 msgstr ""
 
-#: ajax_forms.php:162
+#: ajax_forms.php:162 ajax_htmldata.php:591 index.php:95
 msgid ""
 "There was an error processing this request - please verify configuration.ini "
 "is set up for organizations correctly and the database and tables have been "
 "created."
+msgstr ""
+
+#: ajax_forms.php:174
+msgid "add category"
 msgstr ""
 
 #: ajax_forms.php:191 ajax_forms.php:383
@@ -70,16 +119,31 @@ msgstr ""
 msgid "Add Optional Note"
 msgstr ""
 
-#: ajax_forms.php:220
+#: ajax_forms.php:220 ajax_forms.php:1022
 msgid "Note:"
 msgstr "Remarque:"
 
-#: ajax_forms.php:225
+#: ajax_forms.php:225 ajax_forms.php:1026
 msgid "Note Type:"
 msgstr "Type de remarque:"
 
-#: ajax_forms.php:237
+#: ajax_forms.php:237 ajax_forms.php:1042
 msgid "add note type"
+msgstr ""
+
+#: ajax_forms.php:251 ajax_forms.php:424 ajax_forms.php:522 ajax_forms.php:792
+#: ajax_forms.php:983 ajax_forms.php:1065
+msgid "submit"
+msgstr ""
+
+#: ajax_forms.php:252 ajax_forms.php:425 ajax_forms.php:523 ajax_forms.php:793
+#: ajax_forms.php:984 ajax_forms.php:1066 ajax_forms.php:1201
+#: ajax_forms.php:1247 ajax_forms.php:1303
+msgid "cancel"
+msgstr ""
+
+#: ajax_forms.php:303
+msgid "Document Upload"
 msgstr ""
 
 #: ajax_forms.php:314
@@ -94,25 +158,597 @@ msgstr ""
 msgid "replace with new file"
 msgstr ""
 
-#: ajax_forms.php:424
-msgid "submit"
+#: ajax_forms.php:451
+msgid "Archive Document Date"
 msgstr ""
 
-#: ajax_forms.php:425
-msgid "cancel"
+#: ajax_forms.php:459 ajax_processing.php:561 ajax_processing.php:573
+#: ajax_processing.php:586
+msgid "Continue"
 msgstr ""
 
-#: ajax_htmldata.php:478 ajax_htmldata.php:865 ajax_htmldata.php:870
+#: ajax_forms.php:489
+msgid "Terms Tool Resource Link"
+msgstr ""
+
+#: ajax_forms.php:494
+msgid "For Document:"
+msgstr ""
+
+#: ajax_forms.php:517
+msgid "Terms Tool Resource:"
+msgstr ""
+
+#: ajax_forms.php:554 ajax_htmldata.php:1004 ajax_htmldata.php:1009
+msgid "Signatures"
+msgstr ""
+
+#: ajax_forms.php:597
+msgid "commit update"
+msgstr ""
+
+#: ajax_forms.php:610 ajax_forms.php:879 ajax_htmldata.php:48
+#: ajax_htmldata.php:156 ajax_htmldata.php:236 ajax_htmldata.php:319
+#: ajax_htmldata.php:1258 ajax_htmldata.php:1335
+msgid "edit"
+msgstr ""
+
+#: ajax_forms.php:611 ajax_forms.php:880 ajax_forms.php:967
+#: ajax_htmldata.php:48 ajax_htmldata.php:157 ajax_htmldata.php:236
+#: ajax_htmldata.php:319 ajax_htmldata.php:1258 ajax_htmldata.php:1336
+#: ajax_htmldata.php:1390 ajax_htmldata.php:1438 ajax_htmldata.php:1481
+msgid "remove"
+msgstr ""
+
+#: ajax_forms.php:633 ajax_forms.php:895
+msgid "add"
+msgstr ""
+
+#: ajax_forms.php:643 ajax_forms.php:905
+msgid "Close"
+msgstr ""
+
+#: ajax_forms.php:699 license.php:87 license.php:106
+msgid "Expressions"
+msgstr "Expressions"
+
+#: ajax_forms.php:704 ajax_forms.php:1049
+msgid "Document:"
+msgstr "Document:"
+
+#: ajax_forms.php:726
+msgid "Expression Type:"
+msgstr "Type d'expression:"
+
+#: ajax_forms.php:745
+msgid "add expression type"
+msgstr ""
+
+#: ajax_forms.php:752
+msgid "Qualifier:"
+msgstr "Qualificateur:"
+
+#: ajax_forms.php:788
+msgid "Document Text:"
+msgstr ""
+
+#: ajax_forms.php:826 ajax_forms.php:836 ajax_htmldata.php:726
+msgid " Notes"
+msgstr ""
+
+#: ajax_forms.php:827
+msgid "For Document Text:"
+msgstr "Pour le texte du document:"
+
+#: ajax_forms.php:941 license.php:64 license.php:89 license.php:108
+msgid "Attachments"
+msgstr "Pièces jointes"
+
+#: ajax_forms.php:945
+msgid "Date:"
+msgstr "Date:"
+
+#: ajax_forms.php:952
+msgid "Details:"
+msgstr "Détails:"
+
+#: ajax_forms.php:958
+msgid "Attachments:"
+msgstr "Pièces jointes:"
+
+#: ajax_forms.php:1019
+msgid "Notes"
+msgstr "Notes"
+
+#: ajax_forms.php:1094 ajax_forms.php:1137 ajax_forms.php:1220
+#: ajax_forms.php:1265
+msgid "Update"
+msgstr "Mettre à jour"
+
+#: ajax_forms.php:1103 ajax_htmldata.php:1389 ajax_htmldata.php:1437
+#: ajax_htmldata.php:1480
+msgid "update"
+msgstr "Modifier"
+
+#: ajax_forms.php:1108
+msgid "close"
+msgstr "Fermer"
+
+#: ajax_forms.php:1140 ajax_forms.php:1223 ajax_forms.php:1268
+msgid "Add New"
+msgstr "Ajouter"
+
+#: ajax_forms.php:1148
+msgid " User"
+msgstr " Utilisateur"
+
+#: ajax_forms.php:1149 ajax_htmldata.php:1363
+msgid "Login ID"
+msgstr "Identifiant de connexion"
+
+#: ajax_forms.php:1150 ajax_htmldata.php:1364
+msgid "First Name"
+msgstr "Prénom"
+
+#: ajax_forms.php:1151 ajax_htmldata.php:1365
+msgid "Last Name"
+msgstr "Nom"
+
+#: ajax_forms.php:1152 ajax_htmldata.php:1366
+msgid "Privilege"
+msgstr "Privilège"
+
+#: ajax_forms.php:1155 ajax_forms.php:1158
+msgid "Add/Edit users can add, edit, or remove licenses and associated fields"
+msgstr ""
+"Les utilisateurs 'Add/Edit' peuvent ajouter, modifier ou supprimer les "
+"licences et les champs associés"
+
+#: ajax_forms.php:1155 ajax_forms.php:1158
+msgid "Admin users have access to the Admin page and the SFX tab."
+msgstr ""
+"Les utilisateurs 'Admin' peuvent accéder à la page Admin et à l'onglet SFX."
+
+#: ajax_forms.php:1155 ajax_forms.php:1158
+msgid ""
+"View only users can view all license information, including the license pdf"
+msgstr ""
+"Les utilisateurs 'View only' peuvent consulter tous les détails de licences, "
+"y compris le fichier PDF de la licence"
+
+#: ajax_forms.php:1187
+msgid "Terms Tool Email"
+msgstr ""
+
+#: ajax_forms.php:1190
+msgid "Leave this field blank if the user shouldn't receive emails."
+msgstr ""
+
+#: ajax_forms.php:1231
+msgid " Expression Type"
+msgstr ""
+
+#: ajax_forms.php:1232 ajax_htmldata.php:1427
+msgid "Expression Type"
+msgstr "Type d'expression"
+
+#: ajax_forms.php:1233 ajax_htmldata.php:201 ajax_htmldata.php:1428
+msgid "Note Type"
+msgstr ""
+
+#: ajax_forms.php:1242
+msgid "* Note type of display allows for terms tool use"
+msgstr ""
+
+#: ajax_forms.php:1276
+msgid " Qualifier"
+msgstr " Qualificateur"
+
+#: ajax_forms.php:1278 ajax_htmldata.php:1467
+msgid "For Expression Type"
+msgstr ""
+
+#: ajax_forms.php:1299 ajax_htmldata.php:1194 ajax_htmldata.php:1468
+#: index.php:213
+msgid "Qualifier"
+msgstr "Qualificateur"
+
+#: ajax_forms.php:1326 ajax_htmldata.php:1592 ajax_processing.php:1330
+msgid "Action "
+msgstr "Action"
+
+#: ajax_forms.php:1326 ajax_htmldata.php:1592 ajax_processing.php:1330
+msgid " not set up!"
+msgstr " Non défini!"
+
+#: ajax_forms.php:1190
+msgid ""
+"Enter email address if you wish this user to receive email notifications "
+"when the terms tool box is checked on the Expressions tab.<br /><br />"
+msgstr ""
+
+#: ajax_htmldata.php:59 ajax_htmldata.php:72
+msgid "Description: "
+msgstr ""
+
+#: ajax_htmldata.php:85
+msgid "Creation Date: "
+msgstr ""
+
+#: ajax_htmldata.php:86
+msgid "Last Update: "
+msgstr ""
+
+#: ajax_htmldata.php:93
+msgid "License Status:"
+msgstr ""
+
+#: ajax_htmldata.php:170 ajax_htmldata.php:247 ajax_htmldata.php:330
+#: ajax_htmldata.php:1071 ajax_htmldata.php:1128 ajax_htmldata.php:1304
+#: ajax_htmldata.php:1345 ajax_htmldata.php:1399 ajax_htmldata.php:1447
+msgid "(none found)"
+msgstr ""
+
+#: ajax_htmldata.php:175
+msgid "add new terms tool resource link"
+msgstr ""
+
+#: ajax_htmldata.php:189
+msgid "add new note"
+msgstr ""
+
+#: ajax_htmldata.php:198
+msgid "Date"
+msgstr "Date"
+
+#: ajax_htmldata.php:199
+msgid "Note"
+msgstr ""
+
+#: ajax_htmldata.php:223 ajax_htmldata.php:291 ajax_htmldata.php:770
+msgid "more"
+msgstr ""
+
+#: ajax_htmldata.php:228 ajax_htmldata.php:296 ajax_htmldata.php:775
+msgid "less"
+msgstr ""
+
+#: ajax_htmldata.php:308 ajax_htmldata.php:966 ajax_htmldata.php:1084
+msgid "(none uploaded)"
+msgstr ""
+
+#: ajax_htmldata.php:334
+msgid "add new attachment"
+msgstr ""
+
+#: ajax_htmldata.php:418
+msgid "Sorry, no documents fit your query"
+msgstr ""
+
+#: ajax_htmldata.php:425
+msgid "Displaying "
+msgstr ""
+
+#: ajax_htmldata.php:425
+msgid " to "
+msgstr ""
+
+#: ajax_htmldata.php:425
+msgid " of "
+msgstr ""
+
+#: ajax_htmldata.php:425
+msgid " Records"
+msgstr ""
+
+#: ajax_htmldata.php:478 ajax_htmldata.php:558 ajax_htmldata.php:865
+#: ajax_htmldata.php:870 ajax_htmldata.php:1001 ajax_htmldata.php:1006
 msgid "Name"
 msgstr ""
 
 #: ajax_htmldata.php:480 ajax_htmldata.php:866 ajax_htmldata.php:871
+#: ajax_htmldata.php:1002 ajax_htmldata.php:1007
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: ajax_htmldata.php:481 ajax_htmldata.php:867 ajax_htmldata.php:872
 msgid "Last Document Revision"
 msgstr ""
+
+#: ajax_htmldata.php:527
+msgid "records per page"
+msgstr ""
+
+#: ajax_htmldata.php:559
+msgid "Publisher / Provider"
+msgstr ""
+
+#: ajax_htmldata.php:560
+msgid "Consortium"
+msgstr ""
+
+#: ajax_htmldata.php:561
+msgid "Status"
+msgstr ""
+
+#: ajax_htmldata.php:630
+msgid "view / edit license"
+msgstr ""
+
+#: ajax_htmldata.php:630
+msgid "view / edit "
+msgstr ""
+
+#: ajax_htmldata.php:630 ajax_htmldata.php:1284
+msgid " notes"
+msgstr ""
+
+#: ajax_htmldata.php:630 ajax_htmldata.php:632 ajax_htmldata.php:964
+#: ajax_htmldata.php:1082
+msgid "view document"
+msgstr ""
+
+#: ajax_htmldata.php:632 ajax_htmldata.php:734
+msgid "view license"
+msgstr ""
+
+#: ajax_htmldata.php:642
+msgid " Notes:  "
+msgstr ""
+
+#: ajax_htmldata.php:668
+msgid "Qualifiers:"
+msgstr ""
+
+#: ajax_htmldata.php:725
+msgid "License"
+msgstr ""
+
+#: ajax_htmldata.php:727
+msgid "Document Text"
+msgstr ""
+
+#: ajax_htmldata.php:739
+msgid "(document text not entered)"
+msgstr ""
+
+#: ajax_htmldata.php:747
+msgid " Notes:"
+msgstr ""
+
+#: ajax_htmldata.php:787
+msgid "none for "
+msgstr ""
+
+#: ajax_htmldata.php:837
+msgid "Archived Documents"
+msgstr ""
+
+#: ajax_htmldata.php:837
+msgid "hide archives"
+msgstr "cacher les archives"
+
+#: ajax_htmldata.php:914 ajax_htmldata.php:1034
+msgid "archived on: "
+msgstr "Archivé le: "
+
+#: ajax_htmldata.php:971 ajax_htmldata.php:1088
+msgid "view expressions"
+msgstr ""
+
+#: ajax_htmldata.php:977 ajax_htmldata.php:1094
+msgid "edit document"
+msgstr ""
+
+#: ajax_htmldata.php:977 ajax_htmldata.php:1094
+msgid "remove document"
+msgstr ""
+
+#: ajax_htmldata.php:987 ajax_htmldata.php:989
+msgid "This document has "
+msgstr ""
+
+#: ajax_htmldata.php:987 ajax_htmldata.php:989
+msgid " children document(s) not displayed.  "
+msgstr ""
+
+#: ajax_htmldata.php:987 ajax_htmldata.php:989
+msgid "show all documents for this parent"
+msgstr ""
+
+#: ajax_htmldata.php:993 ajax_htmldata.php:995 ajax_htmldata.php:1103
+#: ajax_htmldata.php:1105
+msgid "The following "
+msgstr "Le/les document(s) suivant(s)"
+
+#: ajax_htmldata.php:993 ajax_htmldata.php:995 ajax_htmldata.php:1103
+#: ajax_htmldata.php:1105
+msgid " document(s) belong to "
+msgstr "appartient(nent) à "
+
+#: ajax_htmldata.php:993 ajax_htmldata.php:995
+msgid "hide children documents for this parent"
+msgstr "cacher les documents subsidiaires de cet élément principal"
+
+#: ajax_htmldata.php:1003 ajax_htmldata.php:1008
+msgid "Effective Date"
+msgstr ""
+
+#: ajax_htmldata.php:1032
+msgid "archive document"
+msgstr "archiver le document"
+
+#: ajax_htmldata.php:1055
+msgid "(no date)"
+msgstr ""
+
+#: ajax_htmldata.php:1066
+msgid "add/view details"
+msgstr ""
+
+#: ajax_htmldata.php:1073
+msgid "add signatures"
+msgstr ""
+
+#: ajax_htmldata.php:1132
+msgid " archive(s) available."
+msgstr ""
+
+#: ajax_htmldata.php:1132
+msgid "show archives"
+msgstr ""
+
+#: ajax_htmldata.php:1141
+msgid "upload new document"
+msgstr ""
+
+#: ajax_htmldata.php:1143
+msgid "Only one active document is allowed."
+msgstr ""
+
+#: ajax_htmldata.php:1143
+msgid "upload archived document"
+msgstr "Télécharger un nouveau document"
+
+#: ajax_htmldata.php:1233
+msgid "used in terms tool"
+msgstr "utilisé dans l'outil de termes"
+
+#: ajax_htmldata.php:1278
+msgid "(none)"
+msgstr "(aucun)"
+
+#: ajax_htmldata.php:1284
+msgid "add/view "
+msgstr "Ajouter/voir"
+
+#: ajax_htmldata.php:1308
+msgid "add new expression"
+msgstr "Ajouter une nouvelle expression"
+
+#: ajax_htmldata.php:1370
+msgid "Terms Tool Update Email"
+msgstr "Modifier l'adresse email de l'outil des termes"
+
+#: ajax_htmldata.php:1517 compare.php:73
+msgid "Limit by Qualifier:"
+msgstr "Restreindre par qualificateur :"
+
+#: ajax_processing.php:177
+msgid "success uploading!"
+msgstr ""
+
+#: ajax_processing.php:180 ajax_processing.php:1078
+msgid "There was a problem saving your file to "
+msgstr ""
+
+#: ajax_processing.php:241
+msgid "Document Saved Successfully."
+msgstr ""
+
+#: ajax_processing.php:255
+msgid "Signature Deleted Successfully."
+msgstr ""
+
+#: ajax_processing.php:340
+msgid ""
+"An expression in the licensing module has been approved for terms tool use."
+msgstr ""
+
+#: ajax_processing.php:341
+msgid "License: "
+msgstr ""
+
+#: ajax_processing.php:342
+msgid "View License Record: "
+msgstr ""
+
+#: ajax_processing.php:346
+msgid "Licensing - expression set to production use"
+msgstr ""
+
+#: ajax_processing.php:351
+msgid "Approved for terms tool display."
+msgstr ""
+
+#: ajax_processing.php:353
+msgid "Removed from terms tool display."
+msgstr ""
+
+#: ajax_processing.php:380
+msgid "Expression Note Updated Successfully."
+msgstr ""
+
+#: ajax_processing.php:396
+msgid "Expression Note Added Successfully."
+msgstr ""
+
+#: ajax_processing.php:420
+msgid "Note Removed Successfully."
+msgstr ""
+
+#: ajax_processing.php:457
+msgid "Terms Tool Resource Link successfully deleted"
+msgstr ""
+
+#: ajax_processing.php:472
+msgid "Document Updated Successfully."
+msgstr ""
+
+#: ajax_processing.php:482
+msgid "Document Added Successfully."
+msgstr ""
+
+#: ajax_processing.php:570 ajax_processing.php:583
+msgid "SQL Insert Failed. "
+msgstr ""
+
+#: ajax_processing.php:570 ajax_processing.php:583
+msgid " Please make sure everything is filled out correctly."
+msgstr ""
+
+#: ajax_processing.php:911
+msgid "Unable to delete  - this "
+msgstr ""
+
+#: ajax_processing.php:911
+msgid ""
+" is in use.  Please make sure no documents are set up with this information."
+msgstr ""
+
+#: ajax_processing.php:917
+msgid ""
+"Unable to delete.  Please make sure no documents are set up with this "
+"information."
+msgstr ""
+
+#: ajax_processing.php:1145
+msgid "Attachment successfully deleted"
+msgstr ""
+
+#: ajax_processing.php:1159
+msgid "Attachment file successfully deleted"
+msgstr ""
+
+#: ajax_processing.php:1172
+msgid "Note successfully deleted"
+msgstr ""
+
+#: ajax_processing.php:1220
+msgid "Status has been updated"
+msgstr ""
+
+#: compare.php:39
+msgid "Limit by Expression Type:"
+msgstr ""
+
+#: in_progress.php:33
+msgid "Licenses In Progress"
+msgstr ""
+
+#: in_progress.php:33
+msgid "Browse All"
+msgstr "Afficher tous"
 
 #: index.php:23
 msgid "Home"
@@ -122,17 +758,17 @@ msgstr "Accueil"
 msgid "Name (contains)"
 msgstr "Nom (contient)"
 
+#: index.php:61
+msgid "go!"
+msgstr "OK!"
+
 #: index.php:105
 msgid "Category"
 msgstr ""
 
 #: index.php:158
 msgid "Document Type"
-msgstr ""
-
-#: index.php:213
-msgid "Qualifier"
-msgstr ""
+msgstr "Type de document"
 
 #: index.php:223
 msgid "Starts with"
@@ -141,6 +777,26 @@ msgstr "Commençant par"
 #: index.php:246
 msgid "new search"
 msgstr "Nouvelle recherche"
+
+#: license.php:61 license.php:86 license.php:105
+msgid "Documents"
+msgstr "Documents"
+
+#: license.php:63 license.php:88 license.php:107
+msgid "Terms Tool"
+msgstr "Outil des termes"
+
+#: not_available.php:21
+msgid "Not Available"
+msgstr "Non disponible"
+
+#: not_available.php:29
+msgid "Management Module"
+msgstr ""
+
+#: not_available.php:55
+msgid "Please contact your Administrator for access to the Management Module."
+msgstr ""
 
 #: templates/header.php:238
 msgid "Invalid translation route!"
