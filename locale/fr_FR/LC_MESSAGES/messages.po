@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
 "POT-Creation-Date: 2016-04-25 15:33-0600\n"
-"PO-Revision-Date: 2016-04-26 11:00-0600\n"
+"PO-Revision-Date: 2016-04-26 11:05-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -446,7 +446,7 @@ msgstr " de "
 
 #: ajax_htmldata.php:425
 msgid " Records"
-msgstr "Fiches"
+msgstr " Fiches"
 
 #: ajax_htmldata.php:478 ajax_htmldata.php:558 ajax_htmldata.php:865
 #: ajax_htmldata.php:870 ajax_htmldata.php:1001 ajax_htmldata.php:1006
