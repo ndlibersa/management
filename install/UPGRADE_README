@@ -1,0 +1,18 @@
+The following file contains notes on specific upgrades.  For full instructions on how to run an upgrade, refer to the technical documentation available at http://coral-erm.org
+
+**************************************************************************************************
+****
+****
+****  UPGRADING FROM CORAL MANAGEMENT VERSION 1.0 TO 1.1
+****
+****
+**************************************************************************************************
+
+This upgrade contains coding and database structure changes.
+
+To install this upgrade, simply run the file install/upgrade_1.1.sql into MySQL located in the install directory. The database changes will be run immediatly.
+
+This release includes translatability of the module. French translation is provided
+
+This version is the last one released as a single module. Next versions will be able from https://github.com/Coral-erm/Coral, the ndlibersa repository is deprecated.
+
