@@ -45,8 +45,8 @@ $_SESSION['ref_script']=$currentPage;
 <td style="width:155px;padding-right:10px;">
 	<table class='noBorder'>
 	<tr><td style="width:75px;">
-	<span style='font-size:130%;font-weight:bold;'>Search</span><br />
-	<a href='javascript:void(0)' class='newSearch'>new search</a>
+	<span style='font-size:130%;font-weight:bold;'><?php echo _("Search");?></span><br />
+	<a href='javascript:void(0)' class='newSearch'><?php echo _("new search");?></a>
 	</td>
 	<td><div id='div_feedback'>&nbsp;</div>
 	</td></tr>

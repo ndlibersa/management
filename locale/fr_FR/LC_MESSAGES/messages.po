@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
-"POT-Creation-Date: 2016-04-25 15:33-0600\n"
-"PO-Revision-Date: 2016-05-04 08:34+0100\n"
+"POT-Creation-Date: 2016-05-04 13:49-0600\n"
+"PO-Revision-Date: 2016-05-04 13:50-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -324,6 +324,12 @@ msgid "Terms Tool Email"
 msgstr "Adresse email de l'Outil des termes"
 
 #: ajax_forms.php:1190
+msgid ""
+"Enter email address if you wish this user to receive email notifications "
+"when the terms tool box is checked on the Expressions tab."
+msgstr ""
+
+#: ajax_forms.php:1190
 msgid "Leave this field blank if the user shouldn't receive emails."
 msgstr ""
 "Laissez ce champ vide si l'utilisateur ne devrait pas recevoir d'emails."
@@ -364,15 +370,6 @@ msgstr "Action "
 #: ajax_forms.php:1326 ajax_htmldata.php:1592 ajax_processing.php:1330
 msgid " not set up!"
 msgstr " Non défini !"
-
-#: ajax_forms.php:1190
-msgid ""
-"Enter email address if you wish this user to receive email notifications "
-"when the terms tool box is checked on the Expressions tab.<br /><br />"
-msgstr ""
-"Entrez une adresse email si vous voulez que cet utilisateur reçoive des "
-"notifications par email lorsque la boîte d'outils des termes est activée "
-"dans l'onglet Expressions.<br /><br />"
 
 #: ajax_htmldata.php:59 ajax_htmldata.php:72
 msgid "Description: "
@@ -767,6 +764,14 @@ msgstr "Afficher tous"
 msgid "Home"
 msgstr "Accueil"
 
+#: index.php:48
+msgid "Search"
+msgstr "Rechercher"
+
+#: index.php:49 index.php:246
+msgid "new search"
+msgstr "Nouvelle recherche"
+
 #: index.php:58
 msgid "Name (contains)"
 msgstr "Nom (contient)"
@@ -786,10 +791,6 @@ msgstr "Type de document"
 #: index.php:223
 msgid "Starts with"
 msgstr "Commençant par"
-
-#: index.php:246
-msgid "new search"
-msgstr "Nouvelle recherche"
 
 #: license.php:61 license.php:86 license.php:105
 msgid "Documents"
@@ -812,6 +813,14 @@ msgid "Please contact your Administrator for access to the Management Module."
 msgstr ""
 "Veuillez contacter votre Administrateur pour accéder au Module de Gestion."
 
-#: templates/header.php:238
+#: templates/header.php:129
 msgid "Invalid translation route!"
 msgstr "Chemin d'accès aux traductions invalide !"
+
+#~ msgid ""
+#~ "Enter email address if you wish this user to receive email notifications "
+#~ "when the terms tool box is checked on the Expressions tab.<br /><br />"
+#~ msgstr ""
+#~ "Entrez une adresse email si vous voulez que cet utilisateur reçoive des "
+#~ "notifications par email lorsque la boîte d'outils des termes est activée "
+#~ "dans l'onglet Expressions.<br /><br />"
