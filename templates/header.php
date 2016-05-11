@@ -92,6 +92,7 @@ $coralURL = $util->getCORALURL();
 <div style="text-align:left;">
 
 <center>
+    
 <table class="titleTable" style="width:1024px;text-align:left;">
 
     <tr style='vertical-align:top;'>
@@ -160,7 +161,6 @@ $coralURL = $util->getCORALURL();
                         
                     </select>
                 </span>
-
             </div>
 
         </td>
