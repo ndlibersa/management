@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
-"POT-Creation-Date: 2016-05-04 13:49-0600\n"
-"PO-Revision-Date: 2016-05-04 13:50-0600\n"
+"POT-Creation-Date: 2016-05-11 13:31-0600\n"
+"PO-Revision-Date: 2016-05-11 13:42-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -328,6 +328,9 @@ msgid ""
 "Enter email address if you wish this user to receive email notifications "
 "when the terms tool box is checked on the Expressions tab."
 msgstr ""
+"Entrez une adresse email si vous voulez que cet utilisateur reçoive des "
+"notifications par email lorsque la boîte d'outils des termes est activée "
+"dans l'onglet Expressions."
 
 #: ajax_forms.php:1190
 msgid "Leave this field blank if the user shouldn't receive emails."
@@ -760,7 +763,8 @@ msgstr "Licences en cours"
 msgid "Browse All"
 msgstr "Afficher tous"
 
-#: index.php:23
+#: index.php:23 templates/header.php:209 templates/header.php:232
+#: templates/header.php:248
 msgid "Home"
 msgstr "Accueil"
 
@@ -813,9 +817,49 @@ msgid "Please contact your Administrator for access to the Management Module."
 msgstr ""
 "Veuillez contacter votre Administrateur pour accéder au Module de Gestion."
 
-#: templates/header.php:129
+#: templates/header.php:102
+msgid "Management"
+msgstr "Management"
+
+#: templates/header.php:103
+msgid "Powered by"
+msgstr "Alimenté par"
+
+#: templates/header.php:137
 msgid "Invalid translation route!"
 msgstr "Chemin d'accès aux traductions invalide !"
+
+#: templates/header.php:216 templates/header.php:239 templates/header.php:255
+msgid "New Document"
+msgstr "Nouveau document"
+
+#: templates/header.php:223
+msgid "Admin"
+msgstr "Administration"
+
+#: templates/header.php:276
+msgid "Change Module"
+msgstr "Changer de module"
+
+#: templates/header.php:279
+msgid "Main Menu"
+msgstr "Menu principal"
+
+#: templates/header.php:284
+msgid "Resources"
+msgstr "Ressources"
+
+#: templates/header.php:289
+msgid "Organizations"
+msgstr "Organisations"
+
+#: templates/header.php:294
+msgid "Licensing"
+msgstr "Licences"
+
+#: templates/header.php:299
+msgid "Usage Statistics"
+msgstr "Statistiques d'utilisation"
 
 #~ msgid ""
 #~ "Enter email address if you wish this user to receive email notifications "
