@@ -55,7 +55,6 @@ $sessionID = $util->getSessionCookie();
 
 		$authURL = $util->getCORALURL() . "auth/" . $addURL . htmlentities($_SERVER['REQUEST_URI']);
 		header('Location: ' . $authURL, true);
-
 		exit; //PREVENT SECURITY HOLE
 	}
 

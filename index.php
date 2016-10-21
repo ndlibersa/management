@@ -244,7 +244,7 @@ $_SESSION['ref_script']=$currentPage;
 	</tr>
 	</table>
 	&nbsp;<a href='javascript:void(0)' class='newSearch'><?php echo _("new search");?></a>
-	<input type='hidden' id='reset' value='<?php echo $reset; ?>'>
+	<input type='hidden' id='reset' value='<?php echo $reset; ?>'/>
 
 </td>
 <td>
@@ -254,9 +254,6 @@ $_SESSION['ref_script']=$currentPage;
 </td></tr>
 </table>
 
-</td>
-</tr>
-</table>
 <br />
 <script type="text/javascript" src="js/index.js"></script>
 
@@ -280,13 +277,10 @@ $_SESSION['ref_script']=$currentPage;
   if (($_SESSION['license_orderBy']) && ($reset != 'Y')){
 	  echo "orderBy = \"" . $_SESSION['license_orderBy'] . "\";";
   }
-
-
+?>
 </script>
-
+								</center>
 
 <?php
 include 'templates/footer.php';
 ?>
-
-

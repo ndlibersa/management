@@ -59,7 +59,7 @@ $(function(){
 			 success:    function(exists) {
 				if (exists == "0"){
 					$("#licenseOrganizationID").val("");
-					$("#span_error_organizationNameResult").html("<br />"+_("Warning!  This organization will be added new."));
+					$("#span_error_organizationNameResult").html("<br />" + _("Warning!  This organization will be added new."));
 
 				}else{
 					$("#licenseOrganizationID").val(exists);
@@ -121,7 +121,7 @@ $(function(){
 				 success:    function(exists) {
 					if (exists == "0"){
 					        $("#licenseOrganizationID").val("");
-					        $("#span_error_organizationNameResult").html("<br />"+_("Warning!  This organization will be added new."));
+					        $("#span_error_organizationNameResult").html("<br />" + _("Warning!  This organization will be added new."));
 
 					}else{
 						$("#licenseOrganizationID").val(exists);
@@ -193,7 +193,7 @@ function doSubmitLicense(){
 
 //the following are only used when interoperability with organizations module is turned off
 function newConsortium(){
-  $('#span_newConsortium').html("<input type='text' name='newConsortium' id='newConsortium' class='licenseAddInput' />  <a href='javascript:addConsortium();'>"+_("add")+"</a>");
+  $('#span_newConsortium').html("<input type='text' name='newConsortium' id='newConsortium' class='licenseAddInput' />  <a href='javascript:addConsortium();'>" + _("add") + "</a>");
 
 	 //attach enter key event to new input and call add data when hit
 	 $('#span_newConsortium').keyup(function(e) {
@@ -219,7 +219,7 @@ function addConsortium(){
 						 url:        "ajax_processing.php",
 						 cache:      false,
 						 data:       "action=addConsortium&shortName=" + $("#newConsortium").val()+"&editLicenseID="+$("#editLicenseID").val(),
-						 success:    function(html) { $('#span_consortium').html(html); $('#span_newConsortium').html("<font color='red'>"+_("Category has been added")+"</font>"); }
+						 success:    function(html) { $('#span_consortium').html(html); $('#span_newConsortium').html("<font color='red'>" + _("Category has been added") + "</font>"); }
 					 });
 					} else {
 						alert(_("That Category is already in use."));
@@ -257,7 +257,7 @@ function addDocumentType(){
 						 url:        "ajax_processing.php?action=addDocumentType",
 						 cache:      false,
 						 data:       { shortName: $("#newDocumentType").val() },
-						 success:    function(html) { $('#span_documentType').html(html); $('#span_newDocumentType').html("<font color='red'>"+_("DocumentType has been added")+"</font>"); }
+						 success:    function(html) { $('#span_documentType').html(html); $('#span_newDocumentType').html("<font color='red'>" + _("DocumentType has been added") + "</font>"); }
 					  });
 					} else {
 						alert(_("That type is already in use."));
@@ -267,7 +267,7 @@ function addDocumentType(){
 }
 
 function newNoteType(){
-  $('#span_newNoteType').html("<input type='text' name='newNoteType' id='newNoteType' class='licenseAddInput' />  <a href='javascript:addNoteType();'>"+_("add")+"</a>");
+  $('#span_newNoteType').html("<input type='text' name='newNoteType' id='newNoteType' class='licenseAddInput' />  <a href='javascript:addNoteType();'>" + _("add")+"</a>");
 
 	 //attach enter key event to new input and call add data when hit
 	 $('#span_newNoteType').keyup(function(e) {
@@ -292,7 +292,7 @@ function addNoteType(){
 						 url:        "ajax_processing.php",
 						 cache:      false,
 						 data:       "action=addNoteType&shortName=" + $("#newNoteType").val(),
-						 success:    function(html) { $('#span_noteType').html(html); $('#span_newNoteType').html("<font color='red'>"+_("Note Type has been added")+"</font>"); }
+						 success:    function(html) { $('#span_noteType').html(html); $('#span_newNoteType').html("<font color='red'>" + _("Note Type has been added") + "</font>"); }
 						});
 					} else {
 						alert(_("That Note Type is already in use."));
@@ -303,7 +303,7 @@ function addNoteType(){
 
 
 function newNoteType(){
-  $('#span_newNoteType').html("<input type='text' name='newNoteType' id='newNoteType' class='licenseAddInput' />  <a href='javascript:addNoteType();'>"+_("add")+"</a>");
+  $('#span_newNoteType').html("<input type='text' name='newNoteType' id='newNoteType' class='licenseAddInput' />  <a href='javascript:addNoteType();'>"+_("add") + "</a>");
 
 	 //attach enter key event to new input and call add data when hit
 	 $('#span_newNoteType').keyup(function(e) {

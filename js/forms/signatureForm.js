@@ -112,7 +112,7 @@ function addSignatureType(){
 	 url:        "ajax_processing.php?action=addSignatureType",
 	 cache:      false,
 	 data:       { shortName: $("#newSignatureType").val() },
-	 success:    function(html) { $('#span_signatureType').html(html); $('#span_newSignatureType').html("<font color='red'>"+_("SignatureType has been added")+"</font>"); }
+	 success:    function(html) { $('#span_signatureType').html(html); $('#span_newSignatureType').html("<font color='red'>" + _("SignatureType has been added") + "</font>"); }
  });
 }
 

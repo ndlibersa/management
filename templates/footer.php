@@ -17,17 +17,26 @@
 */
 ?>
 
-<br />
-<div class="footer">&nbsp;</div>
-</div>
+								<!-- footer.php -->
+								<br />
 
-</td>
-</tr>
-</table>
-<br />
-</center>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<br />
+			</center>
 
-</div>
+		</div>
+	</center>
+
+	<div class="footer">
+		Copyright &copy; 2016. Management Module version 1.2
+		<br/>
+		<a href="http://coral-erm.org/">CORAL Project Website</a>
+		|
+		<a href="https://github.com/Coral-erm/Coral/issues"> Report an issue</a>
+	</div>
 
 </body>
 </html>

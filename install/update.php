@@ -5,27 +5,27 @@ $installer = new CORALInstaller();
 $version = $_REQUEST['version'];
 
 if (!$version || !$installer->isUpdateReady($version)) {
-  header('Location: index.php');
-  exit;
+	header('Location: index.php');
+	exit;
 }
 
 $update = $installer->getUpdate($version);
 
 if ($_POST["submit"]) {
-  $database_username = trim($_POST['database_username']);
+	$database_username = trim($_POST['database_username']);
 	$database_password = trim($_POST['database_password']);
-  
-  if ($database_username) {
-    $installer->connect($database_username, $database_password);
-    if ($installer->error) {
-      $installer->addErrorMessage($installer->error);
-    }
-  }
-  
-  if ($installer->hasPermissions($update["privileges"])) {
-    $sql_file = "protected/update_$version.sql";
-    
-    if (!file_exists($sql_file)) {
+
+	if ($database_username) {
+		$installer->connect($database_username, $database_password);
+		if ($installer->error) {
+			$installer->addErrorMessage($installer->error);
+		}
+	}
+
+	if ($installer->hasPermissions($update["privileges"])) {
+		$sql_file = "protected/update_$version.sql";
+
+		if (!file_exists($sql_file)) {
 			$installer->addErrorMessage("Could not open sql file: " . $sql_file . ".  If this file does not exist you must download new install files.");
 		} else {
 			//run the file - checking for errors at each SQL execution
@@ -35,25 +35,25 @@ if ($_POST["submit"]) {
 
 			//Process the sql file by statements
 			foreach ($statements as $statement) {
-			   if (strlen(trim($statement))>3){
+				if (strlen(trim($statement))>3){
 
-					$result = mysql_query($statement);
+					$result = $installer->db->query($statement);
 					if (!$result){
-						$installer->addErrorMessage(mysql_error() . "<br /><br />For statement: " . $statement);
+						$installer->addErrorMessage($installer->db->error . "<br /><br />For statement: " . $statement);
 						break;
 					}
 				}
 			}
-      
-      if (!$installer->hasErrorMessages()) {
-        $installer->addMessage("Update $version was successfully applied.");
-        header('Location: index.php');
-        exit;
-      }
+
+			if (!$installer->hasErrorMessages()) {
+				$installer->addMessage("Update $version was successfully applied.");
+				header('Location: index.php');
+				exit;
+			}
 		}
-  } else if (!$installer->hasErrorMessages()) {
-    $installer->addErrorMessage("The database user does not have the required permissions: ".implode(", ", $update["privileges"]));
-  }
+	} else if (!$installer->hasErrorMessages()) {
+		$installer->addErrorMessage("The database user does not have the required permissions: ".implode(", ", $update["privileges"]));
+	}
 }
 
 $installer->header("CORAL Management Update $version");
@@ -63,17 +63,17 @@ $installer->header("CORAL Management Update $version");
 <?php echo $update["description"]; ?>
 
 <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-  <input type="hidden" name="version" value="<?php echo $version; ?>">
-  <?php $installer->displayErrorMessages();	?>
-  <?php
-  if ($installer->hasPermissions($update["privileges"])) {
-  ?>
-    <p>The database user for this module already has the required privileges to run this update (<?php echo implode(", ", $update["privileges"]); ?>).</p>
-  <?php } else { ?>
-    <p>To run this update, please enter the username and password for a MySQL user with the following privileges: <?php echo implode(", ", $update["privileges"]); ?></p>
-    <p>This update will use the host and schema specified in your configuration file.</p>
-    
-    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+	<input type="hidden" name="version" value="<?php echo $version; ?>">
+	<?php $installer->displayErrorMessages();	?>
+	<?php
+	if ($installer->hasPermissions($update["privileges"])) {
+	?>
+		<p>The database user for this module already has the required privileges to run this update (<?php echo implode(", ", $update["privileges"]); ?>).</p>
+	<?php } else { ?>
+		<p>To run this update, please enter the username and password for a MySQL user with the following privileges: <?php echo implode(", ", $update["privileges"]); ?></p>
+		<p>This update will use the host and schema specified in your configuration file.</p>
+
+		<table width="100%" border="0" cellspacing="0" cellpadding="2">
 			<tr>
 				<td>&nbsp;Database Username</td>
 				<td>

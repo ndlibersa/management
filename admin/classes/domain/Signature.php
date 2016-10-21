@@ -25,11 +25,15 @@ class Signature extends DatabaseObject {
 
 
 	//search used for the autocomplete
-	public function search($q){
+	public function search($q) {
 		$signArray = array();
-		$result = mysql_query("SELECT distinct signerName FROM Signature WHERE upper(signerName) like upper('%" . $q . "%') ORDER BY 1;");
+		$result = $this->db->query("
+			SELECT distinct signerName
+			FROM Signature
+			WHERE upper(signerName) like upper('%" . $q . "%')
+			ORDER BY 1;");
 
-		while ($row = mysql_fetch_assoc($result)){
+		while ($row = $result->fetch_assoc()) {
 			$signArray[] = $row['signerName'] . "|" . $row['signerName'];
 		}
 
