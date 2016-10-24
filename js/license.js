@@ -447,7 +447,7 @@ function hideFullNoteText(noteID){
  		 success:    function(response) {
  			if (response == "1"){
  				exists = "1";
- 				$("#div_file_message").html("  <font color='red'>"+_("File name is already being used.")+"</font>");
+ 				$("#div_file_message").html("  <font color='red'>" + _("File name is already being used.") + "</font>");
  				return false;
  			}else{
  				$("#div_file_message").html("");
@@ -477,7 +477,7 @@ function hideFullNoteText(noteID){
  					fileName=data;
 
  					if (exists == "1"){
- 						$("#div_file_message").html("  <font color='red'>"+_("File name is already being used.")+"</font>");
+ 						$("#div_file_message").html("  <font color='red'>" + _("File name is already being used.") + "</font>");
  					}else{
  						$("#div_uploadFile").html("<img src='images/paperclip.gif'>" + fileName + _(" successfully uploaded."));
 

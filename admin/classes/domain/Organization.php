@@ -26,7 +26,7 @@ class Organization extends DatabaseObject {
 
 
 	//returns array of parent organization objects
-	public function getParentOrganizations(){
+	public function getParentOrganizations() {
 
 		$query = "SELECT O.name, parentOrganizationID
 			FROM Organization O, OrganizationHierarchy OH
@@ -38,7 +38,7 @@ class Organization extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['parentOrganizationID'])){
+		if (isset($result['parentOrganizationID'])) {
 			$object = new Organization(new NamedArguments(array('primaryKey' => $result['parentOrganizationID'])));
 			array_push($objects, $object);
 		}else{
@@ -53,7 +53,7 @@ class Organization extends DatabaseObject {
 
 
 	//removes child organization
-	public function getChildOrganizations(){
+	public function getChildOrganizations() {
 
 		$query = "SELECT O.*
 			FROM Organization O, OrganizationHierarchy OH
@@ -66,7 +66,7 @@ class Organization extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['organizationID'])){
+		if (isset($result['organizationID'])) {
 			$object = new Organization(new NamedArguments(array('primaryKey' => $result['organizationID'])));
 			array_push($objects, $object);
 		}else{
@@ -83,7 +83,7 @@ class Organization extends DatabaseObject {
 
 
 	//removes organization hierarchy records
-	public function removeOrganizationHierarchy(){
+	public function removeOrganizationHierarchy() {
 
 		$query = "DELETE
 			FROM OrganizationHierarchy
@@ -95,7 +95,7 @@ class Organization extends DatabaseObject {
 
 
 	//returns array of role objects
-	public function getOrganizationRoles(){
+	public function getOrganizationRoles() {
 
 		$query = "SELECT OrganizationRole.* FROM OrganizationRole, OrganizationRoleProfile ORP where ORP.organizationRoleID = OrganizationRole.organizationRoleID AND organizationID = '" . $this->organizationID . "'";
 
@@ -104,7 +104,7 @@ class Organization extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['organizationRoleID'])){
+		if (isset($result['organizationRoleID'])) {
 			$object = new OrganizationRole(new NamedArguments(array('primaryKey' => $result['organizationRoleID'])));
 			array_push($objects, $object);
 		}else{
@@ -121,7 +121,7 @@ class Organization extends DatabaseObject {
 
 
 	//deletes all org roles associated with this org
-	public function removeOrganizationRoles(){
+	public function removeOrganizationRoles() {
 
 		$query = "DELETE FROM OrganizationRoleProfile WHERE organizationID = '" . $this->organizationID . "'";
 
@@ -130,7 +130,7 @@ class Organization extends DatabaseObject {
 
 
 	//deletes all parent orgs associated with this org
-	public function removeParentOrganizations(){
+	public function removeParentOrganizations() {
 
 		$query = "DELETE FROM OrganizationHierarchy WHERE organizationID = '" . $this->organizationID . "'";
 
@@ -138,7 +138,7 @@ class Organization extends DatabaseObject {
 	}
 
 	//returns array of alias objects
-	public function getAliases(){
+	public function getAliases() {
 
 		$query = "SELECT * FROM Alias WHERE organizationID = '" . $this->organizationID . "' order by name";
 
@@ -147,7 +147,7 @@ class Organization extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['aliasID'])){
+		if (isset($result['aliasID'])) {
 			$object = new Alias(new NamedArguments(array('primaryKey' => $result['aliasID'])));
 			array_push($objects, $object);
 		}else{
@@ -163,7 +163,7 @@ class Organization extends DatabaseObject {
 
 
 	//returns array of contact objects
-	public function getContacts(){
+	public function getContacts() {
 
 		$query = "SELECT * FROM Contact WHERE organizationID = '" . $this->organizationID . "' order by name";
 
@@ -172,7 +172,7 @@ class Organization extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['contactID'])){
+		if (isset($result['contactID'])) {
 			$object = new Contact(new NamedArguments(array('primaryKey' => $result['contactID'])));
 			array_push($objects, $object);
 		}else{
@@ -189,7 +189,7 @@ class Organization extends DatabaseObject {
 
 
 	//returns array of contact objects
-	public function getUnarchivedContacts(){
+	public function getUnarchivedContacts() {
 
 		$query = "SELECT * FROM Contact WHERE (archiveDate = '0000-00-00' || archiveDate = '') AND organizationID = '" . $this->organizationID . "' order by name";
 
@@ -198,7 +198,7 @@ class Organization extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['contactID'])){
+		if (isset($result['contactID'])) {
 			$object = new Contact(new NamedArguments(array('primaryKey' => $result['contactID'])));
 			array_push($objects, $object);
 		}else{
@@ -215,7 +215,7 @@ class Organization extends DatabaseObject {
 
 
 	//returns array of contact objects
-	public function getArchivedContacts(){
+	public function getArchivedContacts() {
 
 		$query = "SELECT * FROM Contact WHERE (archiveDate != '0000-00-00' && archiveDate != '') AND organizationID = '" . $this->organizationID . "' order by name";
 
@@ -224,7 +224,7 @@ class Organization extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['contactID'])){
+		if (isset($result['contactID'])) {
 			$object = new Contact(new NamedArguments(array('primaryKey' => $result['contactID'])));
 			array_push($objects, $object);
 		}else{
@@ -240,7 +240,7 @@ class Organization extends DatabaseObject {
 
 
 	//returns array of external login objects
-	public function getExternalLogins(){
+	public function getExternalLogins() {
 
 		$query = "SELECT * FROM ExternalLogin WHERE organizationID = '" . $this->organizationID . "' order by externalLoginTypeID";
 
@@ -249,7 +249,7 @@ class Organization extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['externalLoginID'])){
+		if (isset($result['externalLoginID'])) {
 			$object = new ExternalLogin(new NamedArguments(array('primaryKey' => $result['externalLoginID'])));
 			array_push($objects, $object);
 		}else{
@@ -264,7 +264,7 @@ class Organization extends DatabaseObject {
 
 
 	//returns array of issue log objects
-	public function getIssueLog(){
+	public function getIssueLog() {
 
 		$query = "SELECT * FROM IssueLog WHERE organizationID = '" . $this->organizationID . "' order by issueDate desc";
 
@@ -273,7 +273,7 @@ class Organization extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['issueLogID'])){
+		if (isset($result['issueLogID'])) {
 			$object = new IssueLog(new NamedArguments(array('primaryKey' => $result['issueLogID'])));
 			array_push($objects, $object);
 		}else{
@@ -289,7 +289,7 @@ class Organization extends DatabaseObject {
 
 
 	//returns array of licenses
-	public function getLicenses(){
+	public function getLicenses() {
 		$config = new Configuration;
 
 		$licenseArray = array();
@@ -310,7 +310,7 @@ class Organization extends DatabaseObject {
 		$resultArray = array();
 
 		//need to do this since it could be that there's only one result and this is how the dbservice returns result
-		if (isset($result['licenseID'])){
+		if (isset($result['licenseID'])) {
 
 			foreach (array_keys($result) as $attributeName) {
 				$resultArray[$attributeName] = $result[$attributeName];
@@ -333,15 +333,15 @@ class Organization extends DatabaseObject {
 
 
 	//returns array based on search
-	public function search($whereAdd, $orderBy, $limit){
+	public function search($whereAdd, $orderBy, $limit) {
 
-		if (count($whereAdd) > 0){
+		if (count($whereAdd) > 0) {
 			$whereStatement = " WHERE " . implode(" AND ", $whereAdd);
 		}else{
 			$whereStatement = "";
 		}
 
-		if ($limit != ""){
+		if ($limit != "") {
 			$limitStatement = " LIMIT " . $limit;
 		}else{
 			$limitStatement = "";
@@ -376,7 +376,7 @@ class Organization extends DatabaseObject {
 		$resultArray = array();
 
 		//need to do this since it could be that there's only one result and this is how the dbservice returns result
-		if (isset($result['organizationID'])){
+		if (isset($result['organizationID'])) {
 
 			foreach (array_keys($result) as $attributeName) {
 				$resultArray[$attributeName] = $result[$attributeName];
@@ -399,7 +399,7 @@ class Organization extends DatabaseObject {
 
 
 	//removes this organization
-	public function removeOrganization(){
+	public function removeOrganization() {
 		//delete organization roles
 		$this->removeOrganizationRoles();
 
@@ -435,19 +435,22 @@ class Organization extends DatabaseObject {
 
 
 	//search used for the autocomplete
-	public function autocompleteSearch($q){
+	public function autocompleteSearch($q) {
 		$orgArray = array();
-		$result = mysql_query("SELECT CONCAT(A.name, ' (', O.name, ')') name, O.organizationID
-								FROM Alias A, Organization O
-								WHERE A.organizationID=O.organizationID
-								AND upper(A.name) like upper('%" . $q . "%')
-								UNION
-								SELECT name, organizationID
-								FROM Organization
-								WHERE upper(name) like upper('%" . $q . "%')
-								ORDER BY 1;");
+		$result = $this->db->query("
+			SELECT
+				CONCAT(A.name, ' (', O.name, ')') name,
+				O.organizationID
+			FROM Alias A, Organization O
+			WHERE A.organizationID=O.organizationID
+			AND upper(A.name) like upper('%" . $q . "%')
+			UNION
+			SELECT name, organizationID
+			FROM Organization
+			WHERE upper(name) like upper('%" . $q . "%')
+			ORDER BY 1;");
 
-		while ($row = mysql_fetch_assoc($result)){
+		while ($row = $result->fetch_assoc()) {
 			$orgArray[] = $row['name'] . "|" . $row['organizationID'];
 		}
 
@@ -458,14 +461,17 @@ class Organization extends DatabaseObject {
 
 
 	//used for A-Z on search (index)
-	public function getAlphabeticalList(){
+	public function getAlphabeticalList() {
 		$alphArray = array();
-		$result = mysql_query("SELECT DISTINCT UPPER(SUBSTR(TRIM(LEADING 'The ' FROM name),1,1)) letter, COUNT(SUBSTR(TRIM(LEADING 'The ' FROM name),1,1)) letter_count
-								FROM Organization O
-								GROUP BY SUBSTR(TRIM(LEADING 'The ' FROM name),1,1)
-								ORDER BY 1;");
+		$result = $this->db->query("
+			SELECT DISTINCT
+				UPPER(SUBSTR(TRIM(LEADING 'The ' FROM name),1,1)) letter,
+				COUNT(SUBSTR(TRIM(LEADING 'The ' FROM name),1,1)) letter_count
+			FROM Organization O
+			GROUP BY SUBSTR(TRIM(LEADING 'The ' FROM name),1,1)
+			ORDER BY 1;");
 
-		while ($row = mysql_fetch_assoc($result)){
+		while ($row = $result->fetch_assoc()) {
 			$alphArray[$row['letter']] = $row['letter_count'];
 		}
 

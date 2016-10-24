@@ -46,10 +46,10 @@ class License extends DatabaseObject {
 
 	//returns all Consortiums associated with a license
 	public function getConsortiumsByLicense() {
-		$sql = "SELECT `consortiumID` FROM `license_consortium` c WHERE c.`licenseID`={$this->primaryKey}";
-		if ($result = mysql_query($sql)) {
+		$sql = "SELECT `consortiumID` FROM `license_consortium` c WHERE c.`licenseID`='$this->primaryKey'";
+		if ($result = $this->db->query($sql)) {
 			$rows = array();
-			while ($row = mysql_fetch_array($result)) {
+			while ($row = $result->fetch_array()) {
 				$rows[] = $row['consortiumID'];
 			}
 			return $rows;
@@ -58,7 +58,7 @@ class License extends DatabaseObject {
 	}
 
 	//returns array of Document objects - used by forms to get dropdowns of available documents
-	public function getDocuments(){
+	public function getDocuments() {
 
 		$query = "SELECT D.*
 						FROM Document D
@@ -74,7 +74,7 @@ class License extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['documentID'])){
+		if (isset($result['documentID'])) {
 			$object = new Document(new NamedArguments(array('primaryKey' => $result['documentID'])));
 			array_push($objects, $object);
 		}else{
@@ -98,7 +98,7 @@ class License extends DatabaseObject {
 
 		$objects = array();
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['documentID'])){
+		if (isset($result['documentID'])) {
 			return array($result['documentID']=>$result);
 		}else{
 			$temp = array();
@@ -110,7 +110,7 @@ class License extends DatabaseObject {
 	}
 
 	//returns array of Document objects (parent documents) - used for document display on license record
-	public function getDocumentsWithoutParents($orderBy,$documentID=NULL){
+	public function getDocumentsWithoutParents($orderBy,$documentID=NULL) {
 
 		$query = "SELECT D.*
 						FROM Document D
@@ -118,7 +118,7 @@ class License extends DatabaseObject {
 						LEFT JOIN DocumentType DT ON (DT.documentTypeID = D.documentTypeID)
 						WHERE licenseID = '" . $this->licenseID . "'";
 		if ($documentID) {
-			$query .= " AND D.documentID != {$documentID}";
+			$query .= " AND D.documentID != '$documentID'";
 		}
 		$query .= "		AND (D.expirationDate is null OR D.expirationDate = '0000-00-00')
 						AND (D.parentDocumentID is null OR D.parentDocumentID=0)
@@ -129,7 +129,7 @@ class License extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['documentID'])){
+		if (isset($result['documentID'])) {
 			$object = new Document(new NamedArguments(array('primaryKey' => $result['documentID'])));
 			array_push($objects, $object);
 		}else{
@@ -145,7 +145,7 @@ class License extends DatabaseObject {
 
 
 	//returns array of Document objects that are archived - used by forms to get dropdowns of available documents
-	public function getArchivedDocuments(){
+	public function getArchivedDocuments() {
 
 		$query = "SELECT D.* FROM Document D
 					LEFT JOIN Signature S ON (S.documentID = D.documentID)
@@ -161,7 +161,7 @@ class License extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['documentID'])){
+		if (isset($result['documentID'])) {
 			$object = new Document(new NamedArguments(array('primaryKey' => $result['documentID'])));
 			array_push($objects, $object);
 		}else{
@@ -175,7 +175,7 @@ class License extends DatabaseObject {
 	}
 
 	//returns array of Document objects that are archived - used by document display on license record
-	public function getArchivedDocumentsWithoutParents($orderBy){
+	public function getArchivedDocumentsWithoutParents($orderBy) {
 
 		$query = "SELECT D.* FROM Document D
 					LEFT JOIN Signature S ON (S.documentID = D.documentID)
@@ -192,7 +192,7 @@ class License extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['documentID'])){
+		if (isset($result['documentID'])) {
 			$object = new Document(new NamedArguments(array('primaryKey' => $result['documentID'])));
 			array_push($objects, $object);
 		}else{
@@ -210,7 +210,7 @@ class License extends DatabaseObject {
 
 
 	//returns array of Attachment objects
-	public function getAttachments(){
+	public function getAttachments() {
 
 		$query = "SELECT * FROM Attachment where licenseID = '" . $this->licenseID . "' ORDER BY attachmentID";
 
@@ -219,7 +219,7 @@ class License extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['attachmentID'])){
+		if (isset($result['attachmentID'])) {
 			$object = new Attachment(new NamedArguments(array('primaryKey' => $result['attachmentID'])));
 			array_push($objects, $object);
 		}else{
@@ -232,9 +232,9 @@ class License extends DatabaseObject {
 		return $objects;
 	}
 
-	public function getNotes(){
+	public function getNotes() {
 
-		$query = "SELECT `documentNoteID` FROM `DocumentNote` WHERE `licenseID`={$this->primaryKey} ORDER BY `createDate` DESC";
+		$query = "SELECT `documentNoteID` FROM `DocumentNote` WHERE `licenseID`='$this->primaryKey' ORDER BY `createDate` DESC";
 
 		if ($result = $this->db->processQuery($query, 'assoc')) {
 			$objects = array();
@@ -254,7 +254,7 @@ class License extends DatabaseObject {
 
 	public function getNotesCount() {
 		if ($this->primaryKey) {
-			$sql = "SELECT COUNT(*) AS `total` FROM `DocumentNote` WHERE `licenseID`={$this->primaryKey}";
+			$sql = "SELECT COUNT(*) AS `total` FROM `DocumentNote` WHERE `licenseID`='$this->primaryKey'";
 			if ($result = $this->db->processQuery($sql,'assoc')) {
 				return $result['total'];
 			}
@@ -264,7 +264,7 @@ class License extends DatabaseObject {
 
 
 	//removes this license
-	public function removeLicense(){
+	public function removeLicense() {
 
 		//delete all documents and associated expressions and SFX providers
 		$document = new Document();
@@ -309,14 +309,14 @@ class License extends DatabaseObject {
 		$this->delete();
 	}
 
-  public function searchQuery($whereAdd, $orderBy = '', $limit = '', $count = false) {
-    if (count($whereAdd) > 0){
+	public function searchQuery($whereAdd, $orderBy = '', $limit = '', $count = false) {
+		if (count($whereAdd) > 0) {
 			$whereStatement = " AND " . implode(" AND ", $whereAdd);
 		}else{
 			$whereStatement = "";
 		}
 
-		if ($limit != ""){
+		if ($limit != "") {
 			$limitStatement = " LIMIT " . $limit;
 		}else{
 			$limitStatement = "";
@@ -328,10 +328,10 @@ class License extends DatabaseObject {
 		if ($config->settings->organizationsModule == 'Y') {
 			$dbName = $config->settings->organizationsDatabaseName;
 			if ($count) {
-		    	$select = "SELECT COUNT(DISTINCT L.licenseID) count";
-		    } else {
-		    	$select = "SELECT distinct DT.shortName as Type, D.revisionDate, L.licenseID, L.shortName licenseName, O.name providerName, S.shortName status";
-		    }
+				$select = "SELECT COUNT(DISTINCT L.licenseID) count";
+			} else {
+				$select = "SELECT distinct DT.shortName as Type, D.revisionDate, L.licenseID, L.shortName licenseName, O.name providerName, S.shortName status";
+			}
 			//now formulate query
 			$query = $select . " FROM " . $dbName . ".Organization O, License L
 								LEFT JOIN `license_consortium` lc ON (lc.`licenseID` = L.`licenseID`)
@@ -343,45 +343,45 @@ class License extends DatabaseObject {
 								LEFT JOIN Expression E ON (D.documentID = E.documentID)
 								WHERE O.organizationID = L.organizationID and D.expirationDate is null
 								" . $whereStatement;
-		
+
 		} else {
 			if ($count) {
-        		$select = "SELECT COUNT(DISTINCT L.licenseID) count";
+				$select = "SELECT COUNT(DISTINCT L.licenseID) count";
 			} else {
-        		$select = "SELECT distinct DT.shortName as Type, D.revisionDate, L.licenseID, L.shortName licenseName, O.shortName providerName, S.shortName status";
-      		}
+				$select = "SELECT distinct DT.shortName as Type, D.revisionDate, L.licenseID, L.shortName licenseName, O.shortName providerName, S.shortName status";
+			}
 			//now formulate query
 			$query = $select . " FROM Organization O, License L
 								LEFT JOIN `license_consortium` lc ON (lc.`licenseID` = L.`licenseID`)
 								LEFT JOIN `Consortium` c ON (c.`consortiumID` = lc.`consortiumID`)
 								LEFT JOIN Status S ON (S.statusID = L.statusID)
 								LEFT JOIN Document D ON (D.licenseID = L.licenseID)
-								LEFT JOIN DocumentType DT ON (DT.documentTypeID = L.TypeID)									
+								LEFT JOIN DocumentType DT ON (DT.documentTypeID = L.TypeID)
 								LEFT JOIN Expression E ON (D.documentID = E.documentID)
 								WHERE O.organizationID = L.organizationID and D.expirationDate is null
 								" . $whereStatement;
 
 		}
-		
+
 		if ($orderBy) {
 			$query .= "\nORDER BY " . $orderBy;
 		}
-		
+
 		if ($limit) {
 			$query .= "\nLIMIT " . $limit;
 		}
 		return $query;
-  }
+	}
 
-  public function searchCount($whereAdd) {
-    $query = $this->searchQuery($whereAdd, '', '', true);
-    $result = $this->db->processQuery(stripslashes($query), 'assoc');
-    return $result['count'];
-  }
+	public function searchCount($whereAdd) {
+		$query = $this->searchQuery($whereAdd, '', '', true);
+		$result = $this->db->processQuery(stripslashes($query), 'assoc');
+		return $result['count'];
+	}
 
 	//returns array based on search
-	public function search($whereAdd, $orderBy, $limit){
-    $query = $this->searchQuery($whereAdd, $orderBy, $limit);
+	public function search($whereAdd, $orderBy, $limit) {
+		$query = $this->searchQuery($whereAdd, $orderBy, $limit);
 
 		$result = $this->db->processQuery(stripslashes($query), 'assoc');
 
@@ -390,7 +390,7 @@ class License extends DatabaseObject {
 		$resultArray = array();
 
 		//need to do this since it could be that there's only one result and this is how the dbservice returns result
-		if (isset($result['licenseID'])){
+		if (isset($result['licenseID'])) {
 
 			foreach (array_keys($result) as $attributeName) {
 				$resultArray[$attributeName] = $result[$attributeName];
@@ -418,11 +418,11 @@ class License extends DatabaseObject {
 
 
 	//returns array
-	public function getInProgressLicenses(){
+	public function getInProgressLicenses() {
 		$config = new Configuration;
 
 		//if the org module is installed get the org name from org database
-		if ($config->settings->organizationsModule == 'Y'){
+		if ($config->settings->organizationsModule == 'Y') {
 			$dbName = $config->settings->organizationsDatabaseName;
 
 			//execute query to get default licenses
@@ -452,7 +452,7 @@ class License extends DatabaseObject {
 		$resultArray = array();
 
 		//need to do this since it could be that there's only one result and this is how the dbservice returns result
-		if (isset($result['licenseID'])){
+		if (isset($result['licenseID'])) {
 
 			foreach (array_keys($result) as $attributeName) {
 				$resultArray[$attributeName] = $result[$attributeName];
@@ -475,7 +475,7 @@ class License extends DatabaseObject {
 
 
 	//returns array of Expressions
-	public function getAllDocumentsForExpressionDisplay(){
+	public function getAllDocumentsForExpressionDisplay() {
 
 		$query="SELECT distinct D.documentID, D.shortName documentName
 								FROM Document D, Expression E
@@ -488,7 +488,7 @@ class License extends DatabaseObject {
 		$objects = array();
 
 		//need to do this since it could be that there's only one request and this is how the dbservice returns result
-		if (isset($result['documentID'])){
+		if (isset($result['documentID'])) {
 			$object = new Document(new NamedArguments(array('primaryKey' => $result['documentID'])));
 			array_push($objects, $object);
 		}else{
@@ -503,7 +503,7 @@ class License extends DatabaseObject {
 
 
 	//search used for the autocomplete
-	public function searchOrganizations($q){
+	public function searchOrganizations($q) {
 		$config = new Configuration;
 
 		$q = str_replace("+", " ",$q);
@@ -512,7 +512,7 @@ class License extends DatabaseObject {
 		$orgArray = array();
 
 		//if the org module is installed get the org names from org database
-		if ($config->settings->organizationsModule == 'Y'){
+		if ($config->settings->organizationsModule == 'Y') {
 
 			$dbName = $config->settings->organizationsDatabaseName;
 
@@ -527,9 +527,9 @@ class License extends DatabaseObject {
 									WHERE upper(name) like upper('%" . $q . "%')
 									ORDER BY 1;";
 
-			$result = mysql_query($query);
+			$result = $this->db->query($query);
 
-			while ($row = mysql_fetch_assoc($result)){
+			while ($row = $result->fetch_assoc()) {
 				$orgArray[] = $row['organizationID'] . "|" . $row['name'];
 			}
 
@@ -541,9 +541,9 @@ class License extends DatabaseObject {
 									WHERE upper(shortName) like upper('%" . $q . "%')
 									ORDER BY 1;";
 
-			$result = mysql_query($query);
+			$result = $this->db->query($query);
 
-			while ($row = mysql_fetch_assoc($result)){
+			while ($row = $result->fetch_assoc()) {
 				$orgArray[] = $row['organizationID'] . "|" . $row['shortName'];
 			}
 
@@ -558,13 +558,13 @@ class License extends DatabaseObject {
 
 
 	//search used index page drop down
-	public function getOrganizationList(){
+	public function getOrganizationList() {
 		$config = new Configuration;
 
 		$orgArray = array();
 
 		//if the org module is installed get the org names from org database
-		if ($config->settings->organizationsModule == 'Y'){
+		if ($config->settings->organizationsModule == 'Y') {
 			$dbName = $config->settings->organizationsDatabaseName;
 			$query = "SELECT name, organizationID FROM " . $dbName . ".Organization ORDER BY 1;";
 
@@ -579,7 +579,7 @@ class License extends DatabaseObject {
 		$resultArray = array();
 
 		//need to do this since it could be that there's only one result and this is how the dbservice returns result
-		if (isset($result['organizationID'])){
+		if (isset($result['organizationID'])) {
 
 			foreach (array_keys($result) as $attributeName) {
 				$resultArray[$attributeName] = $result[$attributeName];
@@ -603,19 +603,19 @@ class License extends DatabaseObject {
 
 
 	//go to organizations and get the org name for this license
-	public function getOrganizationName(){
+	public function getOrganizationName() {
 		$config = new Configuration;
 
 		//if the org module is installed get the org name from org database
-		if ($config->settings->organizationsModule == 'Y'){
+		if ($config->settings->organizationsModule == 'Y') {
 			$dbName = $config->settings->organizationsDatabaseName;
 
 			$orgArray = array();
 			$query = "SELECT name FROM " . $dbName . ".Organization WHERE organizationID = " . $this->organizationID;
 
-			if ($result = mysql_query($query)){
+			if ($result = $this->db->query($query)) {
 
-				while ($row = mysql_fetch_assoc($result)){
+				while ($row = $result->fetch_assoc()) {
 					return $row['name'];
 				}
 			}
@@ -629,13 +629,13 @@ class License extends DatabaseObject {
 
 
 	//insert the organization / provider if it doesn't already exist
-	public function setOrganization($orgID, $orgName){
+	public function setOrganization($orgID, $orgName) {
 		$config = new Configuration;
 
 		//if the org module is installed get the org name from org database
-		if ($config->settings->organizationsModule == 'Y'){
+		if ($config->settings->organizationsModule == 'Y') {
 			//if no org ID was passed in then we need to create a new organization shell
-			if (!$orgID){
+			if (!$orgID) {
 
 				$dbName = $config->settings->organizationsDatabaseName;
 				$orgName = str_replace("'", "''",$orgName);
@@ -652,7 +652,7 @@ class License extends DatabaseObject {
 		}else{
 
 			//if no org ID was passed in then we need to create a new provider
-			if (!$orgID){
+			if (!$orgID) {
 				$organization = new Organization();
 				$organization->organizationID = '';
 				$organization->shortName = $orgName;
@@ -672,7 +672,7 @@ class License extends DatabaseObject {
 			//tie the new consortiums to this license
 			$sql = "INSERT INTO `license_consortium` (`licenseID`,`consortiumID`) VALUES ";
 			foreach ($consortiumids as $cid) {
-				$sql .= "({$this->primaryKey},".$this->db->escapeString($cid)."),";
+				$sql .= "('$this->primaryKey',".$this->db->escapeString($cid)."),";
 			}
 			$sql = rtrim($sql,',');
 			$this->db->processQuery($sql);
@@ -682,13 +682,13 @@ class License extends DatabaseObject {
 
 
 	//search used index page drop down
-	public function getConsortiumList(){
+	public function getConsortiumList() {
 		$config = new Configuration;
 
 		$consortiumArray = array();
 
 		//if the org module is installed get the consortia names from org database
-		if ($config->settings->organizationsModule == 'Y'){
+		if ($config->settings->organizationsModule == 'Y') {
 			$dbName = $config->settings->organizationsDatabaseName;
 			$query = "SELECT name, O.organizationID consortiumID
 				FROM " . $dbName . ".Organization O,
@@ -712,7 +712,7 @@ class License extends DatabaseObject {
 		$resultArray = array();
 
 		//need to do this since it could be that there's only one result and this is how the dbservice returns result
-		if (isset($result['consortiumID'])){
+		if (isset($result['consortiumID'])) {
 
 			foreach (array_keys($result) as $attributeName) {
 				$resultArray[$attributeName] = $result[$attributeName];
@@ -736,7 +736,7 @@ class License extends DatabaseObject {
 
 
 	//search used index page drop down
-	public function getTypeList(){
+	public function getTypeList() {
 		$config = new Configuration;
 
 		$typeArray = array();
@@ -748,7 +748,7 @@ class License extends DatabaseObject {
 		$resultArray = array();
 
 		//need to do this since it could be that there's only one result and this is how the dbservice returns result
-		if (isset($result['typeID'])){
+		if (isset($result['typeID'])) {
 
 			foreach (array_keys($result) as $attributeName) {
 				$resultArray[$attributeName] = $result[$attributeName];
@@ -768,21 +768,21 @@ class License extends DatabaseObject {
 		return $typeArray;
 
 	}
-	
-	
+
+
 	//go to organizations and get the consortia name for this license
-	public function getConsortiumName($consortiumid=NULL){
+	public function getConsortiumName($consortiumid=NULL) {
 		$config = new Configuration;
 
 		//if the org module is installed get the org name from org database
-		if ($config->settings->organizationsModule == 'Y'){
+		if ($config->settings->organizationsModule == 'Y') {
 			$dbName = $config->settings->organizationsDatabaseName;
 
 			$orgArray = array();
-			$query = "SELECT `name` FROM `{$dbName}`.`Organization` WHERE `organizationID`=".(($consortiumid) ? $consortiumid:$this->consortiumID);
-			$result = mysql_query($query);
+			$query = "SELECT `name` FROM `$dbName`.`Organization` WHERE `organizationID`=".(($consortiumid) ? $consortiumid:$this->consortiumID);
+			$result = $this->db->query($query);
 
-			while ($row = mysql_fetch_assoc($result)){
+			while ($row = $result->fetch_assoc()) {
 				return $row['name'];
 			}
 		//otherwise if the org module is not installed get the consortium name from this database
@@ -793,14 +793,17 @@ class License extends DatabaseObject {
 	}
 
 	//used for A-Z on search (index)
-	public function getAlphabeticalList(){
+	public function getAlphabeticalList() {
 		$alphArray = array();
-		$result = mysql_query("SELECT DISTINCT UPPER(SUBSTR(TRIM(LEADING 'The ' FROM shortName),1,1)) letter, COUNT(SUBSTR(TRIM(LEADING 'The ' FROM shortName),1,1)) letter_count
-								FROM License L
-								GROUP BY SUBSTR(TRIM(LEADING 'The ' FROM shortName),1,1)
-								ORDER BY 1;");
+		$result = $this->db->query("
+			SELECT
+				DISTINCT UPPER(SUBSTR(TRIM(LEADING 'The ' FROM shortName),1,1)) letter,
+				COUNT(SUBSTR(TRIM(LEADING 'The ' FROM shortName),1,1)) letter_count
+			FROM License L
+			GROUP BY SUBSTR(TRIM(LEADING 'The ' FROM shortName),1,1)
+			ORDER BY 1;");
 
-		while ($row = mysql_fetch_assoc($result)){
+		while ($row = $result->fetch_assoc()) {
 			$alphArray[$row['letter']] = $row['letter_count'];
 		}
 
@@ -808,7 +811,7 @@ class License extends DatabaseObject {
 	}
 
 	function deleteLicenseConsortiums() {
-		$sql = "DELETE FROM `license_consortium` WHERE `licenseID`={$this->primaryKey}";
+		$sql = "DELETE FROM `license_consortium` WHERE `licenseID`='$this->primaryKey'";
 		$this->db->processQuery($sql);
 	}
 

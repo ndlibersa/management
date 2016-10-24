@@ -36,7 +36,7 @@ class DBService extends Object {
 	}
 
 	protected function checkForError() {
-		if ($this->error = mysql_error($this->db)) {
+		if ($this->error = $this->db->error) {
 			throw new Exception(_("There was a problem with the database: ") . $this->error);
 		}
 	}
@@ -45,61 +45,129 @@ class DBService extends Object {
 		$host = $this->config->database->host;
 		$username = $this->config->database->username;
 		$password = $this->config->database->password;
-		$this->db = mysql_connect($host, $username, $password);
+		$this->db = new mysqli($host, $username, $password);
 		$this->checkForError();
 
 		$databaseName = $this->config->database->name;
-		mysql_select_db($databaseName, $this->db);
-        mysql_set_charset('utf8', $this->db);
+		$this->db->select_db($databaseName);
+		$this->db->set_charset('utf8');
 		$this->checkForError();
 	}
 
 	protected function disconnect() {
-		//mysql_close($this->db);
+		//mysqli_close($this->db);
 	}
 
 	public function escapeString($value) {
-		return mysql_real_escape_string($value);
+		return $this->db->real_escape_string($value);
+	}
+
+	public function query($sql) {
+		$result = $this->db->query($sql);
+		$this->checkForError();
+		return $result;
 	}
 
 	public function processQuery($sql, $type = NULL) {
-    $query_start = microtime(true);
-		$result = mysql_query($sql, $this->db);
+		$query_start = microtime(true);
+		$result = $this->db->query($sql);
 		$query_end = microtime(true);
 		$this->log($sql, $query_end - $query_start);
-		
+
 		$this->checkForError();
 		$data = array();
 
-		if (is_resource($result)) {
-			$resultType = MYSQL_NUM;
+		if ($result instanceof mysqli_result) {
+			$resultType = MYSQLI_NUM;
 			if ($type == 'assoc') {
-				$resultType = MYSQL_ASSOC;
+				$resultType = MYSQLI_ASSOC;
 			}
-			while ($row = mysql_fetch_array($result, $resultType)) {
-				if (mysql_affected_rows($this->db) > 1) {
+			while ($row = $result->fetch_array($resultType)) {
+				if ($this->db->affected_rows > 1) {
 					array_push($data, $row);
 				} else {
 					$data = $row;
 				}
 			}
-			mysql_free_result($result);
+			$result->free();
 		} else if ($result) {
-			$data = mysql_insert_id($this->db);
+			$data = $this->db->insert_id;
 		}
 
 		return $data;
 	}
-	
+
+	/**
+	 * Version of processQuery() that deals with prepared statements. As prepared
+	 * statements use variadic functions, much of this function's complexity
+	 * comes from wrapping a variadic function in a PHP 5.5 compatible way.
+	 *
+	 * @param string $query Same format as mysqli::prepare(), with usually one
+	 * or more "?" inside it.
+	 *
+	 * @param string $type Must be "num" or "assoc". Contrary to processQuery(),
+	 * it's not an optionnal argument. Due to this function being variadic.
+	 *
+	 * @param mixed ...$paramsToBind Same format as mysqli_stmt::bind_param()
+	 * It's a variadic function based on this PHP 5.5 compatible implementation
+	 * https://wiki.php.net/rfc/variadics#introduction
+	 * We will be able to simplify this once we require PHP 5.6
+	 * https://secure.php.net/manual/en/migration56.new-features.php#migration56.new-features.variadics
+	 */
+	public function processPreparedQuery($query, $type) {
+		$paramsToBind = array_slice(func_get_args(), 2); // additional arguments
+		// prepared statements specific code
+		$statement = $this->db->prepare($query);
+		$this->checkForError();
+		// The following is an implementation of the splat operator. This
+		// will be simpler with PHP 5.6
+		// https://secure.php.net/manual/en/migration56.new-features.php#migration56.new-features.splat
+		// We need to pass references to bind_param(), hence the use of refValues()
+		call_user_func_array([$statement, "bind_param"], self::refValues($paramsToBind)) ;
+		$statement->execute();
+		$result = $statement->get_result();
+
+		// same as processQuery()
+		$this->checkForError();
+		$data = array();
+
+		if ($result instanceof mysqli_result) {
+			$resultType = MYSQLI_NUM;
+			if ($type == 'assoc') {
+				$resultType = MYSQLI_ASSOC;
+			}
+			while ($row = $result->fetch_array($resultType)) {
+				if ($this->db->affected_rows > 1) {
+					array_push($data, $row);
+				} else {
+					$data = $row;
+				}
+			}
+			$result->free();
+		} else if ($result) {
+			$data = $this->db->insert_id;
+		}
+
+		return $data;
+	}
+
+	private static function refValues($arr){
+		$refs = array();
+		foreach($arr as $key => $value) {
+			$refs[$key] = &$arr[$key];
+		}
+		return $refs;
+	}
+
 	public function log($sql, $query_time) {
-	  $threshold = $this->config->database->logQueryThreshold;
-    if ($this->config->database->logQueries == "Y" && (!$threshold || $query_time >= $threshold)) {
-      $util = new Utility();
-      $log_path = $util->getModulePath()."/log";
-      $log_file = $log_path."/database.log";
-      $log_string = date("c")."\n".$_SERVER['REQUEST_URI']."\n".$sql."\nQuery completed in ".sprintf("%.3f", round($query_time, 3))." seconds";
-      error_log($log_string."\n\n", 3, $log_file);
-    }
+		$threshold = $this->config->database->logQueryThreshold;
+		if ($this->config->database->logQueries == "Y" && (!$threshold || $query_time >= $threshold)) {
+			$util = new Utility();
+			$log_path = $util->getModulePath()."/log";
+			$log_file = $log_path."/database.log";
+			$log_string = date("c")."\n".$_SERVER['REQUEST_URI']."\n".$sql."\nQuery completed in ".sprintf("%.3f", round($query_time, 3))." seconds";
+			error_log($log_string."\n\n", 3, $log_file);
+		}
 	}
 
 }

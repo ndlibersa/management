@@ -36,7 +36,7 @@ if ($user->isAdmin()){
 <br /><span id='span_newUser' class='adminAddInput'><a href='ajax_forms.php?action=getAdminUserUpdateForm&height=202&width=288&modal=true' class='thickbox' id='expression'><?php echo _("add new user");?></a></span>
 <br /><br />
 <div id='div_User'>
-<img src = "images/circle.gif"><?php echo _("Loading...");?>
+<img src = "images/circle.gif" /><?php echo _("Loading...");?>
 </div>
 </td></tr>
 </table>
@@ -176,6 +176,7 @@ if ($config->settings->organizationsModule != 'Y'){ ?>
 <br />
 
 <script type="text/javascript" src="js/admin.js"></script>
+								</center>
 
 <?php
 }else{

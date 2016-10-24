@@ -174,10 +174,10 @@ switch ($_GET['action']) {
 				//set to web rwx, everyone else rw
 				//this way we can edit the document directly on the server
 				chmod ($target_path, 0766);
-				echo "success uploading!";
+				echo _("success uploading!");
 			}else{
 			  header('HTTP/1.1 500 Internal Server Error');
-			  echo "<div id=\"error\">"._("There was a problem saving your file to ").$target_path.".</div>";
+			  echo "<div id=\"error\">" . _("There was a problem saving your file to ") . $target_path . "</div>";
 			}
 
 		}
@@ -337,9 +337,9 @@ switch ($_GET['action']) {
 			$license = new License(new NamedArguments(array('primaryKey' => $licenseID)));
 			$util = new Utility();
 
-			$emailMessage = _("An expression in the licensing module has been approved for terms tool use.")."\n";
-			$emailMessage.= _("License:  "). $license->shortName . "\n\n";
-			$emailMessage.= _("View License Record:  ") . $util->getPageURL() . "license.php?licenseID=" . $licenseID;
+			$emailMessage = _("An expression in the licensing module has been approved for terms tool use.") . "\n";
+			$emailMessage.= _("License: ") . $license->shortName . "\n\n";
+			$emailMessage.= _("View License Record: ") . $util->getPageURL() . "license.php?licenseID=" . $licenseID;
 
 			$email = new Email();
 			$email->to 			= implode(", ", $toList);
@@ -377,7 +377,7 @@ switch ($_GET['action']) {
 
 			try {
 				$expressionNote->save();
-				echo "Expression Note Updated Successfully.";
+				echo _("Expression Note Updated Successfully.");
 			} catch (Exception $e) {
 				echo $e->getMessage();
 			}
@@ -393,7 +393,7 @@ switch ($_GET['action']) {
 
 			try {
 				$expressionNote->save();
-				echo ("Expression Note Added Successfully.");
+				echo _("Expression Note Added Successfully.");
 			} catch (Exception $e) {
 				echo $e->getMessage();
 			}
@@ -567,7 +567,7 @@ switch ($_GET['action']) {
 				?>
 				<table class="thickboxTable" style="background-image:url('images/title.gif');background-repeat:no-repeat;width:260px;">
 				<tr>
-				<td colspan='2'><br /><span class='headerText'><?php echo _("SQL Insert Failed.") .' '. $e->getMessage() .' '. _("Please make sure everything is filled out correctly.");?></span><br /></td>
+				<td colspan='2'><br /><span class='headerText'><?php echo _("SQL Insert Failed.") . ' ' . $e->getMessage() . ' ' .  _(" Please make sure everything is filled out correctly.");?></span><br /></td>
 				</tr>
 				<tr>
 				<td colspan='2'><p><a href='#' onclick='window.parent.tb_remove(); return false'><?php echo _("Continue");?></a></td>
@@ -580,7 +580,7 @@ switch ($_GET['action']) {
 			?>
 			<table class="thickboxTable" style="background-image:url('images/title.gif');background-repeat:no-repeat;width:260px;">
 			<tr>
-			<td colspan='2'><br /><span class='headerText'><?php echo _("SQL Insert Failed.") .' '. $e->getMessage() .' '. _("Please make sure everything is filled out correctly.");?></span><br /></td>
+			<td colspan='2'><br /><span class='headerText'><?php echo _("SQL Insert Failed.") . ' ' . $e->getMessage() . ' ' . _(" Please make sure everything is filled out correctly.");?></span><br /></td>
 			</tr>
 			<tr>
 			<td colspan='2'><p><a href='#' onclick='window.parent.tb_remove(); return false'><?php echo _("Continue");?></a></td>
@@ -1075,7 +1075,7 @@ switch ($_GET['action']) {
 				echo "success uploading!";
 			}else{
 				header('HTTP/1.1 500 Internal Server Error');
-			  echo "<div id=\"error\">"._("There was a problem saving your file to ").$target_path.".</div>";
+			  echo "<div id=\"error\">" . _("There was a problem saving your file to ") . $target_path . ".</div>";
 			}
 		}
 
